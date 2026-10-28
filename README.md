@@ -1,4 +1,7 @@
-# Justice Metrics
+# NJDG Adjournment & Pendency Dashboard
+
+**Live dashboard:** [shaswatshukla.github.io/njdg-adjournment-pendency-dashboard](https://shaswatshukla.github.io/njdg-adjournment-pendency-dashboard/)  
+**Repository:** [github.com/shaswatshukla/njdg-adjournment-pendency-dashboard](https://github.com/shaswatshukla/njdg-adjournment-pendency-dashboard)
 
 **SYNTHETIC - FOR DEMO.** This repository demonstrates a transparent pipeline and static dashboard for Indian court case-flow metrics. Its included court and context data are invented. They are not official statistics, must not be cited as real-world facts, and do not describe real people, courts, or districts.
 
@@ -34,7 +37,7 @@ python -m unittest discover -s pipeline/tests -v
 
 Coverage includes formulas, zero/missing/negative counts, input validation, personal-data refusal, source provenance, duplicate keys, context joins, rolling-window completeness and aggregation, stock handling, and JSON smoke validation.
 
-Validation in the authoring workspace: all 20 checks passed with `unittest`, the Python build and six-file smoke check passed, and Node syntax checking passed. That workspace did not have pytest installed or provide a reachable browser surface, so pytest and visual/mobile browser checks were not run there. Install the development requirements and run the browser steps above when making changes.
+Verification: GitHub Actions run [40778423236](https://github.com/shaswatshukla/njdg-adjournment-pendency-dashboard/actions/runs/40778423236) passed on Python 3.11 with 20 pytest checks, the build, and JSON smoke validation. Desktop (1280px) and mobile (375px) views were inspected; all five routes, state/rolling views, district filters and CSV download, theme persistence, and browser console checks passed.
 
 ## Input data and provenance
 
@@ -57,7 +60,7 @@ No crime series is included. India transitioned from IPC to BNS from July 2024. 
 
 ## GitHub Pages
 
-The included GitHub Actions workflow publishes only the static `site/` directory. In repository settings, enable **Pages → Build and deployment → GitHub Actions**, then push to `main` or run the workflow manually. The pipeline and tests do not need to run as part of the static-site publishing job because generated JSON is committed with the site.
+The GitHub Actions workflow runs pytest and rebuilds the JSON data before publishing the static `site/` directory. In repository settings, enable **Pages > Build and deployment > GitHub Actions**, then push to `main` or run the workflow manually.
 
 ## Suggested next steps
 
