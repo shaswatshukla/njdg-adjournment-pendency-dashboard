@@ -1,0 +1,3 @@
+file_name,source_name,source_url,download_date,licence,coverage_start,coverage_end,notes
+sample_aggregate_SYNTHETIC_FOR_DEMO.csv,Synthetic demonstration data,https://example.org/synthetic-demo,2026-10-28,CC0-1.0 (synthetic demonstration),2024-01,2024-06,Entirely invented aggregate rows; not official court data.
+context/context_demo_SYNTHETIC_FOR_DEMO.csv,Synthetic demonstration context,https://example.org/synthetic-demo,2026-10-28,CC0-1.0 (synthetic demonstration),2024-01,2024-06,Invented population and judge-strength examples; no real-world interpretation.

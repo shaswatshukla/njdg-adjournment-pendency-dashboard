@@ -1,0 +1,36 @@
+{
+  "generated_at_utc": "2026-10-28T21:57:03.010633+00:00",
+  "schema_version": "1.0",
+  "records_loaded": 24,
+  "rejected_rows": 0,
+  "source_files": [
+    "sample_aggregate_SYNTHETIC_FOR_DEMO.csv",
+    "context/context_demo_SYNTHETIC_FOR_DEMO.csv"
+  ],
+  "sources": [
+    {
+      "file_name": "sample_aggregate_SYNTHETIC_FOR_DEMO.csv",
+      "source_name": "Synthetic demonstration data",
+      "source_url": "https://example.org/synthetic-demo",
+      "download_date": "2026-10-28",
+      "licence": "CC0-1.0 (synthetic demonstration)",
+      "coverage_start": "2024-01",
+      "coverage_end": "2024-06",
+      "notes": "Entirely invented aggregate rows; not official court data."
+    },
+    {
+      "file_name": "context/context_demo_SYNTHETIC_FOR_DEMO.csv",
+      "source_name": "Synthetic demonstration context",
+      "source_url": "https://example.org/synthetic-demo",
+      "download_date": "2026-10-28",
+      "licence": "CC0-1.0 (synthetic demonstration)",
+      "coverage_start": "2024-01",
+      "coverage_end": "2024-06",
+      "notes": "Invented population and judge-strength examples; no real-world interpretation."
+    }
+  ],
+  "coverage_start": "2024-01",
+  "coverage_end": "2024-06",
+  "synthetic_demo": true,
+  "method_note": "Rolling rates use ratios of aggregate flows and opening/final stock. Missing calendar months make a rolling window unavailable."
+}

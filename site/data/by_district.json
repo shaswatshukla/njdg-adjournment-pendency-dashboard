@@ -1,0 +1,3118 @@
+{
+  "series": [
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-01",
+      "period": "monthly",
+      "cases_pending_start": 17200,
+      "cases_instituted": 2700,
+      "cases_disposed": 2450,
+      "hearings_listed": 5400,
+      "hearings_adjourned": 1700,
+      "cases_pending_over_3y": 5100,
+      "cases_pending_over_5y": 1550,
+      "cases_pending_end": 17450,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 17450,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0145348837209303,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9074074074074074,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3148148148148148,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2922636103151863,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08882521489971347,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 124.64285714285715,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-01",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation",
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-02",
+      "period": "monthly",
+      "cases_pending_start": 17450,
+      "cases_instituted": 2800,
+      "cases_disposed": 2550,
+      "hearings_listed": 5600,
+      "hearings_adjourned": 1705,
+      "cases_pending_over_3y": 5200,
+      "cases_pending_over_5y": 1570,
+      "cases_pending_end": 17700,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 17700,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0143266475644699,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9107142857142857,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3044642857142857,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2937853107344633,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08870056497175141,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 126.42857142857143,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-02",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation",
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-03",
+      "period": "monthly",
+      "cases_pending_start": 17700,
+      "cases_instituted": 2900,
+      "cases_disposed": 2650,
+      "hearings_listed": 5800,
+      "hearings_adjourned": 1740,
+      "cases_pending_over_3y": 5300,
+      "cases_pending_over_5y": 1590,
+      "cases_pending_end": 17950,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 17950,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0141242937853108,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9137931034482759,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.29526462395543174,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08857938718662953,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 128.21428571428572,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-03",
+      "period": "rolling_3m",
+      "cases_pending_start": 17200,
+      "cases_pending_end": 17950,
+      "cases_instituted": 8400,
+      "cases_disposed": 7650,
+      "hearings_listed": 16800,
+      "hearings_adjourned": 5145,
+      "cases_pending_over_3y": 5300,
+      "cases_pending_over_5y": 1590,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 17950,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0436046511627908,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9107142857142857,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.30625,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.29526462395543174,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08857938718662953,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 128.21428571428572,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-04",
+      "period": "monthly",
+      "cases_pending_start": 17950,
+      "cases_instituted": 2930,
+      "cases_disposed": 2710,
+      "hearings_listed": 5850,
+      "hearings_adjourned": 1750,
+      "cases_pending_over_3y": 5400,
+      "cases_pending_over_5y": 1610,
+      "cases_pending_end": 18170,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 18170,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0122562674094708,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9249146757679181,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.29914529914529914,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2971931755641167,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08860759493670886,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 129.78571428571428,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-04",
+      "period": "rolling_3m",
+      "cases_pending_start": 17450,
+      "cases_pending_end": 18170,
+      "cases_instituted": 8630,
+      "cases_disposed": 7910,
+      "hearings_listed": 17250,
+      "hearings_adjourned": 5195,
+      "cases_pending_over_3y": 5400,
+      "cases_pending_over_5y": 1610,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 18170,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0412607449856734,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9165701042873696,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.3011594202898551,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2971931755641167,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08860759493670886,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 129.78571428571428,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-05",
+      "period": "monthly",
+      "cases_pending_start": 18170,
+      "cases_instituted": 3050,
+      "cases_disposed": 2790,
+      "hearings_listed": 6100,
+      "hearings_adjourned": 1830,
+      "cases_pending_over_3y": 5500,
+      "cases_pending_over_5y": 1630,
+      "cases_pending_end": 18430,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 18430,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0143093010456796,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9147540983606557,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2984264785675529,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08844275637547477,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 131.64285714285714,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-05",
+      "period": "rolling_3m",
+      "cases_pending_start": 17700,
+      "cases_pending_end": 18430,
+      "cases_instituted": 8880,
+      "cases_disposed": 8150,
+      "hearings_listed": 17750,
+      "hearings_adjourned": 5320,
+      "cases_pending_over_3y": 5500,
+      "cases_pending_over_5y": 1630,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 18430,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0412429378531074,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9177927927927928,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.29971830985915493,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2984264785675529,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08844275637547477,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 131.64285714285714,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-06",
+      "period": "monthly",
+      "cases_pending_start": 18430,
+      "cases_instituted": 3150,
+      "cases_disposed": 2900,
+      "hearings_listed": 6300,
+      "hearings_adjourned": 1890,
+      "cases_pending_over_3y": 5600,
+      "cases_pending_over_5y": 1650,
+      "cases_pending_end": 18680,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 18680,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0135648399348887,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9206349206349206,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.29978586723768735,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08832976445396146,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 133.42857142857142,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "month": "2024-06",
+      "period": "rolling_3m",
+      "cases_pending_start": 17950,
+      "cases_pending_end": 18680,
+      "cases_instituted": 9130,
+      "cases_disposed": 8400,
+      "hearings_listed": 18250,
+      "hearings_adjourned": 5470,
+      "cases_pending_over_3y": 5600,
+      "cases_pending_over_5y": 1650,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 18680,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0406685236768802,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9200438116100766,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.2997260273972603,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.29978586723768735,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08832976445396146,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      },
+      "context": {
+        "population": 14000000,
+        "judge_strength": 120,
+        "budget": 125000000,
+        "pending_per_lakh": {
+          "value": 133.42857142857142,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-01",
+      "period": "monthly",
+      "cases_pending_start": 13500,
+      "cases_instituted": 2200,
+      "cases_disposed": 2050,
+      "hearings_listed": 4400,
+      "hearings_adjourned": 1200,
+      "cases_pending_over_3y": 4400,
+      "cases_pending_over_5y": 1200,
+      "cases_pending_end": 13650,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 13650,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.011111111111111,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9318181818181818,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2727272727272727,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.32234432234432236,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08791208791208792,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 143.68421052631578,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-01",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation",
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-02",
+      "period": "monthly",
+      "cases_pending_start": 13650,
+      "cases_instituted": 2300,
+      "cases_disposed": 2150,
+      "hearings_listed": 4600,
+      "hearings_adjourned": 1240,
+      "cases_pending_over_3y": 4500,
+      "cases_pending_over_5y": 1220,
+      "cases_pending_end": 13800,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 13800,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.010989010989011,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9347826086956522,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.26956521739130435,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.32608695652173914,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08840579710144927,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 145.26315789473685,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-02",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation",
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-03",
+      "period": "monthly",
+      "cases_pending_start": 13800,
+      "cases_instituted": 2400,
+      "cases_disposed": 2230,
+      "hearings_listed": 4800,
+      "hearings_adjourned": 1300,
+      "cases_pending_over_3y": 4600,
+      "cases_pending_over_5y": 1240,
+      "cases_pending_end": 13970,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 13970,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.01231884057971,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9291666666666667,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2708333333333333,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.329277022190408,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08876163206871868,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 147.05263157894737,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-03",
+      "period": "rolling_3m",
+      "cases_pending_start": 13500,
+      "cases_pending_end": 13970,
+      "cases_instituted": 6900,
+      "cases_disposed": 6430,
+      "hearings_listed": 13800,
+      "hearings_adjourned": 3740,
+      "cases_pending_over_3y": 4600,
+      "cases_pending_over_5y": 1240,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 13970,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0348148148148149,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9318840579710145,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.2710144927536232,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.329277022190408,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08876163206871868,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 147.05263157894737,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-04",
+      "period": "monthly",
+      "cases_pending_start": 13970,
+      "cases_instituted": 2430,
+      "cases_disposed": 2300,
+      "hearings_listed": 4850,
+      "hearings_adjourned": 1315,
+      "cases_pending_over_3y": 4700,
+      "cases_pending_over_5y": 1260,
+      "cases_pending_end": 14100,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 14100,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0093056549749464,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9465020576131687,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2711340206185567,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3333333333333333,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08936170212765958,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 148.42105263157896,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-04",
+      "period": "rolling_3m",
+      "cases_pending_start": 13650,
+      "cases_pending_end": 14100,
+      "cases_instituted": 7130,
+      "cases_disposed": 6680,
+      "hearings_listed": 14250,
+      "hearings_adjourned": 3855,
+      "cases_pending_over_3y": 4700,
+      "cases_pending_over_5y": 1260,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 14100,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.032967032967033,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9368863955119214,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.27052631578947367,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3333333333333333,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08936170212765958,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 148.42105263157896,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-05",
+      "period": "monthly",
+      "cases_pending_start": 14100,
+      "cases_instituted": 2550,
+      "cases_disposed": 2380,
+      "hearings_listed": 5100,
+      "hearings_adjourned": 1390,
+      "cases_pending_over_3y": 4800,
+      "cases_pending_over_5y": 1280,
+      "cases_pending_end": 14270,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 14270,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0120567375886524,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9333333333333333,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2725490196078431,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.33637000700770847,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08969866853538892,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 150.21052631578948,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-05",
+      "period": "rolling_3m",
+      "cases_pending_start": 13800,
+      "cases_pending_end": 14270,
+      "cases_instituted": 7380,
+      "cases_disposed": 6910,
+      "hearings_listed": 14750,
+      "hearings_adjourned": 4005,
+      "cases_pending_over_3y": 4800,
+      "cases_pending_over_5y": 1280,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 14270,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0340579710144928,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9363143631436315,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.27152542372881355,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.33637000700770847,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08969866853538892,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 150.21052631578948,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-06",
+      "period": "monthly",
+      "cases_pending_start": 14270,
+      "cases_instituted": 2650,
+      "cases_disposed": 2480,
+      "hearings_listed": 5300,
+      "hearings_adjourned": 1440,
+      "cases_pending_over_3y": 4900,
+      "cases_pending_over_5y": 1300,
+      "cases_pending_end": 14440,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 14440,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0119131044148564,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9358490566037736,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.27169811320754716,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.33933518005540164,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09002770083102493,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 152.0,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "month": "2024-06",
+      "period": "rolling_3m",
+      "cases_pending_start": 13970,
+      "cases_pending_end": 14440,
+      "cases_instituted": 7630,
+      "cases_disposed": 7160,
+      "hearings_listed": 15250,
+      "hearings_adjourned": 4145,
+      "cases_pending_over_3y": 4900,
+      "cases_pending_over_5y": 1300,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 14440,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0336435218324982,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9384010484927916,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.2718032786885246,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.33933518005540164,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09002770083102493,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      },
+      "context": {
+        "population": 9500000,
+        "judge_strength": 90,
+        "budget": 98000000,
+        "pending_per_lakh": {
+          "value": 152.0,
+          "method": "Ending pending ÷ population × 100,000; contextual derived value"
+        }
+      },
+      "context_method": "Derived pending per lakh = ending pending ÷ population × 100,000; context joins on state and district only"
+    }
+  ],
+  "slices": [
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-01",
+      "period": "monthly",
+      "cases_pending_start": 10000,
+      "cases_instituted": 1200,
+      "cases_disposed": 1100,
+      "hearings_listed": 2400,
+      "hearings_adjourned": 800,
+      "cases_pending_over_3y": 3000,
+      "cases_pending_over_5y": 900,
+      "cases_pending_end": 10100,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10100,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.01,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9166666666666666,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3333333333333333,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.297029702970297,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.0891089108910891,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-01",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-02",
+      "period": "monthly",
+      "cases_pending_start": 10100,
+      "cases_instituted": 1250,
+      "cases_disposed": 1150,
+      "hearings_listed": 2500,
+      "hearings_adjourned": 775,
+      "cases_pending_over_3y": 3050,
+      "cases_pending_over_5y": 910,
+      "cases_pending_end": 10200,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10200,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.00990099009901,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.92,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.31,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.29901960784313725,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.0892156862745098,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-02",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-03",
+      "period": "monthly",
+      "cases_pending_start": 10200,
+      "cases_instituted": 1300,
+      "cases_disposed": 1200,
+      "hearings_listed": 2600,
+      "hearings_adjourned": 780,
+      "cases_pending_over_3y": 3100,
+      "cases_pending_over_5y": 920,
+      "cases_pending_end": 10300,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10300,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0098039215686274,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9230769230769231,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.30097087378640774,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08932038834951456,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-03",
+      "period": "rolling_3m",
+      "cases_pending_start": 10000,
+      "cases_pending_end": 10300,
+      "cases_instituted": 3750,
+      "cases_disposed": 3450,
+      "hearings_listed": 7500,
+      "hearings_adjourned": 2355,
+      "cases_pending_over_3y": 3100,
+      "cases_pending_over_5y": 920,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10300,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.03,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.92,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.314,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.30097087378640774,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08932038834951456,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-04",
+      "period": "monthly",
+      "cases_pending_start": 10300,
+      "cases_instituted": 1280,
+      "cases_disposed": 1210,
+      "hearings_listed": 2550,
+      "hearings_adjourned": 760,
+      "cases_pending_over_3y": 3150,
+      "cases_pending_over_5y": 930,
+      "cases_pending_end": 10370,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10370,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0067961165048545,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9453125,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2980392156862745,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3037608486017358,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08968177434908389,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-04",
+      "period": "rolling_3m",
+      "cases_pending_start": 10100,
+      "cases_pending_end": 10370,
+      "cases_instituted": 3830,
+      "cases_disposed": 3560,
+      "hearings_listed": 7650,
+      "hearings_adjourned": 2315,
+      "cases_pending_over_3y": 3150,
+      "cases_pending_over_5y": 930,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10370,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0267326732673268,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9295039164490861,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.3026143790849673,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3037608486017358,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08968177434908389,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-05",
+      "period": "monthly",
+      "cases_pending_start": 10370,
+      "cases_instituted": 1350,
+      "cases_disposed": 1240,
+      "hearings_listed": 2700,
+      "hearings_adjourned": 810,
+      "cases_pending_over_3y": 3200,
+      "cases_pending_over_5y": 940,
+      "cases_pending_end": 10480,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10480,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0106075216972035,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9185185185185185,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3053435114503817,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08969465648854962,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-05",
+      "period": "rolling_3m",
+      "cases_pending_start": 10200,
+      "cases_pending_end": 10480,
+      "cases_instituted": 3930,
+      "cases_disposed": 3650,
+      "hearings_listed": 7850,
+      "hearings_adjourned": 2350,
+      "cases_pending_over_3y": 3200,
+      "cases_pending_over_5y": 940,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10480,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0274509803921568,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9287531806615776,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.29936305732484075,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3053435114503817,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08969465648854962,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-06",
+      "period": "monthly",
+      "cases_pending_start": 10480,
+      "cases_instituted": 1400,
+      "cases_disposed": 1300,
+      "hearings_listed": 2800,
+      "hearings_adjourned": 840,
+      "cases_pending_over_3y": 3250,
+      "cases_pending_over_5y": 950,
+      "cases_pending_end": 10580,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10580,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0095419847328244,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9285714285714286,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.30718336483931946,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08979206049149338,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-06",
+      "period": "rolling_3m",
+      "cases_pending_start": 10300,
+      "cases_pending_end": 10580,
+      "cases_instituted": 4030,
+      "cases_disposed": 3750,
+      "hearings_listed": 8050,
+      "hearings_adjourned": 2410,
+      "cases_pending_over_3y": 3250,
+      "cases_pending_over_5y": 950,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 10580,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0271844660194174,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9305210918114144,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.2993788819875776,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.30718336483931946,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08979206049149338,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-01",
+      "period": "monthly",
+      "cases_pending_start": 7200,
+      "cases_instituted": 1500,
+      "cases_disposed": 1350,
+      "hearings_listed": 3000,
+      "hearings_adjourned": 900,
+      "cases_pending_over_3y": 2100,
+      "cases_pending_over_5y": 650,
+      "cases_pending_end": 7350,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 7350,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0208333333333333,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2857142857142857,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08843537414965986,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-01",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-02",
+      "period": "monthly",
+      "cases_pending_start": 7350,
+      "cases_instituted": 1550,
+      "cases_disposed": 1400,
+      "hearings_listed": 3100,
+      "hearings_adjourned": 930,
+      "cases_pending_over_3y": 2150,
+      "cases_pending_over_5y": 660,
+      "cases_pending_end": 7500,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 7500,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0204081632653061,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9032258064516129,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2866666666666667,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.088,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-02",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-03",
+      "period": "monthly",
+      "cases_pending_start": 7500,
+      "cases_instituted": 1600,
+      "cases_disposed": 1450,
+      "hearings_listed": 3200,
+      "hearings_adjourned": 960,
+      "cases_pending_over_3y": 2200,
+      "cases_pending_over_5y": 670,
+      "cases_pending_end": 7650,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 7650,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.02,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.90625,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2875816993464052,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08758169934640522,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-03",
+      "period": "rolling_3m",
+      "cases_pending_start": 7200,
+      "cases_pending_end": 7650,
+      "cases_instituted": 4650,
+      "cases_disposed": 4200,
+      "hearings_listed": 9300,
+      "hearings_adjourned": 2790,
+      "cases_pending_over_3y": 2200,
+      "cases_pending_over_5y": 670,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 7650,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0625,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9032258064516129,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2875816993464052,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08758169934640522,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-04",
+      "period": "monthly",
+      "cases_pending_start": 7650,
+      "cases_instituted": 1650,
+      "cases_disposed": 1500,
+      "hearings_listed": 3300,
+      "hearings_adjourned": 990,
+      "cases_pending_over_3y": 2250,
+      "cases_pending_over_5y": 680,
+      "cases_pending_end": 7800,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 7800,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0196078431372548,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9090909090909091,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.28846153846153844,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08717948717948718,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-04",
+      "period": "rolling_3m",
+      "cases_pending_start": 7350,
+      "cases_pending_end": 7800,
+      "cases_instituted": 4800,
+      "cases_disposed": 4350,
+      "hearings_listed": 9600,
+      "hearings_adjourned": 2880,
+      "cases_pending_over_3y": 2250,
+      "cases_pending_over_5y": 680,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 7800,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0612244897959184,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.90625,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.28846153846153844,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08717948717948718,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-05",
+      "period": "monthly",
+      "cases_pending_start": 7800,
+      "cases_instituted": 1700,
+      "cases_disposed": 1550,
+      "hearings_listed": 3400,
+      "hearings_adjourned": 1020,
+      "cases_pending_over_3y": 2300,
+      "cases_pending_over_5y": 690,
+      "cases_pending_end": 7950,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 7950,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0192307692307692,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9117647058823529,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2893081761006289,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08679245283018867,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-05",
+      "period": "rolling_3m",
+      "cases_pending_start": 7500,
+      "cases_pending_end": 7950,
+      "cases_instituted": 4950,
+      "cases_disposed": 4500,
+      "hearings_listed": 9900,
+      "hearings_adjourned": 2970,
+      "cases_pending_over_3y": 2300,
+      "cases_pending_over_5y": 690,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 7950,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.06,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9090909090909091,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.2893081761006289,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08679245283018867,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-06",
+      "period": "monthly",
+      "cases_pending_start": 7950,
+      "cases_instituted": 1750,
+      "cases_disposed": 1600,
+      "hearings_listed": 3500,
+      "hearings_adjourned": 1050,
+      "cases_pending_over_3y": 2350,
+      "cases_pending_over_5y": 700,
+      "cases_pending_end": 8100,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8100,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0188679245283019,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9142857142857143,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.29012345679012347,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08641975308641975,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-06",
+      "period": "rolling_3m",
+      "cases_pending_start": 7650,
+      "cases_pending_end": 8100,
+      "cases_instituted": 5100,
+      "cases_disposed": 4650,
+      "hearings_listed": 10200,
+      "hearings_adjourned": 3060,
+      "cases_pending_over_3y": 2350,
+      "cases_pending_over_5y": 700,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8100,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0588235294117647,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9117647058823529,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.3,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.29012345679012347,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08641975308641975,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-01",
+      "period": "monthly",
+      "cases_pending_start": 8100,
+      "cases_instituted": 900,
+      "cases_disposed": 850,
+      "hearings_listed": 1800,
+      "hearings_adjourned": 500,
+      "cases_pending_over_3y": 2600,
+      "cases_pending_over_5y": 700,
+      "cases_pending_end": 8150,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8150,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0061728395061729,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9444444444444444,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2777777777777778,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.31901840490797545,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08588957055214724,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-01",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-02",
+      "period": "monthly",
+      "cases_pending_start": 8150,
+      "cases_instituted": 950,
+      "cases_disposed": 900,
+      "hearings_listed": 1900,
+      "hearings_adjourned": 520,
+      "cases_pending_over_3y": 2650,
+      "cases_pending_over_5y": 710,
+      "cases_pending_end": 8200,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8200,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0061349693251533,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9473684210526315,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2736842105263158,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3231707317073171,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08658536585365853,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-02",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-03",
+      "period": "monthly",
+      "cases_pending_start": 8200,
+      "cases_instituted": 1000,
+      "cases_disposed": 930,
+      "hearings_listed": 2000,
+      "hearings_adjourned": 550,
+      "cases_pending_over_3y": 2700,
+      "cases_pending_over_5y": 720,
+      "cases_pending_end": 8270,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8270,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0085365853658537,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.93,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.275,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3264812575574365,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08706166868198308,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-03",
+      "period": "rolling_3m",
+      "cases_pending_start": 8100,
+      "cases_pending_end": 8270,
+      "cases_instituted": 2850,
+      "cases_disposed": 2680,
+      "hearings_listed": 5700,
+      "hearings_adjourned": 1570,
+      "cases_pending_over_3y": 2700,
+      "cases_pending_over_5y": 720,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8270,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0209876543209877,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9403508771929825,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.2754385964912281,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3264812575574365,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08706166868198308,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-04",
+      "period": "monthly",
+      "cases_pending_start": 8270,
+      "cases_instituted": 980,
+      "cases_disposed": 950,
+      "hearings_listed": 1950,
+      "hearings_adjourned": 535,
+      "cases_pending_over_3y": 2750,
+      "cases_pending_over_5y": 730,
+      "cases_pending_end": 8300,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8300,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.003627569528416,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9693877551020408,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2743589743589744,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3313253012048193,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08795180722891566,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-04",
+      "period": "rolling_3m",
+      "cases_pending_start": 8150,
+      "cases_pending_end": 8300,
+      "cases_instituted": 2930,
+      "cases_disposed": 2780,
+      "hearings_listed": 5850,
+      "hearings_adjourned": 1605,
+      "cases_pending_over_3y": 2750,
+      "cases_pending_over_5y": 730,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8300,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.01840490797546,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9488054607508533,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.2743589743589744,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3313253012048193,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08795180722891566,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-05",
+      "period": "monthly",
+      "cases_pending_start": 8300,
+      "cases_instituted": 1050,
+      "cases_disposed": 980,
+      "hearings_listed": 2100,
+      "hearings_adjourned": 580,
+      "cases_pending_over_3y": 2800,
+      "cases_pending_over_5y": 740,
+      "cases_pending_end": 8370,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8370,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.008433734939759,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9333333333333333,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2761904761904762,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3345280764635603,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.0884109916367981,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-05",
+      "period": "rolling_3m",
+      "cases_pending_start": 8200,
+      "cases_pending_end": 8370,
+      "cases_instituted": 3030,
+      "cases_disposed": 2860,
+      "hearings_listed": 6050,
+      "hearings_adjourned": 1665,
+      "cases_pending_over_3y": 2800,
+      "cases_pending_over_5y": 740,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8370,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0207317073170732,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9438943894389439,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.27520661157024795,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3345280764635603,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.0884109916367981,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-06",
+      "period": "monthly",
+      "cases_pending_start": 8370,
+      "cases_instituted": 1100,
+      "cases_disposed": 1030,
+      "hearings_listed": 2200,
+      "hearings_adjourned": 600,
+      "cases_pending_over_3y": 2850,
+      "cases_pending_over_5y": 750,
+      "cases_pending_end": 8440,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8440,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.008363201911589,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9363636363636364,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2727272727272727,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.33767772511848343,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08886255924170616,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Civil",
+      "month": "2024-06",
+      "period": "rolling_3m",
+      "cases_pending_start": 8270,
+      "cases_pending_end": 8440,
+      "cases_instituted": 3130,
+      "cases_disposed": 2960,
+      "hearings_listed": 6250,
+      "hearings_adjourned": 1715,
+      "cases_pending_over_3y": 2850,
+      "cases_pending_over_5y": 750,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 8440,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0205562273276905,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9456869009584664,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.2744,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.33767772511848343,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08886255924170616,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-01",
+      "period": "monthly",
+      "cases_pending_start": 5400,
+      "cases_instituted": 1300,
+      "cases_disposed": 1200,
+      "hearings_listed": 2600,
+      "hearings_adjourned": 700,
+      "cases_pending_over_3y": 1800,
+      "cases_pending_over_5y": 500,
+      "cases_pending_end": 5500,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 5500,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0185185185185186,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9230769230769231,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2692307692307692,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.32727272727272727,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09090909090909091,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-01",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-02",
+      "period": "monthly",
+      "cases_pending_start": 5500,
+      "cases_instituted": 1350,
+      "cases_disposed": 1250,
+      "hearings_listed": 2700,
+      "hearings_adjourned": 720,
+      "cases_pending_over_3y": 1850,
+      "cases_pending_over_5y": 510,
+      "cases_pending_end": 5600,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 5600,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.018181818181818,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9259259259259259,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.26666666666666666,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.33035714285714285,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09107142857142857,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-02",
+      "period": "rolling_3m",
+      "metrics": {
+        "cases_pending_end": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "pendency_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "clearance_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "adjournment_rate": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_3y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        },
+        "share_pending_over_5y": {
+          "value": null,
+          "method": "Calendar rolling 3-month ratio of aggregate totals; incomplete window (all 3 calendar months required)"
+        }
+      },
+      "method_note": "Incomplete calendar window; no interpolation"
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-03",
+      "period": "monthly",
+      "cases_pending_start": 5600,
+      "cases_instituted": 1400,
+      "cases_disposed": 1300,
+      "hearings_listed": 2800,
+      "hearings_adjourned": 750,
+      "cases_pending_over_3y": 1900,
+      "cases_pending_over_5y": 520,
+      "cases_pending_end": 5700,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 5700,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0178571428571428,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9285714285714286,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.26785714285714285,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3333333333333333,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.0912280701754386,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-03",
+      "period": "rolling_3m",
+      "cases_pending_start": 5400,
+      "cases_pending_end": 5700,
+      "cases_instituted": 4050,
+      "cases_disposed": 3750,
+      "hearings_listed": 8100,
+      "hearings_adjourned": 2170,
+      "cases_pending_over_3y": 1900,
+      "cases_pending_over_5y": 520,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 5700,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0555555555555556,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9259259259259259,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.2679012345679012,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3333333333333333,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.0912280701754386,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-04",
+      "period": "monthly",
+      "cases_pending_start": 5700,
+      "cases_instituted": 1450,
+      "cases_disposed": 1350,
+      "hearings_listed": 2900,
+      "hearings_adjourned": 780,
+      "cases_pending_over_3y": 1950,
+      "cases_pending_over_5y": 530,
+      "cases_pending_end": 5800,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 5800,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0175438596491229,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9310344827586207,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2689655172413793,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.33620689655172414,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09137931034482759,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-04",
+      "period": "rolling_3m",
+      "cases_pending_start": 5500,
+      "cases_pending_end": 5800,
+      "cases_instituted": 4200,
+      "cases_disposed": 3900,
+      "hearings_listed": 8400,
+      "hearings_adjourned": 2250,
+      "cases_pending_over_3y": 1950,
+      "cases_pending_over_5y": 530,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 5800,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0545454545454545,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9285714285714286,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.26785714285714285,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.33620689655172414,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09137931034482759,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-05",
+      "period": "monthly",
+      "cases_pending_start": 5800,
+      "cases_instituted": 1500,
+      "cases_disposed": 1400,
+      "hearings_listed": 3000,
+      "hearings_adjourned": 810,
+      "cases_pending_over_3y": 2000,
+      "cases_pending_over_5y": 540,
+      "cases_pending_end": 5900,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 5900,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0172413793103448,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9333333333333333,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.27,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3389830508474576,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09152542372881356,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-05",
+      "period": "rolling_3m",
+      "cases_pending_start": 5600,
+      "cases_pending_end": 5900,
+      "cases_instituted": 4350,
+      "cases_disposed": 4050,
+      "hearings_listed": 8700,
+      "hearings_adjourned": 2340,
+      "cases_pending_over_3y": 2000,
+      "cases_pending_over_5y": 540,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 5900,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0535714285714286,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9310344827586207,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.2689655172413793,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3389830508474576,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09152542372881356,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-06",
+      "period": "monthly",
+      "cases_pending_start": 5900,
+      "cases_instituted": 1550,
+      "cases_disposed": 1450,
+      "hearings_listed": 3100,
+      "hearings_adjourned": 840,
+      "cases_pending_over_3y": 2050,
+      "cases_pending_over_5y": 550,
+      "cases_pending_end": 6000,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 6000,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0169491525423728,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9354838709677419,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2709677419354839,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3416666666666667,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09166666666666666,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "district": "Pune",
+      "court_type": "District Court",
+      "case_category": "Criminal",
+      "month": "2024-06",
+      "period": "rolling_3m",
+      "cases_pending_start": 5700,
+      "cases_pending_end": 6000,
+      "cases_instituted": 4500,
+      "cases_disposed": 4200,
+      "hearings_listed": 9000,
+      "hearings_adjourned": 2430,
+      "cases_pending_over_3y": 2050,
+      "cases_pending_over_5y": 550,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 6000,
+          "method": "Ending stock from final month; stock is not summed"
+        },
+        "pendency_rate": {
+          "value": 1.0526315789473684,
+          "method": "Final month ending pending ÷ first month opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9333333333333333,
+          "method": "Three-month disposed total ÷ three-month instituted total"
+        },
+        "adjournment_rate": {
+          "value": 0.27,
+          "method": "Three-month adjourned total ÷ three-month listed total"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3416666666666667,
+          "method": "Final month over-three-year snapshot ÷ final month ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.09166666666666666,
+          "method": "Final month over-five-year snapshot ÷ final month ending pending"
+        }
+      }
+    }
+  ]
+}

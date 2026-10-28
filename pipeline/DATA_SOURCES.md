@@ -1,0 +1,47 @@
+# Data sources and provenance
+
+The committed files are entirely synthetic. The links below are research starting points, not sources used to create the checked-in CSVs. No source has been scraped or downloaded by this project. Before adding a real file, manually download it, review its current terms, record its provenance in `pipeline/sources.csv`, and note its definitions and coverage. No values should be inferred from these pointers.
+
+## 1. Official court data
+
+| Source | Provides | Access | Specific limitation |
+|---|---|---|---|
+| [National Judicial Data Grid (NJDG)](https://njdg.ecourts.gov.in/) | Aggregate case institution, disposal, pendency, and age snapshots across participating courts | Manual download | Dashboards, refresh dates, definitions, and historical coverage can vary by court and measure. |
+| [eCourts Services](https://ecourts.gov.in/) | Court services, case status, and links to court systems | Manual download | A service portal; comparable bulk historical aggregates may not be available for every court. Do not collect person-level records. |
+| [Supreme Court of India](https://www.sci.gov.in/) | Court annual reports, statistics, and administrative publications | Manual download | Publication periods and definitions may differ from NJDG and other courts. |
+| [High Court reports - Allahabad High Court (example)](https://allahabadhighcourt.in/) | Example High Court annual reports and administrative statistics | Manual download | One High Court is not representative of other High Courts; report metrics may not align across years. Check each court's own publication. |
+
+## 2. Government statistics and justice context
+
+| Source | Provides | Access | Specific limitation |
+|---|---|---|---|
+| [NCRB Crime in India](https://www.ncrb.mha.gov.in/crime-in-india.html) | Official crime and police statistics by reporting year and category | Manual download | Definitions and categories can change; IPC/BNS transition requires a documented mapping and comparability treatment. |
+| [NCRB Prison Statistics India](https://www.ncrb.mha.gov.in/prison-statistics-india.html) | Prison population, occupancy, and related annual statistics | Manual download | Annual snapshots and administrative definitions do not directly match court case cohorts. |
+| [National Legal Services Authority (NALSA)](https://nalsa.gov.in/) | Legal aid, lok adalat, and access-to-justice reports | Manual download | Program reach and reporting units differ from court case-flow counts. |
+| [Parliament questions and answers - Sansad](https://sansad.in/) | Published answers, reports, and government statements | Manual download | Responses may be one-off, use varying periods, and require careful source-page citation. |
+| [Open Government Data Platform - data.gov.in](https://www.data.gov.in/) | Government datasets and metadata | Manual download | Dataset licences, completeness, refresh cadence, and column meanings must be checked individually. |
+
+## 3. Research and civil-society publications
+
+| Source | Provides | Access | Specific limitation |
+|---|---|---|---|
+| [India Justice Report](https://indiajusticereport.org/) | Comparative justice-system capacity and state-level indicators | Manual download | Composite indicators and publication rounds have their own methods; not a direct administrative case-flow series. |
+| [Vidhi Centre for Legal Policy](https://vidhilegalpolicy.in/) | Legal policy research, datasets, and analysis | Manual download | Project-specific scope and sampling; read the underlying report methodology before comparison. |
+| [Centre for Policy Research (CPR)](https://cprindia.org/) | Policy research and analysis | Manual download | Publications vary in topic, period, and method; not a harmonized court dataset. |
+| [Common Cause](https://commoncause.in/) | Governance and justice-sector research | Manual download | Study-specific methods and dates; check whether data can be compared with administrative records. |
+| [Law Commission of India](https://lawcommissionofindia.nic.in/) | Reports and legal reform recommendations | Manual download | Reports are issue-specific and do not necessarily contain regularly updated statistics. |
+
+## 4. Optional contextual indicators
+
+| Source | Provides | Access | Specific limitation |
+|---|---|---|---|
+| [Census of India](https://censusindia.gov.in/) | Official population and census tables | Manual download | Census reference years are infrequent; population denominators may not match court-report periods or boundaries. |
+| [Department of Justice vacancy dashboard](https://www.dashboard.doj.gov.in/vacancy/) | Judge sanctioned strength, working strength, and vacancies | Manual download | Snapshot dates and court-level granularity vary; vacancies are descriptive context, not causal evidence. |
+| [Union Budget of India](https://www.indiabudget.gov.in/) | Union ministry and program budget documents | Manual download | Allocations and spending are not necessarily available at district/court level or aligned to the court reporting period. |
+| [State budget documents](https://www.indiabudget.gov.in/) | Starting point for official state finance portals and budget documents | Manual download | There is no single harmonized state budget series here; classification, scope, and district detail vary by state. |
+
+Optional context columns are `population`, `judge_strength`, and `budget`. They must be documented in the provenance registry and joined only on `(state, district)`. The pipeline derives pending per lakh from population; it does not treat context as a cause of case outcomes.
+
+## Crime-series boundary
+
+This project includes no crime time series. India transitioned from the Indian Penal Code (IPC) to the Bharatiya Nyaya Sanhita (BNS) from July 2024. Any future crime comparison must document a defensible IPC-to-BNS category crosswalk and a break in comparability before inclusion. NCRB's [Sankalan portal](https://www.ncrb.mha.gov.in/uploads/SankalanPortal/Index.html) provides official correspondence material; this project does not apply it.

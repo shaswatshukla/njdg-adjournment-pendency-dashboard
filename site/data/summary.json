@@ -1,0 +1,269 @@
+{
+  "coverage": {
+    "start": "2024-01",
+    "end": "2024-06",
+    "months": 6
+  },
+  "latest_month": "2024-06",
+  "latest_totals": {
+    "month": "2024-06",
+    "cases_pending_start": 32700,
+    "cases_instituted": 5800,
+    "cases_disposed": 5380,
+    "hearings_listed": 11600,
+    "hearings_adjourned": 3330,
+    "cases_pending_over_3y": 10500,
+    "cases_pending_over_5y": 2950,
+    "cases_pending_end": 33120,
+    "metrics": {
+      "cases_pending_end": {
+        "value": 33120,
+        "method": "Opening pending + instituted − disposed"
+      },
+      "pendency_rate": {
+        "value": 1.0128440366972478,
+        "method": "Ending pending ÷ opening pending"
+      },
+      "clearance_rate": {
+        "value": 0.9275862068965517,
+        "method": "Disposed ÷ instituted"
+      },
+      "adjournment_rate": {
+        "value": 0.28706896551724137,
+        "method": "Adjourned ÷ listed"
+      },
+      "share_pending_over_3y": {
+        "value": 0.3170289855072464,
+        "method": "Pending over 3 years ÷ ending pending"
+      },
+      "share_pending_over_5y": {
+        "value": 0.08907004830917874,
+        "method": "Pending over 5 years ÷ ending pending"
+      }
+    }
+  },
+  "time_series": [
+    {
+      "month": "2024-01",
+      "cases_pending_start": 30700,
+      "cases_instituted": 4900,
+      "cases_disposed": 4500,
+      "hearings_listed": 9800,
+      "hearings_adjourned": 2900,
+      "cases_pending_over_3y": 9500,
+      "cases_pending_over_5y": 2750,
+      "cases_pending_end": 31100,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 31100,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.013029315960912,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9183673469387755,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.29591836734693877,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3054662379421222,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08842443729903537,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "month": "2024-02",
+      "cases_pending_start": 31100,
+      "cases_instituted": 5100,
+      "cases_disposed": 4700,
+      "hearings_listed": 10200,
+      "hearings_adjourned": 2945,
+      "cases_pending_over_3y": 9700,
+      "cases_pending_over_5y": 2790,
+      "cases_pending_end": 31500,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 31500,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0128617363344052,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9215686274509803,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2887254901960784,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.30793650793650795,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08857142857142856,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "month": "2024-03",
+      "cases_pending_start": 31500,
+      "cases_instituted": 5300,
+      "cases_disposed": 4880,
+      "hearings_listed": 10600,
+      "hearings_adjourned": 3040,
+      "cases_pending_over_3y": 9900,
+      "cases_pending_over_5y": 2830,
+      "cases_pending_end": 31920,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 31920,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0133333333333334,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9207547169811321,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.28679245283018867,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3101503759398496,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08865914786967419,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "month": "2024-04",
+      "cases_pending_start": 31920,
+      "cases_instituted": 5360,
+      "cases_disposed": 5010,
+      "hearings_listed": 10700,
+      "hearings_adjourned": 3065,
+      "cases_pending_over_3y": 10100,
+      "cases_pending_over_5y": 2870,
+      "cases_pending_end": 32270,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 32270,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0109649122807018,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9347014925373134,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2864485981308411,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3129841958475364,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08893709327548807,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "month": "2024-05",
+      "cases_pending_start": 32270,
+      "cases_instituted": 5600,
+      "cases_disposed": 5170,
+      "hearings_listed": 11200,
+      "hearings_adjourned": 3220,
+      "cases_pending_over_3y": 10300,
+      "cases_pending_over_5y": 2910,
+      "cases_pending_end": 32700,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 32700,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.013325069724202,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9232142857142858,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.2875,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3149847094801223,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.0889908256880734,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    },
+    {
+      "month": "2024-06",
+      "cases_pending_start": 32700,
+      "cases_instituted": 5800,
+      "cases_disposed": 5380,
+      "hearings_listed": 11600,
+      "hearings_adjourned": 3330,
+      "cases_pending_over_3y": 10500,
+      "cases_pending_over_5y": 2950,
+      "cases_pending_end": 33120,
+      "metrics": {
+        "cases_pending_end": {
+          "value": 33120,
+          "method": "Opening pending + instituted − disposed"
+        },
+        "pendency_rate": {
+          "value": 1.0128440366972478,
+          "method": "Ending pending ÷ opening pending"
+        },
+        "clearance_rate": {
+          "value": 0.9275862068965517,
+          "method": "Disposed ÷ instituted"
+        },
+        "adjournment_rate": {
+          "value": 0.28706896551724137,
+          "method": "Adjourned ÷ listed"
+        },
+        "share_pending_over_3y": {
+          "value": 0.3170289855072464,
+          "method": "Pending over 3 years ÷ ending pending"
+        },
+        "share_pending_over_5y": {
+          "value": 0.08907004830917874,
+          "method": "Pending over 5 years ÷ ending pending"
+        }
+      }
+    }
+  ]
+}

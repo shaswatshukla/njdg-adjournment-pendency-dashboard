@@ -1,0 +1,25 @@
+state,district,court_type,case_category,month,cases_pending_start,cases_instituted,cases_disposed,hearings_listed,hearings_adjourned,cases_pending_over_3y,cases_pending_over_5y
+Karnataka,Bengaluru Urban,District Court,Civil,2024-01,10000,1200,1100,2400,800,3000,900
+Karnataka,Bengaluru Urban,District Court,Civil,2024-02,10100,1250,1150,2500,775,3050,910
+Karnataka,Bengaluru Urban,District Court,Civil,2024-03,10200,1300,1200,2600,780,3100,920
+Karnataka,Bengaluru Urban,District Court,Civil,2024-04,10300,1280,1210,2550,760,3150,930
+Karnataka,Bengaluru Urban,District Court,Civil,2024-05,10370,1350,1240,2700,810,3200,940
+Karnataka,Bengaluru Urban,District Court,Civil,2024-06,10480,1400,1300,2800,840,3250,950
+Karnataka,Bengaluru Urban,District Court,Criminal,2024-01,7200,1500,1350,3000,900,2100,650
+Karnataka,Bengaluru Urban,District Court,Criminal,2024-02,7350,1550,1400,3100,930,2150,660
+Karnataka,Bengaluru Urban,District Court,Criminal,2024-03,7500,1600,1450,3200,960,2200,670
+Karnataka,Bengaluru Urban,District Court,Criminal,2024-04,7650,1650,1500,3300,990,2250,680
+Karnataka,Bengaluru Urban,District Court,Criminal,2024-05,7800,1700,1550,3400,1020,2300,690
+Karnataka,Bengaluru Urban,District Court,Criminal,2024-06,7950,1750,1600,3500,1050,2350,700
+Maharashtra,Pune,District Court,Civil,2024-01,8100,900,850,1800,500,2600,700
+Maharashtra,Pune,District Court,Civil,2024-02,8150,950,900,1900,520,2650,710
+Maharashtra,Pune,District Court,Civil,2024-03,8200,1000,930,2000,550,2700,720
+Maharashtra,Pune,District Court,Civil,2024-04,8270,980,950,1950,535,2750,730
+Maharashtra,Pune,District Court,Civil,2024-05,8300,1050,980,2100,580,2800,740
+Maharashtra,Pune,District Court,Civil,2024-06,8370,1100,1030,2200,600,2850,750
+Maharashtra,Pune,District Court,Criminal,2024-01,5400,1300,1200,2600,700,1800,500
+Maharashtra,Pune,District Court,Criminal,2024-02,5500,1350,1250,2700,720,1850,510
+Maharashtra,Pune,District Court,Criminal,2024-03,5600,1400,1300,2800,750,1900,520
+Maharashtra,Pune,District Court,Criminal,2024-04,5700,1450,1350,2900,780,1950,530
+Maharashtra,Pune,District Court,Criminal,2024-05,5800,1500,1400,3000,810,2000,540
+Maharashtra,Pune,District Court,Criminal,2024-06,5900,1550,1450,3100,840,2050,550
