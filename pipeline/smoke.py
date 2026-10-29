@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 EXPECTED = ("summary.json", "by_state.json", "by_district.json", "by_court_type.json",
-            "by_category.json", "meta.json")
+            "by_category.json", "meta.json", "official_snapshot.json", "refresh_status.json")
 
 
 def check_json(data_dir: Path) -> None:
@@ -25,7 +25,9 @@ def main() -> int:
     result = build()
     data_dir = ROOT / "site" / "data"
     check_json(data_dir)
-    print(f"Smoke check passed: {len(EXPECTED)} JSON files parsed; {result['records_loaded']} rows loaded.")
+    official = json.loads((data_dir / "official_snapshot.json").read_text(encoding="utf-8"))
+    official_label = f"{len(official['records'])} official reporting units" if official.get("available") else "no official snapshot"
+    print(f"Smoke check passed: {len(EXPECTED)} JSON files parsed; {result['records_loaded']} demo rows; {official_label}.")
     return 0
 
 

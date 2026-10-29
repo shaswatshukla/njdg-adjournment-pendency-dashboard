@@ -12,8 +12,10 @@ import pandas as pd
 
 try:  # package import for tests; script import for `python pipeline/build.py`
     from .metrics import build_views, calculate_metrics
+    from .snapshot import SnapshotError, validate_snapshot
 except ImportError:
     from metrics import build_views, calculate_metrics
+    from snapshot import SnapshotError, validate_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
 PIPELINE = ROOT / "pipeline"
@@ -25,6 +27,7 @@ KEY = REQUIRED[:5]
 SOURCES_REQUIRED = ["file_name", "source_name", "source_url", "download_date", "licence",
                     "coverage_start", "coverage_end", "notes"]
 PRIVACY = re.compile(r"name|phone|aadhaar|address|party|accused", re.I)
+REFRESH_STATUSES = {"verified_snapshot", "no_change", "updated", "needs_review", "error"}
 
 
 class BuildError(RuntimeError):
@@ -137,6 +140,31 @@ def _dump(path: Path, obj: Any) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2, default=_json_default, allow_nan=False), encoding="utf-8")
 
 
+def _refresh_status() -> dict[str, Any]:
+    path = PIPELINE / "refresh_status.json"
+    if not path.is_file():
+        raise BuildError("Missing pipeline/refresh_status.json")
+    try:
+        status = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        raise BuildError("Invalid pipeline/refresh_status.json") from exc
+    required = {"last_checked_at_utc", "status", "data_as_of", "sources", "note"}
+    if not required.issubset(status):
+        raise BuildError("Refresh status is missing required fields")
+    try:
+        checked = datetime.fromisoformat(str(status["last_checked_at_utc"]).replace("Z", "+00:00"))
+    except ValueError as exc:
+        raise BuildError("last_checked_at_utc must be an ISO 8601 UTC timestamp") from exc
+    if checked.tzinfo is None or checked.utcoffset() is None or checked.utcoffset().total_seconds() != 0:
+        raise BuildError("last_checked_at_utc must use UTC")
+    data_as_of = str(status["data_as_of"])
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", data_as_of) or pd.isna(pd.to_datetime(data_as_of, format="%Y-%m-%d", errors="coerce")):
+        raise BuildError("Refresh data_as_of must be a valid YYYY-MM-DD date")
+    if status["status"] not in REFRESH_STATUSES or not isinstance(status["sources"], list) or not status["sources"] or not all(isinstance(x, str) and x.startswith("https://") for x in status["sources"]) or not str(status["note"]).strip():
+        raise BuildError("Refresh status fields are invalid")
+    return status
+
+
 def build() -> dict[str, Any]:
     rejects: list[dict[str, Any]] = []
     sources = _provenance()
@@ -145,6 +173,15 @@ def build() -> dict[str, Any]:
     inputs = []
     context_frames = []
     raw_root = PIPELINE / "raw"
+    controls_path = PIPELINE / "official_snapshot_controls.json"
+    if not controls_path.is_file():
+        raise BuildError("Missing official_snapshot_controls.json")
+    try:
+        official_controls = json.loads(controls_path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        raise BuildError("Invalid official_snapshot_controls.json") from exc
+    refresh_status = _refresh_status()
+    official_files = []
     present_files = {p.relative_to(raw_root).as_posix() for p in raw_root.rglob("*.csv")}
     registered = set(sources.file_name)
     for filename in sorted(present_files - registered):
@@ -169,6 +206,9 @@ def build() -> dict[str, Any]:
                 if len(c): context_frames.append(c)
             except Exception:
                 rejects.append({"source_file": filename, "row_number": "", "reason": "Unreadable context CSV"})
+            continue
+        if "official" in Path(filename).parts:
+            official_files.append(filename)
             continue
         loaded = _load_file(path, rejects)
         if not loaded.empty: inputs.append(loaded)
@@ -198,6 +238,32 @@ def build() -> dict[str, Any]:
                     if vals.isna().any() or (vals < 0).any() or not vals.map(math.isfinite).all():
                         rejects.append({"source_file": "context", "row_number": "", "reason": f"Invalid context value: {col}"})
                     context[col] = vals
+    official_snapshot: dict[str, Any] = {"available": False, "data_as_of": None, "records": [],
+                                         "note": "No verified official snapshot is registered."}
+    configured_official = official_controls.get("source_file")
+    if official_files:
+        if len(official_files) != 1 or official_files[0] != configured_official:
+            rejects.append({"source_file": "official", "row_number": "", "reason": "Exactly the controls-manifest official source_file must be registered"})
+        else:
+            filename = official_files[0]
+            provenance = source_map[filename]._asdict()
+            source_path = raw_root / Path(filename)
+            try:
+                if provenance["source_url"] != official_controls.get("source_url"):
+                    raise SnapshotError("Official source URL differs from controls manifest")
+                official_snapshot = validate_snapshot(source_path, provenance, official_controls)
+                official_snapshot["available"] = True
+                if refresh_status["data_as_of"] != official_snapshot["data_as_of"]:
+                    raise SnapshotError("Refresh status data_as_of differs from the last verified snapshot")
+                if official_snapshot["source"]["source_url"] not in refresh_status["sources"]:
+                    raise SnapshotError("Refresh status sources do not include the active official source URL")
+            except SnapshotError as exc:
+                rejects.extend(exc.rejections or [{"source_file": filename, "row_number": "", "reason": str(exc)}])
+    elif configured_official in registered:
+        # The registry-to-filesystem mismatch is already recorded above; keep a safe file-level reason.
+        pass
+    if refresh_status["data_as_of"] != official_controls.get("data_as_of"):
+        rejects.append({"source_file": "pipeline/refresh_status.json", "row_number": "", "reason": "Refresh status data_as_of differs from controls manifest"})
     _write_rejections(rejects)
     if rejects:
         raise BuildError(f"Build stopped: {len(rejects)} rejected data/provenance issue(s). See output/rejected_rows.csv")
@@ -219,12 +285,15 @@ def build() -> dict[str, Any]:
     coverage = {"start": str(data.month.min()), "end": str(data.month.max()), "months": int(data.month.nunique())}
     _dump(site_data / "summary.json", {"coverage": coverage, "latest_month": latest["month"],
                                       "latest_totals": latest, "time_series": summary})
+    demo_sources = sources[~sources.file_name.str.startswith("official/")]
     meta = {"generated_at_utc": datetime.now(timezone.utc).isoformat(), "schema_version":"1.0",
-            "records_loaded":int(len(data)), "rejected_rows":0, "source_files":list(sources.file_name),
-            "sources":sources.to_dict("records"), "coverage_start":str(data.month.min()),
-            "coverage_end":str(data.month.max()), "synthetic_demo":any("SYNTHETIC" in f for f in sources.file_name),
+            "records_loaded":int(len(data)), "rejected_rows":0, "source_files":list(demo_sources.file_name),
+            "sources":demo_sources.to_dict("records"), "coverage_start":str(data.month.min()),
+            "coverage_end":str(data.month.max()), "synthetic_demo":True,
             "method_note":"Rolling rates use ratios of aggregate flows and opening/final stock. Missing calendar months make a rolling window unavailable."}
     _dump(site_data / "meta.json", meta)
+    _dump(site_data / "official_snapshot.json", official_snapshot)
+    _dump(site_data / "refresh_status.json", refresh_status)
     # Require every expected artifact and parse it before declaring success.
     try:
         from .smoke import check_json
@@ -240,7 +309,10 @@ def build() -> dict[str, Any]:
 if __name__ == "__main__":
     try:
         result = build()
-        print(f"Build succeeded: {result['records_loaded']} rows, {result['coverage_start']}–{result['coverage_end']}")
+        official = json.loads((ROOT / "site" / "data" / "official_snapshot.json").read_text(encoding="utf-8"))
+        official_label = (f"{len(official['records'])} official reporting units as of {official['data_as_of']}"
+                          if official.get("available") else "no official snapshot available")
+        print(f"Build succeeded: {result['records_loaded']} synthetic demo rows ({result['coverage_start']}-{result['coverage_end']}); {official_label}")
     except BuildError as exc:
         print(str(exc))
         raise SystemExit(1)

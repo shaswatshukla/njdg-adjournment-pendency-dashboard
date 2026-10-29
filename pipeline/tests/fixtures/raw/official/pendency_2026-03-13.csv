@@ -1,0 +1,63 @@
+state,court_level,court_id,court_label,snapshot_date,cases_pending,cases_pending_over_5y,source_table
+,supreme_court,SC-IN,Supreme Court of India,2026-03-13,92621,24445,Annex I
+,high_court,HC-ALLAHABAD-HIGH-COURT,Allahabad High Court,2026-03-13,1226147,733395,Annex I
+,high_court,HC-BOMBAY-HIGH-COURT,Bombay High Court,2026-03-13,665758,346741,Annex I
+,high_court,HC-CALCUTTA-HIGH-COURT,Calcutta High Court,2026-03-13,204445,111239,Annex I
+,high_court,HC-GAUHATI-HIGH-COURT,Gauhati High Court,2026-03-13,64502,24358,Annex I
+,high_court,HC-HIGH-COURT-FOR-THE-STATE-OF-TELANGANA,High Court for the State of Telangana,2026-03-13,236590,103050,Annex I
+,high_court,HC-HIGH-COURT-OF-CHHATTISGARH,High Court of Chhattisgarh,2026-03-13,75994,25151,Annex I
+,high_court,HC-RAJASTHAN-HIGH-COURT,Rajasthan High Court,2026-03-13,673553,293502,Annex I
+,high_court,HC-HIGH-COURT-OF-ANDHRA-PRADESH,High Court of Andhra Pradesh,2026-03-13,248934,116331,Annex I
+,high_court,HC-HIGH-COURT-OF-DELHI,High Court of Delhi,2026-03-13,126290,45592,Annex I
+,high_court,HC-HIGH-COURT-OF-GUJARAT,High Court of Gujarat,2026-03-13,174091,71973,Annex I
+,high_court,HC-HIGH-COURT-OF-HIMACHAL-PRADESH,High Court of Himachal Pradesh,2026-03-13,104133,40527,Annex I
+,high_court,HC-HIGH-COURT-OF-JAMMU-AND-KASHMIR-AND-LADAKH,High Court of Jammu and Kashmir and Ladakh,2026-03-13,43314,13930,Annex I
+,high_court,HC-HIGH-COURT-OF-JHARKHAND,High Court of Jharkhand,2026-03-13,72905,30458,Annex I
+,high_court,HC-HIGH-COURT-OF-KARNATAKA,High Court of Karnataka,2026-03-13,331680,78843,Annex I
+,high_court,HC-HIGH-COURT-OF-KERALA,High Court of Kerala,2026-03-13,247671,107493,Annex I
+,high_court,HC-HIGH-COURT-OF-MADHYA-PRADESH,High Court of Madhya Pradesh,2026-03-13,478434,255972,Annex I
+,high_court,HC-HIGH-COURT-OF-MANIPUR,High Court of Manipur,2026-03-13,6042,1094,Annex I
+,high_court,HC-HIGH-COURT-OF-MEGHALAYA,High Court of Meghalaya,2026-03-13,1785,100,Annex I
+,high_court,HC-HIGH-COURT-OF-PUNJAB-AND-HARYANA,High Court of Punjab and Haryana,2026-03-13,420452,234216,Annex I
+,high_court,HC-HIGH-COURT-OF-SIKKIM,High Court of Sikkim,2026-03-13,297,16,Annex I
+,high_court,HC-HIGH-COURT-OF-TRIPURA,High Court of Tripura,2026-03-13,1388,6,Annex I
+,high_court,HC-HIGH-COURT-OF-UTTARAKHAND,High Court of Uttarakhand,2026-03-13,60859,22891,Annex I
+,high_court,HC-MADRAS-HIGH-COURT,Madras High Court,2026-03-13,553854,205621,Annex I
+,high_court,HC-ORISSA-HIGH-COURT,Orissa High Court,2026-03-13,163591,69359,Annex I
+,high_court,HC-PATNA-HIGH-COURT,Patna High Court,2026-03-13,218181,91084,Annex I
+Andaman and Nicobar Islands,district_subordinate_aggregate,DIST-ANDAMAN-AND-NICOBAR-ISLANDS,District and subordinate courts - Andaman and Nicobar Islands,2026-03-13,8627,4254,Annex II
+Andhra Pradesh,district_subordinate_aggregate,DIST-ANDHRA-PRADESH,District and subordinate courts - Andhra Pradesh,2026-03-13,976082,154956,Annex II
+Arunachal Pradesh,district_subordinate_aggregate,DIST-ARUNACHAL-PRADESH,District and subordinate courts - Arunachal Pradesh,2026-03-13,15719,4327,Annex II
+Assam,district_subordinate_aggregate,DIST-ASSAM,District and subordinate courts - Assam,2026-03-13,578555,68130,Annex II
+Bihar,district_subordinate_aggregate,DIST-BIHAR,District and subordinate courts - Bihar,2026-03-13,3719519,2085650,Annex II
+Chandigarh,district_subordinate_aggregate,DIST-CHANDIGARH,District and subordinate courts - Chandigarh,2026-03-13,101946,6478,Annex II
+Chhattisgarh,district_subordinate_aggregate,DIST-CHHATTISGARH,District and subordinate courts - Chhattisgarh,2026-03-13,516848,43774,Annex II
+Delhi,district_subordinate_aggregate,DIST-DELHI,District and subordinate courts - Delhi,2026-03-13,1602441,279489,Annex II
+Goa,district_subordinate_aggregate,DIST-GOA,District and subordinate courts - Goa,2026-03-13,62025,17109,Annex II
+Gujarat,district_subordinate_aggregate,DIST-GUJARAT,District and subordinate courts - Gujarat,2026-03-13,2069656,258773,Annex II
+Haryana,district_subordinate_aggregate,DIST-HARYANA,District and subordinate courts - Haryana,2026-03-13,1546857,221443,Annex II
+Himachal Pradesh,district_subordinate_aggregate,DIST-HIMACHAL-PRADESH,District and subordinate courts - Himachal Pradesh,2026-03-13,623427,81154,Annex II
+Jammu and Kashmir,district_subordinate_aggregate,DIST-JAMMU-AND-KASHMIR,District and subordinate courts - Jammu and Kashmir,2026-03-13,352201,82675,Annex II
+Jharkhand,district_subordinate_aggregate,DIST-JHARKHAND,District and subordinate courts - Jharkhand,2026-03-13,573546,162249,Annex II
+Karnataka,district_subordinate_aggregate,DIST-KARNATAKA,District and subordinate courts - Karnataka,2026-03-13,2436610,428675,Annex II
+Kerala,district_subordinate_aggregate,DIST-KERALA,District and subordinate courts - Kerala,2026-03-13,1800628,353933,Annex II
+Ladakh,district_subordinate_aggregate,DIST-LADAKH,District and subordinate courts - Ladakh,2026-03-13,1629,110,Annex II
+Lakshadweep,district_subordinate_aggregate,DIST-LAKSHADWEEP,District and subordinate courts - Lakshadweep,2026-03-13,557,97,Annex II
+Madhya Pradesh,district_subordinate_aggregate,DIST-MADHYA-PRADESH,District and subordinate courts - Madhya Pradesh,2026-03-13,2122639,392365,Annex II
+Maharashtra,district_subordinate_aggregate,DIST-MAHARASHTRA,District and subordinate courts - Maharashtra,2026-03-13,6060201,1742851,Annex II
+Manipur,district_subordinate_aggregate,DIST-MANIPUR,District and subordinate courts - Manipur,2026-03-13,14139,3201,Annex II
+Meghalaya,district_subordinate_aggregate,DIST-MEGHALAYA,District and subordinate courts - Meghalaya,2026-03-13,16671,5810,Annex II
+Mizoram,district_subordinate_aggregate,DIST-MIZORAM,District and subordinate courts - Mizoram,2026-03-13,7343,545,Annex II
+Nagaland,district_subordinate_aggregate,DIST-NAGALAND,District and subordinate courts - Nagaland,2026-03-13,3940,1129,Annex II
+Odisha,district_subordinate_aggregate,DIST-ODISHA,District and subordinate courts - Odisha,2026-03-13,1820475,746383,Annex II
+Puducherry,district_subordinate_aggregate,DIST-PUDUCHERRY,District and subordinate courts - Puducherry,2026-03-13,36414,8499,Annex II
+Punjab,district_subordinate_aggregate,DIST-PUNJAB,District and subordinate courts - Punjab,2026-03-13,977912,65405,Annex II
+Rajasthan,district_subordinate_aggregate,DIST-RAJASTHAN,District and subordinate courts - Rajasthan,2026-03-13,2717617,700519,Annex II
+Sikkim,district_subordinate_aggregate,DIST-SIKKIM,District and subordinate courts - Sikkim,2026-03-13,2284,40,Annex II
+Tamil Nadu,district_subordinate_aggregate,DIST-TAMIL-NADU,District and subordinate courts - Tamil Nadu,2026-03-13,1763798,278994,Annex II
+Telangana,district_subordinate_aggregate,DIST-TELANGANA,District and subordinate courts - Telangana,2026-03-13,991205,169772,Annex II
+Dadra and Nagar Haveli and Daman and Diu,district_subordinate_aggregate,DIST-DADRA-AND-NAGAR-HAVELI-AND-DAMAN-AND-DIU,District and subordinate courts - Dadra and Nagar Haveli and Daman and Diu,2026-03-13,8359,1770,Annex II
+Tripura,district_subordinate_aggregate,DIST-TRIPURA,District and subordinate courts - Tripura,2026-03-13,67190,4206,Annex II
+Uttar Pradesh,district_subordinate_aggregate,DIST-UTTAR-PRADESH,District and subordinate courts - Uttar Pradesh,2026-03-13,12137452,4866682,Annex II
+Uttarakhand,district_subordinate_aggregate,DIST-UTTARAKHAND,District and subordinate courts - Uttarakhand,2026-03-13,313735,55687,Annex II
+West Bengal,district_subordinate_aggregate,DIST-WEST-BENGAL,District and subordinate courts - West Bengal,2026-03-13,3908587,1509157,Annex II

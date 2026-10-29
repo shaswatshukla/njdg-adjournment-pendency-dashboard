@@ -3,9 +3,21 @@
 **Live dashboard:** [shaswatshukla.github.io/njdg-adjournment-pendency-dashboard](https://shaswatshukla.github.io/njdg-adjournment-pendency-dashboard/)  
 **Repository:** [github.com/shaswatshukla/njdg-adjournment-pendency-dashboard](https://github.com/shaswatshukla/njdg-adjournment-pendency-dashboard)
 
-**SYNTHETIC - FOR DEMO.** This repository demonstrates a transparent pipeline and static dashboard for Indian court case-flow metrics. Its included court and context data are invented. They are not official statistics, must not be cited as real-world facts, and do not describe real people, courts, or districts.
+The default dataset is a manually transcribed official snapshot from the Department of Justice reply to Rajya Sabha Unstarred Question 3113, answered 19 March 2026, reporting figures as of **13 March 2026**. It contains Supreme Court and High Court counts plus state/UT aggregates for district and subordinate courts. It does not provide individual district-court rows or tribunal coverage. It is a historical snapshot, not live/current data.
 
-The dashboard is a plain HTML/CSS/vanilla JavaScript single-page site with hash routes. It uses Chart.js 4.4.8 from a pinned CDN. The data pipeline uses Python 3.11 and pandas; pytest is a development dependency. No scraping or build tool is used.
+The dataset selector also offers a separate **SYNTHETIC - FOR DEMO** dataset. Those invented monthly examples remain useful for trying the original case-flow charts, but they are not official data. Values and coverage from the two datasets are never combined.
+
+## Source rights and commercial use
+
+Reuse and commercial publication terms for the official report have not been verified. Do not assume the repository's MIT license grants rights to the source data. Confirm the applicable reuse terms and attribution requirements before commercial use; this project does not claim commercial data clearance. This project has no live public data API connected.
+
+## Source verification and freshness
+
+A daily source-verification automation is scheduled to check for newer primary government publications, validate source tables and totals, run tests/build, and publish only a verified update. The first scheduled check has not yet run. The dashboard reports **data as of** separately from **source checked**; if verification needs review or errors, it warns and preserves the last verified snapshot. This is report-based verification, not scraping and not a live feed.
+
+The canonical status is [`pipeline/refresh_status.json`](pipeline/refresh_status.json). It records `last_checked_at_utc`, status, data-as-of date, primary source URLs, and a note. `pipeline/build.py` validates and copies it to `site/data/refresh_status.json` without replacing the source-check time with build time. See [`pipeline/refresh_status.md`](pipeline/refresh_status.md) for the status contract.
+
+When a newer report is verified, update the one active snapshot named by `source_file` in `pipeline/official_snapshot_controls.json`, its matching `sources.csv` row, all CSV rows, source-published controls and identities, and `refresh_status.json` together. Keep a single report date per CSV and preserve earlier versions in Git history. See [`pipeline/official_schema.md`](pipeline/official_schema.md#updating-the-active-snapshot). Fixed regression tests preserve the original transcription; a separate test validates the active snapshot against its own controls so later verified dates can pass CI.
 
 ## Run locally
 
@@ -18,7 +30,7 @@ python pipeline/smoke.py
 python -m http.server 8000 --directory site
 ```
 
-Open `http://localhost:8000`. Serve the `site/` folder over HTTP so the browser can fetch the JSON files. `pipeline/build.py` validates every registered CSV, writes the six data JSON files, and parses all six required output files before reporting success.
+Open `http://localhost:8000`. Serve `site/` over HTTP so the browser can fetch the JSON files. The build validates the synthetic monthly dataset and official snapshot as separate inputs, reconciles official rows against source control totals, writes the eight JSON contracts, and parses every required output before returning success.
 
 ## Tests
 
@@ -29,47 +41,35 @@ python -m pip install -r requirements-dev.txt
 python -m pytest pipeline/tests -v
 ```
 
-The test classes also run using Python's standard library `unittest`:
+The unittest-compatible test classes can also run with Python's standard library:
 
 ```powershell
 python -m unittest discover -s pipeline/tests -v
 ```
 
-Coverage includes formulas, zero/missing/negative counts, input validation, personal-data refusal, source provenance, duplicate keys, context joins, rolling-window completeness and aggregation, stock handling, and JSON smoke validation.
+Tests cover monthly metrics, official row/control-total reconciliation, reported state identities, unreported-field nulls, provenance and privacy checks, context joins, invalid snapshots, refresh-status preservation, and JSON smoke validation.
 
-Verification: GitHub Actions run [40778423236](https://github.com/shaswatshukla/njdg-adjournment-pendency-dashboard/actions/runs/40778423236) passed on Python 3.11 with 20 pytest checks, the build, and JSON smoke validation. Desktop (1280px) and mobile (375px) views were inspected; all five routes, state/rolling views, district filters and CSV download, theme persistence, and browser console checks passed.
+## Data and metric boundaries
 
-## Input data and provenance
+See [`pipeline/official_schema.md`](pipeline/official_schema.md), [`pipeline/official_snapshot_controls.json`](pipeline/official_snapshot_controls.json), and [`pipeline/DATA_SOURCES.md`](pipeline/DATA_SOURCES.md) for the official snapshot schema, published control totals, and source limitations. The public report link and annex pages are shown on the Methodology view.
 
-Place aggregate monthly CSV files in `pipeline/raw/`. Optional aggregate context CSVs can live in `pipeline/raw/context/`. Register **every** file in `pipeline/sources.csv` with file name, source name, URL, download date, licence, coverage start/end, and notes. Context joins use only state and district. Never add personal-level rows. See [`pipeline/schema.md`](pipeline/schema.md) for the schema and [`pipeline/DATA_SOURCES.md`](pipeline/DATA_SOURCES.md) for source guidance.
+The official source reports pending stock and cases pending over five years. The dashboard derives the over-five-year share from aggregate counts. It does not calculate institution, disposal, hearing, adjournment, pendency-rate, over-three-year, or monthly measures because their source values are absent. It does not fill unknown figures with zero or backsolve them.
 
-The build stops if any row or provenance check fails and writes safe row locators, aggregate field values, and reasons to `pipeline/output/rejected_rows.csv`. Files with personal-data column names are refused before their row values are parsed or logged.
+The separate demo pipeline uses the monthly flow formulas documented in [`pipeline/schema.md`](pipeline/schema.md). It still stops on invalid rows, incomplete provenance, duplicate keys, or personal-data column names.
 
-## Measures and limitations
-
-- Ending pending = opening pending + instituted - disposed.
-- Pendency = ending pending / opening pending.
-- Clearance = disposed / instituted.
-- Adjournment = adjourned hearings / listed hearings.
-- Long-pending shares divide the latest month-end age snapshot by ending pending.
-- Three-month flow ratios use ratios of aggregate counts, never averages of monthly ratios. Stock measures use the first opening and final ending; age measures use the final snapshot. A missing month or changing contributing-grain coverage makes a rolling measure unavailable.
-
-These are descriptive measures. They do not explain delay or adjournments, assess judicial quality, predict outcomes, or establish cause. Reporting definitions and coverage can vary. Consult the current [National Judicial Data Grid (NJDG)](https://njdg.ecourts.gov.in/) for authoritative data and definitions. This project is not legal advice. Figures may differ from current official NJDG figures.
-
-No crime series is included. India transitioned from IPC to BNS from July 2024. Any future crime comparison must document an appropriate category mapping and the comparability break before introducing a series.
+No crime series is included. Any future IPC/BNS comparison would need a documented category mapping and comparability treatment for the July 2024 transition.
 
 ## GitHub Pages
 
-The GitHub Actions workflow runs pytest and rebuilds the JSON data before publishing the static `site/` directory. In repository settings, enable **Pages > Build and deployment > GitHub Actions**, then push to `main` or run the workflow manually.
+GitHub Actions runs pytest and rebuilds the JSON data before publishing the static `site/` directory. In repository settings, enable **Pages > Build and deployment > GitHub Actions**, then push to `main` or run the workflow manually.
 
 ## Suggested next steps
 
-1. Manually obtain a public aggregate source file and record its exact provenance and applicable terms.
-2. Confirm the source definitions, coverage, refresh date, and dimensions before mapping it to the schema.
-3. Run the validator, review every rejection, and compare calculated totals with source documentation.
-4. Keep context data separate and avoid causal claims from descriptive comparisons.
-5. For any future crime series, document the IPC-to-BNS category crosswalk and July 2024 discontinuity before analysis.
+1. Verify the reuse terms for each source before any commercial redistribution.
+2. Review future official snapshots against their published totals and state/court coverage before replacing this historical data.
+3. Keep source-check time distinct from snapshot date and preserve the previous verified figures if a source update is uncertain.
+4. Connect an official public API only after its existence, access terms, and schema have been confirmed.
 
 ## License
 
-MIT. See [`LICENSE`](LICENSE).
+MIT for the project code. The license does not grant rights to external source data. See [`LICENSE`](LICENSE).

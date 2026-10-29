@@ -1,3 +1,4 @@
+import csv
 import json
 import tempfile
 import unittest
@@ -30,6 +31,11 @@ class BuildTests(unittest.TestCase):
         (self.root / "site" / "data").mkdir(parents=True)
         self.old_root, self.old_pipeline = build_module.ROOT, build_module.PIPELINE
         build_module.ROOT, build_module.PIPELINE = self.root, self.pipeline
+        project = Path(__file__).resolve().parents[2]
+        (self.pipeline / "official_snapshot_controls.json").write_text(
+            (project / "pipeline" / "official_snapshot_controls.json").read_text(encoding="utf-8"), encoding="utf-8")
+        (self.pipeline / "refresh_status.json").write_text(
+            (project / "pipeline" / "refresh_status.json").read_text(encoding="utf-8"), encoding="utf-8")
 
     def tearDown(self):
         build_module.ROOT, build_module.PIPELINE = self.old_root, self.old_pipeline
@@ -57,10 +63,82 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(result["rejected_rows"], 0)
             for name in ("summary", "by_state", "by_district", "by_court_type", "by_category", "meta"):
                 self.assertIsNotNone(json.loads((project / "site" / "data" / f"{name}.json").read_text(encoding="utf-8")))
+            official = json.loads((project / "site" / "data" / "official_snapshot.json").read_text(encoding="utf-8"))
+            self.assertTrue(official["available"])
+            controls = json.loads((project / "pipeline" / "official_snapshot_controls.json").read_text(encoding="utf-8"))
+            self.assertEqual(official["coverage"]["published_reporting_units"],
+                             controls["published_control_totals"]["reported_categories_combined"]["reporting_units"])
+            refresh = json.loads((project / "site" / "data" / "refresh_status.json").read_text(encoding="utf-8"))
+            canonical = json.loads((project / "pipeline" / "refresh_status.json").read_text(encoding="utf-8"))
+            self.assertEqual(refresh["last_checked_at_utc"], canonical["last_checked_at_utc"])
             rows = json.loads((project / "site" / "data" / "by_district.json").read_text(encoding="utf-8"))
             self.assertTrue(any(r["period"] == "rolling_3m" for r in rows["slices"]))
         finally:
             build_module.ROOT, build_module.PIPELINE = old_root, old_pipeline
+
+    def test_build_accepts_coordinated_future_official_snapshot(self):
+        self.add_file(row=sample_row())
+        project = Path(__file__).resolve().parents[2]
+        fixture_csv = project / "pipeline" / "tests" / "fixtures" / "raw" / "official" / "pendency_2026-03-13.csv"
+        official_path = self.pipeline / "raw" / "official" / "future.csv"
+        official_path.parent.mkdir(parents=True)
+        with fixture_csv.open(encoding="utf-8", newline="") as source:
+            rows = list(csv.DictReader(source)); fields = list(rows[0])
+        rows[0]["cases_pending"] = str(int(rows[0]["cases_pending"]) + 1)
+        for row in rows:
+            row["snapshot_date"] = "2027-06-15"
+        with official_path.open("w", encoding="utf-8", newline="") as target:
+            writer = csv.DictWriter(target, fieldnames=fields); writer.writeheader(); writer.writerows(rows)
+
+        controls_path = self.pipeline / "official_snapshot_controls.json"
+        controls = json.loads(controls_path.read_text(encoding="utf-8"))
+        controls["source_file"] = "official/future.csv"
+        controls["data_as_of"] = "2027-06-15"
+        controls["source_title"] = "Verified future parliamentary report"
+        controls["source_url"] = "https://example.test/future.pdf"
+        controls["answer_date"] = "2027-06-20"
+        controls["published_control_totals"]["supreme_court"]["cases_pending"] += 1
+        controls["published_control_totals"]["reported_categories_combined"]["cases_pending"] += 1
+        controls_path.write_text(json.dumps(controls), encoding="utf-8")
+        refresh_path = self.pipeline / "refresh_status.json"
+        refresh = json.loads(refresh_path.read_text(encoding="utf-8"))
+        refresh["data_as_of"] = "2027-06-15"
+        refresh["sources"] = [controls["source_url"]]
+        refresh_path.write_text(json.dumps(refresh), encoding="utf-8")
+
+        registry_path = self.pipeline / "sources.csv"
+        registry = pd.read_csv(registry_path)
+        registry.loc[len(registry)] = ["official/future.csv", "Future verified fixture", controls["source_url"],
+                                       "2027-06-21", "fixture terms", "2027-06", "2027-06", "coordinated future fixture"]
+        registry.to_csv(registry_path, index=False)
+        result = build_module.build()
+        official = json.loads((self.root / "site" / "data" / "official_snapshot.json").read_text(encoding="utf-8"))
+        self.assertEqual(result["records_loaded"], 1)
+        self.assertEqual(official["data_as_of"], "2027-06-15")
+        self.assertEqual(official["source"]["title"], "Verified future parliamentary report")
+        self.assertEqual(official["coverage"]["published_reporting_units"],
+                         controls["published_control_totals"]["reported_categories_combined"]["reporting_units"])
+
+    def test_refresh_sources_must_include_active_official_source_url(self):
+        self.add_file(row=sample_row())
+        project = Path(__file__).resolve().parents[2]
+        source_file = "official/pendency_2026-03-13.csv"
+        source_path = project / "pipeline" / "raw" / source_file
+        temp_source = self.pipeline / "raw" / source_file
+        temp_source.parent.mkdir(parents=True)
+        temp_source.write_bytes(source_path.read_bytes())
+        registry = pd.read_csv(self.pipeline / "sources.csv")
+        official_source = pd.read_csv(project / "pipeline" / "sources.csv")
+        official_source = official_source[official_source.file_name == source_file].iloc[0].tolist()
+        registry.loc[len(registry)] = official_source
+        registry.to_csv(self.pipeline / "sources.csv", index=False)
+        refresh_path = self.pipeline / "refresh_status.json"
+        refresh = json.loads(refresh_path.read_text(encoding="utf-8"))
+        refresh["sources"] = ["https://example.test/old-report.pdf"]
+        refresh_path.write_text(json.dumps(refresh), encoding="utf-8")
+        with self.assertRaisesRegex(build_module.BuildError, "rejected"):
+            build_module.build()
+        self.assertIn("active official source URL", (self.pipeline / "output" / "rejected_rows.csv").read_text(encoding="utf-8"))
 
     def test_rejected_row_fails_and_logs_reason_with_safe_fields(self):
         self.add_file(row=sample_row(cases_instituted="-4"))
@@ -162,3 +240,15 @@ class BuildTests(unittest.TestCase):
         logged = (self.pipeline / "output" / "rejected_rows.csv").read_text()
         self.assertIn("personal-data column", logged)
         self.assertNotIn("SECRET PERSON", logged)
+
+    def test_refresh_status_invalid_timestamp_fails_without_build_fabricating_a_new_one(self):
+        self.add_file(row=sample_row())
+        status_path = self.pipeline / "refresh_status.json"
+        status = json.loads(status_path.read_text(encoding="utf-8"))
+        original = status["last_checked_at_utc"]
+        status["last_checked_at_utc"] = "2026-10-29"
+        status_path.write_text(json.dumps(status), encoding="utf-8")
+        with self.assertRaisesRegex(build_module.BuildError, "UTC"):
+            build_module.build()
+        self.assertEqual(json.loads(status_path.read_text(encoding="utf-8"))["last_checked_at_utc"], "2026-10-29")
+        self.assertNotEqual(original, "2026-10-29")

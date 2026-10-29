@@ -4,6 +4,8 @@ The committed files are entirely synthetic. The links below are research startin
 
 ## 1. Official court data
 
+The current official snapshot is a manual transcription of the Department of Justice reply to Rajya Sabha Unstarred Question 3113, answered 19 March 2026, with data as of 13 March 2026. The cited PDF is [available here](https://www.doj.gov.in/static/uploads/2026/04/b7b4da487543be9a9f1d1558d06d76d2.pdf); Annex I is PDF page 53 and Annex II is page 54. Reuse and commercial publication terms have not been verified. No PDF bytes are bundled and no PDF hash is claimed. The CSV transcription has a calculated SHA-256 digest in generated snapshot metadata.
+
 | Source | Provides | Access | Specific limitation |
 |---|---|---|---|
 | [National Judicial Data Grid (NJDG)](https://njdg.ecourts.gov.in/) | Aggregate case institution, disposal, pendency, and age snapshots across participating courts | Manual download | Dashboards, refresh dates, definitions, and historical coverage can vary by court and measure. |

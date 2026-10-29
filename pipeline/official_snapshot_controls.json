@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "source_file": "official/pendency_2026-03-13.csv",
+  "data_as_of": "2026-03-13",
+  "answer_date": "2026-03-19",
+  "source_title": "Department of Justice reply to Rajya Sabha Unstarred Question 3113",
+  "source_url": "https://www.doj.gov.in/static/uploads/2026/04/b7b4da487543be9a9f1d1558d06d76d2.pdf",
+  "source_tables": {"supreme_court": "Annex I", "high_court": "Annex I", "district_subordinate_aggregate": "Annex II"},
+  "source_pages": {"Annex I": 53, "Annex II": 54},
+  "published_control_totals": {
+    "supreme_court": {"reporting_units": 1, "cases_pending": 92621, "cases_pending_over_5y": 24445},
+    "high_court": {"reporting_units": 25, "cases_pending": 6400890, "cases_pending_over_5y": 3022942},
+    "district_subordinate_aggregate": {"reporting_units": 36, "cases_pending": 49956834, "cases_pending_over_5y": 14806291},
+    "reported_categories_combined": {"reporting_units": 62, "cases_pending": 56450345, "cases_pending_over_5y": 17853678}
+  },
+  "coverage_counts": {
+    "states_and_union_territories_with_district_subordinate_aggregate": 36,
+    "high_courts": 25,
+    "supreme_courts": 1
+  },
+  "expected_state_ut_aggregate_labels": [
+    "Andaman and Nicobar Islands", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Ladakh", "Lakshadweep", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Puducherry", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"
+  ],
+  "expected_high_court_labels": [
+    "Allahabad High Court", "Bombay High Court", "Calcutta High Court", "Gauhati High Court", "High Court for the State of Telangana", "High Court of Chhattisgarh", "Rajasthan High Court", "High Court of Andhra Pradesh", "High Court of Delhi", "High Court of Gujarat", "High Court of Himachal Pradesh", "High Court of Jammu and Kashmir and Ladakh", "High Court of Jharkhand", "High Court of Karnataka", "High Court of Kerala", "High Court of Madhya Pradesh", "High Court of Manipur", "High Court of Meghalaya", "High Court of Punjab and Haryana", "High Court of Sikkim", "High Court of Tripura", "High Court of Uttarakhand", "Madras High Court", "Orissa High Court", "Patna High Court"
+  ],
+  "expected_supreme_court_labels": ["Supreme Court of India"],
+  "limitations": [
+    "District/subordinate figures are state/UT aggregates, not district-level or individual-court values.",
+    "Tribunal coverage is not stated in this source.",
+    "Institution, disposal, hearings, adjournments, over-three-year counts, and monthly series are not reported in these tables.",
+    "The combined total sums the three reported categories and is not evidence of coverage of all judicial bodies.",
+    "The source is a historical snapshot as of 2026-03-13, not a current/live data feed."
+  ],
+  "label_aliases": {
+    "High Court of Jammu and Kashmir": "High Court of Jammu and Kashmir and Ladakh"
+  }
+}
