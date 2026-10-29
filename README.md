@@ -1,99 +1,76 @@
-## Interface
+# Justice Metrics — NJDG Pendency Dashboard
 
-The grouped sidebar links all court and research views; use the menu button on mobile. Escape closes the mobile drawer. The header theme button switches light/dark mode and retains the choice locally. The overview chart starts with the ten largest State/UT aggregates; choose All 36 to show every published aggregate. Dates and coverage limitations remain visible. The interface uses system fonts with no new external services or tracking.
+A free, static research website for verified aggregate court reports and registered-crime statistics in India. Plain HTML, CSS and JavaScript modules; pinned Chart.js 4.4.8. Python 3.11+ and pandas validate manually downloaded aggregate inputs. No backend, paid API, analytics or cookies.
 
-# NJDG Adjournment & Pendency Dashboard
+## Current coverage and limits
 
-**Live dashboard:** [shaswatshukla.github.io/njdg-adjournment-pendency-dashboard](https://shaswatshukla.github.io/njdg-adjournment-pendency-dashboard/)  
-**Repository:** [github.com/shaswatshukla/njdg-adjournment-pendency-dashboard](https://github.com/shaswatshukla/njdg-adjournment-pendency-dashboard)
+- National court snapshot: 13 March 2026; Supreme Court, 25 High Courts and 36 State/UT district/subordinate aggregates. These are not individual district observations.
+- Periodic reports: Supreme Court monthly Civil/Criminal/Total statistics for January–August 2025, and Kokrajhar district for September 2026. Nationwide district coverage remains incomplete.
+- Crime map: 2023 NCRB/MHA registered cognizable IPC/SLL counts for all 36 States/UTs. Crime registrations are not convictions, true incidence, population-adjusted rates or safety scores. They are never combined with pending court stocks.
+- Geographic boundaries: 2024 LGD state/UT polygons, distributed by Bharatlas and simplified for display. Source, licence statement, transformations and download checksum are bundled with the geometry. Small UT dots are enlarged click targets, not areas. Refer to Survey of India for authoritative boundaries.
 
-The default dataset is a manually transcribed official snapshot from the Department of Justice reply to Rajya Sabha Unstarred Question 3113, answered 19 March 2026, reporting figures as of **13 March 2026**. It contains Supreme Court and High Court counts plus state/UT aggregates for district and subordinate courts. It does not provide individual district-court rows or tribunal coverage. It is a historical snapshot, not live/current data.
+The website publishes official report data only. The synthetic selector, demo views, demo requests and public demo JSON files have been removed. Offline test fixtures remain in the repository, labelled **SYNTHETIC - FOR DEMO**; they are not published as website data.
 
-The dataset selector also offers a separate **SYNTHETIC - FOR DEMO** dataset. Those invented monthly examples remain useful for trying the original case-flow charts, but they are not official data. Values and coverage from the two datasets are never combined.
+## Use the website
 
-## Source rights and commercial use
+The grouped sidebar opens all court and research views. On mobile use the menu button; Escape closes the drawer. The header theme toggle defaults to the system preference and saves a light/dark choice in localStorage. Charts re-theme with the page.
 
-Reuse and commercial publication terms for the official report have not been verified. Do not assume the repository's MIT license grants rights to the source data. Confirm the applicable reuse terms and attribution requirements before commercial use; this project does not claim commercial data clearance. This project has no live public data API connected.
+The crime map supports clickable, keyboard-focusable State/UT regions, exact figures, shareable State/UT links, zoom buttons, drag-to-pan when zoomed, reset, and an expanded modal view. Escape or Close returns to the normal view. The dropdown and exact-count table provide alternatives for small regions and map-loading failures. Expanding works without a browser full-screen permission. All geometry is served locally: no map tile service or external API is called by the map.
 
-## Source verification and freshness
+The national state chart shows the ten largest aggregates by default; choose All 36 for every published aggregate. Research briefs use browser print / Save as PDF and preserve source dates, scope and limitations.
 
-A daily source-verification automation is scheduled to check for newer primary government publications, validate source tables and totals, run tests/build, and publish only a verified update. The first scheduled check has not yet run. The dashboard reports **data as of** separately from **source checked**; if verification needs review or errors, it warns and preserves the last verified snapshot. This is report-based verification, not scraping and not a live feed.
+## Run and validate
 
-The canonical status is [`pipeline/refresh_status.json`](pipeline/refresh_status.json). It records `last_checked_at_utc`, status, data-as-of date, primary source URLs, and a note. `pipeline/build.py` validates and copies it to `site/data/refresh_status.json` without replacing the source-check time with build time. See [`pipeline/refresh_status.md`](pipeline/refresh_status.md) for the status contract.
-
-When a newer report is verified, update the one active snapshot named by `source_file` in `pipeline/official_snapshot_controls.json`, its matching `sources.csv` row, all CSV rows, source-published controls and identities, and `refresh_status.json` together. Keep a single report date per CSV and preserve earlier versions in Git history. See [`pipeline/official_schema.md`](pipeline/official_schema.md#updating-the-active-snapshot). Fixed regression tests preserve the original transcription; a separate test validates the active snapshot against its own controls so later verified dates can pass CI.
-
-## Run locally
-
-Install Python 3.11, then run:
-
-```powershell
-python -m pip install -r requirements.txt
+```sh
+python -m pip install -r requirements-dev.txt
 python pipeline/build.py
+python -m pytest pipeline/tests -q
+node pipeline/tests/map_logic.mjs
 python pipeline/smoke.py
 python -m http.server 8000 --directory site
 ```
 
-Open `http://localhost:8000`. Serve `site/` over HTTP so the browser can fetch the JSON files. The build validates the synthetic monthly dataset and official snapshot as separate inputs, reconciles official rows against source control totals, writes the eight JSON contracts, and parses every required output before returning success.
+Open http://localhost:8000 . There is no frontend build step. Six JSON contracts in `site/data/` contain official reports and build metadata; a separate geographic asset lives in `site/assets/maps/india-states.json`. Smoke checks reject any of the former public synthetic summary/series files. Fixture JSON is generated only under `pipeline/output/synthetic_fixture_outputs/`, outside the hosted directory.
 
-## Tests
+## Add or update a report
 
-Install development tools and run pytest:
+1. Manually download a published aggregate report. Do not scrape websites, collect case/party data or use undocumented endpoints.
+2. Transcribe the relevant aggregate table into `pipeline/raw/`, following `schema.md`, `official_schema.md`, `periodic_schema.md` or `crime_schema.md` as applicable. Do not invent missing values.
+3. Add a matching `pipeline/sources.csv` row with file_name, source_name, source_url, download_date, licence, coverage_start, coverage_end and notes. Record the source in `DATA_SOURCES.md` with its access method and limitations.
+4. Update reviewed control totals, identities, dates and page citations in the appropriate controls manifest. National snapshots have exactly one active CSV; historical snapshots are preserved in `pipeline/archive/`. Different dates and scopes remain separate. Crime categories require the documented July 2024 IPC/BNS transition treatment.
+5. Update truthful refresh metadata, run all checks, review generated output and publish. Validation failures stop the build and write reasons to `pipeline/output/rejected_rows.csv`; privacy-sensitive headers are refused before row values are parsed.
 
-```powershell
-python -m pip install -r requirements-dev.txt
-python -m pytest pipeline/tests -v
+The monthly synthetic CSV and context fixture remain for offline regression tests. Context joins use state/district keys only in metrics.py; per-lakh measures must be labelled derived. Real data is never substituted with fixtures when a report is unavailable.
+
+## Update map boundaries
+
+The map asset is a manually reviewed geographic reference, not a court/crime count input. Its separate provenance is in the asset's `source` object and `pipeline/DATA_SOURCES.md`.
+
+Manually download the published LGD States GeoJSON from the documented source, then run:
+
+```sh
+python pipeline/build_map.py path/to/LGD_States.geojson
+python -m pytest pipeline/tests/test_map_asset.py -q
 ```
 
-The unittest-compatible test classes can also run with Python's standard library:
+The builder performs no network requests. It requires the exact 36 geographic identities, retains LGD codes, checks coordinates, simplifies polygons using standard-library Python and embeds the original file's SHA-256. Review the result and attribution before publication. The source download is not bundled; the self-contained derived geometry is committed.
 
-```powershell
-python -m unittest discover -s pipeline/tests -v
-```
+## Refresh and hosting
 
-Tests cover monthly metrics, official row/control-total reconciliation, reported state identities, unreported-field nulls, provenance and privacy checks, context joins, invalid snapshots, refresh-status preservation, and JSON smoke validation.
+Daily source review is scheduled separately from website hosting. It looks for newer published reports and validates candidate changes; it is not a live NJDG feed and does not guarantee a new release. Last checked dates never replace reporting dates. A failed or uncertain check retains the last verified counts and records its status.
 
-## Data and metric boundaries
+For GitHub Pages, enable GitHub Actions under repository Settings → Pages. The included workflow validates reports and tests before uploading only `/site`. Commit source changes and generated official JSON to `main`. Pipeline fixtures and private fixture outputs stay outside the uploaded directory. Other static hosts can serve `/site` directly for free.
 
-See [`pipeline/official_schema.md`](pipeline/official_schema.md), [`pipeline/official_snapshot_controls.json`](pipeline/official_snapshot_controls.json), and [`pipeline/DATA_SOURCES.md`](pipeline/DATA_SOURCES.md) for the official snapshot schema, published control totals, and source limitations. The public report link and annex pages are shown on the Methodology view.
+## Disclaimer and data rights
 
-The official source reports pending stock and cases pending over five years. The dashboard derives the over-five-year share from aggregate counts. It does not calculate institution, disposal, hearing, adjournment, pendency-rate, over-three-year, or monthly measures because their source values are absent. It does not fill unknown figures with zero or backsolve them.
+Independent analysis and information only. Not legal advice. Does not predict verdicts, recommend bail, judge cases or provide case-level lookup. Figures may differ from current [official NJDG](https://njdg.ecourts.gov.in/) numbers because reporting dates, scopes and definitions differ.
 
-The separate demo pipeline uses the monthly flow formulas documented in [`pipeline/schema.md`](pipeline/schema.md). It still stops on invalid rows, incomplete provenance, duplicate keys, or personal-data column names.
-
-No crime series is included. Any future IPC/BNS comparison would need a documented category mapping and comparability treatment for the July 2024 transition.
-
-## GitHub Pages
-
-GitHub Actions runs pytest and rebuilds the JSON data before publishing the static `site/` directory. In repository settings, enable **Pages > Build and deployment > GitHub Actions**, then push to `main` or run the workflow manually.
+The MIT licence covers project code, not third-party data. Government report commercial reuse terms remain unverified; the Supreme Court annual report reserves reproduction rights. Geometry is attributed to LGD via Bharatlas with the publisher's CC0 / CC-BY-4.0 statement; this is not a claim of government approval or blanket commercial clearance. Confirm applicable source-specific terms and attribution requirements before commercial use.
 
 ## Suggested next steps
 
-1. Verify the reuse terms for each source before any commercial redistribution.
-2. Review future official snapshots against their published totals and state/court coverage before replacing this historical data.
-3. Keep source-check time distinct from snapshot date and preserve the previous verified figures if a source update is uncertain.
-4. Connect an official public API only after its existence, access terms, and schema have been confirmed.
-
-## License
-
-MIT for the project code. The license does not grant rights to external source data. See [`LICENSE`](LICENSE).
-# Research tools (0.3.0)
-
-- **Data health:** reporting age, last recorded source attempt and result, last successful check when recorded, build timestamp, missing fields and coverage. A full check history is not yet recorded.
-- **Archive:** full verified snapshots in `pipeline/archive/`; the build generates `site/data/snapshot_archive.json`. It starts with one date. Future builds preserve prior dates. Same-date CSV revisions stop for explicit archive review. Cross-date changes are withheld when source or coverage identifiers differ; matching identifiers still require definition review.
-- **Comparison:** two State/UT district/subordinate aggregates at the same reporting date; exact counts and percentage-point age-share differences. No court-quality rankings.
-- **Sources:** links and computation notes beside cards and table values.
-- **Research brief:** print/save as PDF from any official view. The brief includes exact counts, source citations, reporting date, formulas and limitations; State/UT, court-level, comparison and archive selections are respected. Crime briefs include the selected measure and State/UT's counts and source. Browser print controls choose the destination; no paid PDF service is used.
-- **Breakdowns:** reporting levels plus reported over-five-year counts and the derived remainder. Civil/criminal, institutions/disposals and hearing splits remain unavailable until an appropriate source is verified.
-- **Crime map:** an accessible schematic tile map of all 36 State/UTs, based on NCRB's 2023 registrations in MHA parliamentary Question 407 (3 December 2025), Annexure I, page 3. IPC, SLL and total filters; exact-count accessible table. Positions are approximate, not boundaries or an official political map. This historical snapshot is not joined to court data, not a safety ranking and not population-adjusted. Reuse terms are unverified. See `pipeline/crime_schema.md` and `pipeline/ipc_bns_mapping.csv`.
-
-The pipeline emits ten JSON files and uses the same pandas-only runtime. No extra browser dependencies, accounts, backend or map-tile services were introduced. Daily verification reviews court and crime sources separately. Crime check status and reporting year are recorded independently; changed years or IPC/BNS definitions require review before ingestion.
-
-# Court reports (0.4.0)
-
-Dedicated links now expose all 25 High Courts and the Supreme Court's aggregate snapshot without requiring a State/UT filter. Shared High Courts are not assigned to a single state. These pages do not provide individual case lookup.
-
-The separate **District reports** page loads a real Kokrajhar district statement for September 2026, with Civil/Criminal/Total opening, institutions, disposals and pending. This is one district in Assam, **not nationwide district coverage**. Selecting another state displays an explicit missing-report message. The **Supreme Court** page also shows January–August 2025 monthly counts from its annual report, with category filters, chart, source pages and CSV export. These historical periods are never blended with the national snapshot dated March 2026.
-
-The **Periodic publications** page links the official publication archives. Input files, identity/period/control manifests and ingestion rules are documented in `pipeline/periodic_schema.md`. Eleven JSON files now form the smoke contract. Daily review is extended to these publication archives; new reports need primary-source checks before ingestion. The annual report reserves reproduction rights; no source commercial clearance is claimed.
-
+- Add further districts only after verifying published monthly reports and coverage controls.
+- Add verified reporting dates to the archive without interpolating missing periods.
+- Establish dependable permitted data access and source-specific commercial reuse terms.
+- Review an offence-level IPC/BNS crosswalk before adding a post-transition crime year.
+- Verify newly published boundary revisions against authoritative sources before replacing the fixed map asset.

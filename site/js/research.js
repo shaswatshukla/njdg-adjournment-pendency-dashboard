@@ -1,5 +1,6 @@
+import { renderCrimeMap } from './crime-map.js?v=0.6.0';
 // Research tools share the verified snapshot; crime remains an independent series.
-import { reportRoutes, renderCourtReports } from './court-reports.js?v=0.5.0';
+import { reportRoutes, renderCourtReports } from './court-reports.js?v=0.6.0';
 const e = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num = v => v == null ? 'Unavailable' : new Intl.NumberFormat('en-IN').format(v);
 const share = r => r.cases_pending ? r.cases_pending_over_5y / r.cases_pending : null;
@@ -56,23 +57,7 @@ function breakdowns(s, root) {
   const draw = () => {const rows = s.records.filter(r => !root.querySelector('select').value || r.court_level === root.querySelector('select').value);const pending = rows.reduce((n,r)=>n+r.cases_pending,0), old = rows.reduce((n,r)=>n+r.cases_pending_over_5y,0);root.querySelector('#breakdown-results').innerHTML = `<p>Reported pending: <strong>${num(pending)}</strong> · Over five years: <strong>${num(old)}</strong> · Five years or less: <strong>${num(pending-old)}</strong> (derived: pending minus over five years).</p>${table(rows,s)}`;};
   root.querySelector('select').addEventListener('change',draw); draw();
 }
-// Approximate tile locations only: not boundaries, coordinates, or an official political map.
-const positions = {'Ladakh':[4,0],'Jammu and Kashmir':[3,1],'Himachal Pradesh':[4,2],'Punjab':[3,2],'Chandigarh':[3,3],'Uttarakhand':[5,3],'Haryana':[3,4],'Delhi':[4,4],'Rajasthan':[2,5],'Uttar Pradesh':[5,4],'Bihar':[7,4],'Sikkim':[8,3],'Arunachal Pradesh':[11,2],'Assam':[10,3],'Nagaland':[12,3],'Manipur':[12,4],'Mizoram':[11,5],'Tripura':[10,5],'Meghalaya':[10,4],'West Bengal':[8,5],'Jharkhand':[7,5],'Gujarat':[1,6],'Madhya Pradesh':[4,6],'Chhattisgarh':[6,6],'Odisha':[7,7],'Maharashtra':[3,7],'Dadra and Nagar Haveli and Daman and Diu':[1,7],'Goa':[2,8],'Karnataka':[3,9],'Telangana':[5,8],'Andhra Pradesh':[5,9],'Tamil Nadu':[4,11],'Puducherry':[5,11],'Kerala':[3,11],'Lakshadweep':[1,11],'Andaman and Nicobar Islands':[10,11]};
-function crime(data, root, check) {
-  if (!data?.records?.length) {root.innerHTML='<section class="panel">No verified aggregate crime data is available.</section>';return;}
-  root.innerHTML = `<div class="alert"><strong>${data.year} registered crimes · Historical annual data.</strong> This is a schematic tile map, not geographic boundaries or a safety ranking. Court figures remain dated separately.</div><section class="panel"><div class="filter-panel"><label>Measure<select id="crime-measure"><option value="total">IPC + SLL registered cases</option><option value="ipc">IPC registered cases</option><option value="sll">SLL registered cases</option></select></label><label>State/UT<select id="crime-state">${options(data.records)}</select></label></div><p>Each equally sized tile represents one State/UT. Darker shading means more registered cases; counts are not adjusted for population.</p><div class="crime-map-scroll"><div id="crime-map" class="crime-map" role="group" aria-label="Schematic State and UT registered crime tile map"></div></div><p id="crime-detail" role="status" aria-live="polite"></p><p class="map-legend">Light to dark: lower to higher counts, five equal-width bands from zero to the selected national maximum.</p><div id="crime-table"></div><p>Source: <a href="${e(data.source.source_url)}#page=3" target="_blank" rel="noopener">MHA, Rajya Sabha Question 407, 3 December 2025, Annexure I, PDF page 3</a>; underlying NCRB Crime in India. <strong>Reuse terms unverified.</strong></p></section><section class="panel"><h2>How to read this map</h2><ul>${data.limitations.map(x=>`<li>${e(x)}</li>`).join('')}</ul><p>No per-lakh rate is calculated because no matching population denominator is loaded.</p><p><strong>IPC → BNS, 1 July 2024:</strong> this map uses pre-transition 2023 IPC and SLL categories only. The mapping table marks totals as not directly comparable; no BNS year is spliced into this series.</p></section>`;
-  const draw = () => {
-    const key=root.querySelector('#crime-measure').value, selected=root.querySelector('#crime-state').value;
-    const max=Math.max(...data.records.map(r=>r[key]));
-    root.querySelector('#crime-map').innerHTML=data.records.map((r,i)=>{const pos=positions[r.state]||[i%13,13+Math.floor(i/13)], band=Math.min(4,Math.floor(r[key]/(max||1)*5));return `<button type="button" class="crime-tile band-${band}" style="grid-column:${pos[0]+1};grid-row:${pos[1]+1}" data-state="${e(r.state)}" aria-pressed="${r.state===selected}" aria-label="${e(r.state)}, ${num(r[key])} registered cases in ${data.year}" title="${e(r.state)}: ${num(r[key])}">${e(r.state)}</button>`;}).join('');
-    const row=data.records.find(r=>r.state===selected);
-    root.querySelector('#crime-detail').textContent=`${row.state}: ${num(row[key])} registered cases (${data.year}). ${data.method}`;
-    root.querySelector('#crime-table').innerHTML=`<div class="table-scroll"><table><caption>Accessible table · ${data.year} · exact counts</caption><thead><tr><th>State/UT</th><th>IPC</th><th>SLL</th><th>IPC + SLL</th></tr></thead><tbody>${[...data.records].sort((a,b)=>b[key]-a[key]).map(r=>`<tr><td>${e(r.state)}</td><td>${num(r.ipc)}</td><td>${num(r.sll)}</td><td>${num(r.total)}</td></tr>`).join('')}</tbody></table></div>`;
-  };
-  root.querySelectorAll('select').forEach(x=>x.addEventListener('change',draw));
-  const verification=document.createElement('p');verification.className='method-note';verification.textContent=`Crime source verification: ${check?.status || 'not recorded'}; last attempt ${check?.last_checked_at_utc || 'unknown'}. Crime reporting year remains ${data.year}. Daily review is scheduled; a changed classification requires review before ingestion.`;root.prepend(verification);
-  root.querySelector('#crime-map').addEventListener('click',ev=>{const button=ev.target.closest('button[data-state]');if(!button)return;root.querySelector('#crime-state').value=button.dataset.state;draw();root.querySelectorAll('button[data-state]').forEach(x=>{if(x.dataset.state===button.dataset.state)x.focus();});}); draw();
-}
+function crime(data, root, check) { void renderCrimeMap(data,root,check); }
 export function renderResearch(route,s,refresh,extras,root) {
   root.innerHTML=chrome(route,s);const content=root.querySelector('#research-content');
   if(reportRoutes.includes(route)){renderCourtReports(route,s,extras.periodic,content);return;}
@@ -107,3 +92,4 @@ export function addResearchActions(root,s,refresh,extras,route) {
     window.print();
   });
 }
+

@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { bandFor, stateLink } from '../../site/js/crime-map.js';
+assert.equal(bandFor(0,100),0);
+assert.equal(bandFor(20,100),1);
+assert.equal(bandFor(100,100),4);
+assert.equal(bandFor(0,0),0);
+assert.equal(bandFor(null,100),null);
+assert.equal(bandFor(-1,100),null);
+const link=stateLink('Dadra and Nagar Haveli and Daman and Diu','ipc');
+const query=new URLSearchParams(link.split('?')[1]);
+assert.equal(link.split('?')[0],'#crime');
+assert.equal(query.get('state'),'Dadra and Nagar Haveli and Daman and Diu');
+assert.equal(query.get('measure'),'ipc');
+console.log('Map bands and State/UT permalink checks passed.');

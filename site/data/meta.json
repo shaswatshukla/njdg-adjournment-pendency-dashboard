@@ -1,36 +1,59 @@
 {
-  "generated_at_utc": "2026-10-29T06:30:33.436821+00:00",
-  "schema_version": "1.0",
-  "records_loaded": 24,
+  "generated_at_utc": "2026-10-29T08:13:31.123848+00:00",
+  "schema_version": "1.1",
   "rejected_rows": 0,
   "source_files": [
-    "sample_aggregate_SYNTHETIC_FOR_DEMO.csv",
-    "context/context_demo_SYNTHETIC_FOR_DEMO.csv"
+    "periodic/supreme_court_2025.csv",
+    "periodic/kokrajhar_2026_09.csv",
+    "crime/registered_crime_2023.csv",
+    "official/pendency_2026-03-13.csv"
   ],
   "sources": [
     {
-      "file_name": "sample_aggregate_SYNTHETIC_FOR_DEMO.csv",
-      "source_name": "Synthetic demonstration data",
-      "source_url": "https://example.org/synthetic-demo",
-      "download_date": "2026-10-28",
-      "licence": "CC0-1.0 (synthetic demonstration)",
-      "coverage_start": "2024-01",
-      "coverage_end": "2024-06",
-      "notes": "Entirely invented aggregate rows; not official court data."
+      "file_name": "periodic/supreme_court_2025.csv",
+      "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+      "download_date": "2026-10-29",
+      "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+      "coverage_start": "2025-01",
+      "coverage_end": "2025-08",
+      "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
     },
     {
-      "file_name": "context/context_demo_SYNTHETIC_FOR_DEMO.csv",
-      "source_name": "Synthetic demonstration context",
-      "source_url": "https://example.org/synthetic-demo",
-      "download_date": "2026-10-28",
-      "licence": "CC0-1.0 (synthetic demonstration)",
-      "coverage_start": "2024-01",
-      "coverage_end": "2024-06",
-      "notes": "Invented population and judge-strength examples; no real-world interpretation."
+      "file_name": "periodic/kokrajhar_2026_09.csv",
+      "source_name": "Kokrajhar district judiciary monthly pendency statement September 2026",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/10/2026100717.pdf",
+      "download_date": "2026-10-29",
+      "licence": "Reuse terms unverified; no commercial clearance claimed",
+      "coverage_start": "2026-09",
+      "coverage_end": "2026-09",
+      "notes": "Manual transcription of district summary Civil/Criminal/Total on PDF page 3; published 2026-10-07; one district only; no judge or case details collected."
+    },
+    {
+      "file_name": "crime/registered_crime_2023.csv",
+      "source_name": "Ministry of Home Affairs Rajya Sabha Question 407 NCRB Crime in India",
+      "source_url": "https://sansad.in/getFile/annex/269/AU407_UbEvYl.pdf?source=pqars",
+      "download_date": "2026-10-29",
+      "licence": "Reuse terms unverified; no commercial clearance claimed",
+      "coverage_start": "2023-01",
+      "coverage_end": "2023-12",
+      "notes": "Manual transcription of Annexure I PDF page 3 answered 2025-12-03; 36 State/UT registered cognizable IPC and SLL counts; no personal data; not safety rankings."
+    },
+    {
+      "file_name": "official/pendency_2026-03-13.csv",
+      "source_name": "Department of Justice Rajya Sabha Unstarred Question 3113",
+      "source_url": "https://www.doj.gov.in/static/uploads/2026/04/b7b4da487543be9a9f1d1558d06d76d2.pdf",
+      "download_date": "2026-10-29",
+      "licence": "Reuse terms not verified; not represented as GODL",
+      "coverage_start": "2026-03",
+      "coverage_end": "2026-03",
+      "notes": "Manual transcription of answer dated 2026-03-19; snapshot as of 2026-03-13. Annex I PDF page 53: Supreme Court and High Courts. Annex II PDF page 54: state/UT district and subordinate court aggregates. Jammu and Kashmir High Court label normalized to current shared-jurisdiction name. Source reuse/commercial terms not verified."
     }
   ],
-  "coverage_start": "2024-01",
-  "coverage_end": "2024-06",
-  "synthetic_demo": true,
-  "method_note": "Rolling rates use ratios of aggregate flows and opening/final stock. Missing calendar months make a rolling window unavailable."
+  "records_by_dataset": {
+    "national_snapshot": 62,
+    "crime": 36,
+    "periodic_reports": 27
+  },
+  "method_note": "Official aggregate reports only. Datasets retain separate reporting dates and scopes."
 }

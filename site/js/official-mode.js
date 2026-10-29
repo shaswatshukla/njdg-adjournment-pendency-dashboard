@@ -1,5 +1,5 @@
-import { researchRoutes, renderResearch, addResearchActions } from './research.js?v=0.5.0';
-import { reportRoutes, courtLinks } from './court-reports.js?v=0.5.0';
+import { researchRoutes, renderResearch, addResearchActions } from './research.js?v=0.6.0';
+import { reportRoutes, courtLinks } from './court-reports.js?v=0.6.0';
 const n = value => {
   if (value == null) return '-';
   const v = Number(value);
@@ -121,3 +121,4 @@ export function renderOfficialRoute(route,snapshot,refresh,statusFn,extras={}) {
   root.insertAdjacentHTML('afterbegin',courtLinks());
   addResearchActions(root,snapshot,refresh,extras,route);
 }
+

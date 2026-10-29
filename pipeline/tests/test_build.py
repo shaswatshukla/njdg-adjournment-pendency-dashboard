@@ -62,7 +62,12 @@ class BuildTests(unittest.TestCase):
             self.assertEqual((result["coverage_start"], result["coverage_end"]), ("2024-01", "2024-06"))
             self.assertEqual(result["rejected_rows"], 0)
             for name in ("summary", "by_state", "by_district", "by_court_type", "by_category", "meta"):
-                self.assertIsNotNone(json.loads((project / "site" / "data" / f"{name}.json").read_text(encoding="utf-8")))
+                self.assertIsNotNone(json.loads((project / "pipeline" / "output" / "synthetic_fixture_outputs" / f"{name}.json").read_text(encoding="utf-8")))
+            for name in ('summary', 'by_state', 'by_district', 'by_court_type', 'by_category'):
+                self.assertFalse((project / 'site' / 'data' / f'{name}.json').exists())
+            public_meta = json.loads((project / 'site' / 'data' / 'meta.json').read_text(encoding='utf-8'))
+            self.assertNotIn('synthetic_demo', public_meta)
+            self.assertTrue(all(f.startswith(('official/', 'crime/', 'periodic/')) for f in public_meta['source_files']))
             official = json.loads((project / "site" / "data" / "official_snapshot.json").read_text(encoding="utf-8"))
             self.assertTrue(official["available"])
             controls = json.loads((project / "pipeline" / "official_snapshot_controls.json").read_text(encoding="utf-8"))
@@ -71,7 +76,7 @@ class BuildTests(unittest.TestCase):
             refresh = json.loads((project / "site" / "data" / "refresh_status.json").read_text(encoding="utf-8"))
             canonical = json.loads((project / "pipeline" / "refresh_status.json").read_text(encoding="utf-8"))
             self.assertEqual(refresh["last_checked_at_utc"], canonical["last_checked_at_utc"])
-            rows = json.loads((project / "site" / "data" / "by_district.json").read_text(encoding="utf-8"))
+            rows = json.loads((project / "pipeline" / "output" / "synthetic_fixture_outputs" / "by_district.json").read_text(encoding="utf-8"))
             self.assertTrue(any(r["period"] == "rolling_3m" for r in rows["slices"]))
         finally:
             build_module.ROOT, build_module.PIPELINE = old_root, old_pipeline

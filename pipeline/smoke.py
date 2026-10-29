@@ -5,8 +5,7 @@ import json
 import sys
 from pathlib import Path
 
-EXPECTED = ("summary.json", "by_state.json", "by_district.json", "by_court_type.json",
-            "by_category.json", "meta.json", "official_snapshot.json", "refresh_status.json",
+EXPECTED = ("meta.json", "official_snapshot.json", "refresh_status.json",
             "snapshot_archive.json", "crime.json", "periodic_reports.json")
 
 
@@ -17,6 +16,9 @@ def check_json(data_dir: Path) -> None:
         if not path.is_file():
             raise ValueError(f"Smoke check failed: missing site/data/{name}")
         json.loads(path.read_text(encoding="utf-8"))
+    for forbidden in ('summary.json', 'by_state.json', 'by_district.json', 'by_court_type.json', 'by_category.json'):
+        if (data_dir / forbidden).exists():
+            raise ValueError(f'Synthetic fixture output must not be published: {forbidden}')
 
 
 def main() -> int:
@@ -28,7 +30,7 @@ def main() -> int:
     check_json(data_dir)
     official = json.loads((data_dir / "official_snapshot.json").read_text(encoding="utf-8"))
     official_label = f"{len(official['records'])} official reporting units" if official.get("available") else "no official snapshot"
-    print(f"Smoke check passed: {len(EXPECTED)} JSON files parsed; {result['records_loaded']} demo rows; {official_label}.")
+    print(f"Smoke check passed: {len(EXPECTED)} JSON files parsed; {result['records_loaded']} offline fixture rows; {official_label}.")
     return 0
 
 

@@ -1,69 +1,53 @@
-import { setupPresentation, polishPresentation } from './presentation.js?v=0.5.0';
-import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.5.0';
-import { researchRoutes } from './research.js?v=0.5.0';
-const DATA='./data/';
-const number=n=>{if(n==null)return '-';const value=Number(n);if(Math.abs(value)>=10000000)return `${(value/10000000).toFixed(1)} Cr`;if(Math.abs(value)>=100000)return `${(value/100000).toFixed(1)} L`;return new Intl.NumberFormat('en-IN',{maximumFractionDigits:0}).format(value)};
-const percent=n=>n==null||!Number.isFinite(Number(n))?'—':`${(Number(n)*100).toFixed(1)}%`;
-const metric=(row,key)=>row?.metrics?.[key]?.value??null;
-const charts=new Map();let dataset={};let active='overview';let mode='official';let stateDistrictSort={key:'cases_pending_end',direction:'desc'};
-const cssColor=name=>getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-function status(message,kind=''){const target=mode==='official'?'#official-view .data-status':`#view-${active} .data-status`;document.querySelector(target)?.replaceChildren(document.createTextNode(message));const el=document.querySelector(target);if(el)el.className=`data-status ${kind}`}
-function updateCoverage(meta){const text=`${meta.coverage_start} – ${meta.coverage_end} · ${number(meta.records_loaded)} aggregate rows`;document.querySelectorAll('.coverage').forEach(e=>e.textContent=text);if(mode==='demo')document.querySelectorAll('.coverage-short').forEach(e=>e.textContent=`${meta.coverage_start} – ${meta.coverage_end}`)}
-async function getJSON(name){const response=await fetch(`${DATA}${name}.json`);if(!response.ok)throw new Error(`${name} data unavailable (HTTP ${response.status})`);return response.json()}
-function chart(id,labels,datasets,percentAxis=false,type='line'){const canvas=document.getElementById(id);if(!canvas)return;let empty=canvas.parentElement.querySelector('.chart-empty');if(!empty){empty=document.createElement('span');empty.className='chart-empty';canvas.parentElement.append(empty)}if(!window.Chart){empty.textContent='Chart library unavailable. Check the Chart.js CDN connection.';empty.hidden=false;return}charts.get(id)?.destroy();const text=cssColor('--chart-text'),grid=cssColor('--chart-grid');charts.set(id,new Chart(canvas,{type,data:{labels,datasets:datasets.map(d=>({label:d.label,data:d.data,borderColor:d.color,backgroundColor:d.color,pointRadius:2,pointHoverRadius:4,borderWidth:2,tension:.28,spanGaps:false,fill:false}))},options:{responsive:true,maintainAspectRatio:false,interaction:{intersect:false,mode:'index'},plugins:{legend:{display:datasets.length>1,position:'bottom',labels:{color:text,boxWidth:8,usePointStyle:true,font:{size:10}}},tooltip:{callbacks:percentAxis?{label:c=>`${c.dataset.label}: ${Number(c.raw).toFixed(1)}%`}:{label:c=>`${c.dataset.label}: ${number(c.raw)}`}}},scales:{x:{grid:{display:false},ticks:{color:text,font:{size:9},maxRotation:0}},y:{beginAtZero:true,grid:{color:grid},ticks:{color:text,font:{size:9},callback:v=>percentAxis?`${Number(v).toFixed(1)}%`:number(v)}}}}}));const available=labels.length>0&&datasets.some(d=>d.data.some(v=>v!==null&&v!==undefined));empty.textContent='No data available for this selection.';empty.hidden=available}
-function renderOverview(){const summary=dataset.summary,latest=summary?.latest_totals,series=summary?.time_series??[];if(!latest||!series.length){for(const id of ['kpi-pending','kpi-clearance','kpi-adjournment','kpi-long-pending'])document.getElementById(id).textContent='-';document.getElementById('kpi-month').textContent='No data';chart('pending-chart',[],[{label:'Pending at month end',data:[],color:cssColor('--chart-pending')}]);chart('state-comparison',[],[{label:'Pendency',data:[],color:cssColor('--chart-compare')}],true,'bar');return}document.getElementById('kpi-pending').textContent=number(latest.cases_pending_end);document.getElementById('kpi-pending').title=`${new Intl.NumberFormat('en-IN').format(latest.cases_pending_end)} cases`;document.getElementById('kpi-month').textContent=latest.month;document.getElementById('kpi-clearance').textContent=percent(metric(latest,'clearance_rate'));document.getElementById('kpi-adjournment').textContent=percent(metric(latest,'adjournment_rate'));document.getElementById('kpi-long-pending').textContent=percent(metric(latest,'share_pending_over_3y'));const labels=series.map(r=>r.month);chart('pending-chart',labels,[{label:'Pending at month end',data:series.map(r=>r.cases_pending_end),color:cssColor('--chart-pending')}]);const latestState=dataset.by_state.filter(r=>r.month===latest.month&&r.period==='monthly').sort((a,b)=>a.state.localeCompare(b.state));chart('state-comparison',latestState.map(r=>r.state),[{label:'Pendency',data:latestState.map(r=>metric(r,'pendency_rate')==null?null:metric(r,'pendency_rate')*100),color:cssColor('--chart-compare')}],true,'bar')}
-function renderState(){const rows=dataset.by_state;const select=document.getElementById('state-select'),period=document.getElementById('period-select');if(!select.dataset.ready){const states=[...new Set(rows.map(r=>r.state))].sort();select.innerHTML=states.map(s=>`<option>${escapeHtml(s)}</option>`).join('');select.addEventListener('change',draw);period.addEventListener('change',draw);document.querySelectorAll('[data-state-sort]').forEach(button=>button.addEventListener('click',()=>{const key=button.dataset.stateSort;if(stateDistrictSort.key===key)stateDistrictSort.direction=stateDistrictSort.direction==='asc'?'desc':'asc';else stateDistrictSort={key,direction:key==='district'||key==='month'?'asc':'desc'};draw()}));select.dataset.ready='true'}function draw(){const chosen=select.value,which=period.value,data=rows.filter(r=>r.state===chosen&&r.period===which).sort((a,b)=>a.month.localeCompare(b.month));document.getElementById('state-count').textContent=`${data.length} ${which==='monthly'?'monthly':'rolling'} records`;const labels=data.map(r=>r.month);for(const [id,key,colorName] of [['state-pendency','pendency_rate','--chart-pending'],['state-clearance','clearance_rate','--chart-clearance'],['state-adjournment','adjournment_rate','--chart-adjournment']])chart(id,labels,[{label:key.replace('_rate',''),data:data.map(r=>metric(r,key)==null?null:metric(r,key)*100),color:cssColor(colorName)}],true);const sample=data[data.length-1];const descriptions=[['Pendency',sample?.metrics?.pendency_rate],['Clearance',sample?.metrics?.clearance_rate],['Adjournment',sample?.metrics?.adjournment_rate]].map(([name,item])=>`${sample?.month??'No month'} - ${which==='monthly'?'Monthly':'Rolling 3-month'} ${name}: ${item?.method??'No data for this period.'}`).join(' | ');document.getElementById('state-methods').textContent=descriptions;renderStateDistrict(chosen,which)}draw()}
-function renderStateDistrict(state,period){const all=dataset.by_district.series.filter(r=>r.state===state&&r.period===period);const latest=all.reduce((m,r)=>r.month>m?r.month:m,'');let rows=all.filter(r=>r.month===latest);const {key,direction}=stateDistrictSort;rows.sort((a,b)=>{const va=key==='district'?a.district:key.endsWith('_rate')||key.startsWith('share_')?metric(a,key):a[key];const vb=key==='district'?b.district:key.endsWith('_rate')||key.startsWith('share_')?metric(b,key):b[key];const order=typeof va==='string'?String(va??'').localeCompare(String(vb??'')):(va??-Infinity)-(vb??-Infinity);return direction==='asc'?order:-order});document.querySelectorAll('[data-state-sort]').forEach(button=>{const th=button.closest('th');if(button.dataset.stateSort===key){th.setAttribute('aria-sort',direction==='asc'?'ascending':'descending');button.setAttribute('aria-pressed','true')}else{th.removeAttribute('aria-sort');button.setAttribute('aria-pressed','false')}});const tbody=document.getElementById('state-district-rows');tbody.innerHTML=rows.length?rows.map(r=>`<tr><td>${escapeHtml(r.district)}</td><td>${escapeHtml(r.month)}</td><td class="numeric" title="${new Intl.NumberFormat('en-IN').format(r.cases_pending_end??0)} cases">${number(r.cases_pending_end)}</td><td class="numeric">${percent(metric(r,'clearance_rate'))}</td><td class="numeric">${percent(metric(r,'adjournment_rate'))}</td><td class="numeric">${percent(metric(r,'share_pending_over_3y'))}</td></tr>`).join(''):'<tr><td colspan="6">No district data for this state and period.</td></tr>';document.getElementById('state-table-count').textContent=rows.length?`${rows.length} districts - ${latest}`:'No data'}
-function renderDistrict(){const rows=dataset.by_district.slices;const latestMonth=rows.reduce((latest,r)=>r.period==='monthly'&&r.month>latest?r.month:latest,'');const table=rows.filter(r=>r.period==='monthly'&&r.month===latestMonth);const state=document.getElementById('district-state'),court=document.getElementById('court-filter'),category=document.getElementById('category-filter'),sort=document.getElementById('sort-filter');if(!state.dataset.ready){const add=(el,values)=>el.insertAdjacentHTML('beforeend',[...new Set(values)].sort().map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join(''));add(state,table.map(r=>r.state));add(court,table.map(r=>r.court_type));add(category,table.map(r=>r.case_category));for(const el of [state,court,category,sort])el.addEventListener('change',draw);document.getElementById('download-csv').addEventListener('click',download);state.dataset.ready='true'}let view=[];function draw(){view=table.filter(r=>(!state.value||r.state===state.value)&&(!court.value||r.court_type===court.value)&&(!category.value||r.case_category===category.value));const key=sort.value,val=r=>key==='district'?r.district:key.endsWith('_rate')?metric(r,key):r[key];view.sort((a,b)=>key==='district'?a.district.localeCompare(b.district):(val(b)??-Infinity)-(val(a)??-Infinity));const tbody=document.getElementById('district-rows');tbody.innerHTML=view.length?view.map(r=>`<tr><td>${escapeHtml(r.district)}</td><td>${escapeHtml(r.state)}</td><td>${escapeHtml(r.court_type)}</td><td>${escapeHtml(r.case_category)}</td><td>${escapeHtml(r.month)}</td><td class="numeric" title="${new Intl.NumberFormat('en-IN').format(r.cases_pending_end)} cases">${number(r.cases_pending_end)}</td><td class="numeric">${percent(metric(r,'clearance_rate'))}</td><td class="numeric">${percent(metric(r,'adjournment_rate'))}</td></tr>`).join(''):'<tr><td colspan="8">No records match these filters.</td></tr>';document.getElementById('row-count').textContent=`${view.length} rows - ${latestMonth}`;status(view.length?`${view.length} district slices shown for ${latestMonth}.`:'No data for this filter combination.',view.length?'success':'')}
-function download(){const cols=['district','state','court_type','case_category','month','cases_pending_start','cases_pending_end','cases_instituted','cases_disposed','hearings_listed','hearings_adjourned','cases_pending_over_3y','cases_pending_over_5y','pendency_rate','clearance_rate','adjournment_rate'];const esc=v=>{let value=String(v??'');if(/^[=+\-@]/.test(value))value=`'${value}`;return `"${value.replaceAll('"','""')}"`};const csv=[cols.map(esc).join(','),...view.map(r=>cols.map(c=>esc(c.endsWith('_rate')?metric(r,c):r[c])).join(','))].join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download=`justice-metrics-${dataset.meta.synthetic_demo?'SYNTHETIC-DEMO-':''}${latestMonth}-filtered.csv`;a.click();URL.revokeObjectURL(a.href)}draw()}
-function renderSources(){const meta=dataset.meta,list=document.getElementById('source-list');list.innerHTML=(meta.sources??[]).filter(s=>!String(s.file_name).startsWith('official/')).map(s=>`<div class="source-item"><a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener">${escapeHtml(s.source_name)}</a><small>${escapeHtml(s.file_name)} · ${escapeHtml(s.coverage_start)} to ${escapeHtml(s.coverage_end)} · ${escapeHtml(s.licence)}</small><small>${escapeHtml(s.notes)}</small></div>`).join('')||'No sources registered.'}
-function showRoute(){
-  let route=location.hash.slice(1)||'overview';
-  if(!['overview','state','district','methodology','about',...researchRoutes].includes(route))route='overview';
-  if(researchRoutes.includes(route))document.getElementById('dataset-mode').value='official';
-  active=route;mode=document.getElementById('dataset-mode')?.value||'official';
-  document.querySelectorAll('.page-view').forEach(v=>{v.hidden=mode==='official'?v.id!=='official-view':!(v.dataset.mode==='demo'&&v.dataset.page===route)});
-  const footerCoverage=document.querySelector('.coverage-short');
-  if(footerCoverage)footerCoverage.textContent=mode==='official'?(dataset.official?(dataset.official.data_as_of||'Unavailable'):'Loading'):(dataset.meta?`${dataset.meta.coverage_start} to ${dataset.meta.coverage_end}`:'Loading');
-  document.querySelectorAll('[data-route]').forEach(a=>{if(a.dataset.route===route)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-  const districtLink=document.querySelector('[data-route="district"]');if(districtLink)districtLink.querySelector('.nav-label').textContent=mode==='official'?'Court coverage':'District explorer';
-  document.title=`NJDG Adjournment & Pendency Dashboard - ${mode==='official'?'Official snapshot':'Synthetic demo'} - ${route[0].toUpperCase()+route.slice(1)}`;
-  if(mode==='official'&&dataset.official)updateOfficialModeStatus(dataset.official,dataset.refreshStatus,document.getElementById('mode-status'));
-  else if(mode==='official'&&!dataset.officialError){const e=document.getElementById('mode-status');e.textContent='Loading official snapshot and source-check status...';e.className='mode-status'}
-  else if(mode==='demo'&&dataset.meta){const e=document.getElementById('mode-status');e.textContent=`SYNTHETIC - FOR DEMO. Demo coverage ${dataset.meta.coverage_start} to ${dataset.meta.coverage_end}; not official data.`;e.className='mode-status'}
-  else if(mode==='demo'&&!dataset.demoError){const e=document.getElementById('mode-status');e.textContent='Loading synthetic demo data...';e.className='mode-status'}
-  if(mode==='demo'&&dataset.demoError){status(`Synthetic demo data unavailable: ${dataset.demoError}`,'error');return}
-  if(mode==='demo'&&!dataset.meta)return;
-  try{
-    if(mode==='official'){
-      if(!dataset.official?.available){const e=document.getElementById('mode-status');e.textContent=`${dataset.officialError||'No verified official snapshot is available.'} The synthetic demo remains a separate option in the dataset selector.`;e.className='mode-status warning';document.getElementById('official-view').innerHTML='<section class="page-heading"><p class="eyebrow">OFFICIAL SNAPSHOT</p><h1>Official data unavailable</h1><p>The published official snapshot could not be loaded or verified. No synthetic values have been substituted.</p></section><div class="alert alert-strong" role="alert"><strong>Unavailable.</strong> Choose the synthetic demo dataset explicitly if you want to explore example values.</div>';return}
-      renderOfficialRoute(route,dataset.official,dataset.refreshStatus,status,{archive:dataset.archive,crime:dataset.crime,meta:dataset.meta,periodic:dataset.periodic});
-    }else{
-      status(`${number(dataset.meta.records_loaded)} synthetic demo rows loaded. This data is invented.`,'success');
-      if(route==='overview')renderOverview();if(route==='state')renderState();if(route==='district')renderDistrict();if(route==='methodology')renderSources();
-      const empty=route==='overview'?!(dataset.summary?.latest_totals&&dataset.summary?.time_series?.length):route==='state'?dataset.by_state.length===0:route==='district'?dataset.by_district.slices.length===0:route==='methodology'?dataset.meta.sources.length===0:false;
-      if(empty)status('No data is available for this view.','');
-    }
-  }catch(err){status(`Unable to display this view: ${err.message}`,'error')}finally{polishPresentation(route,mode)}
+import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.6.0';
+import { researchRoutes } from './research.js?v=0.6.0';
+import { setupPresentation, polishPresentation } from './presentation.js?v=0.6.0';
+
+const dataset={};
+const routes=['overview','state','district','methodology','about',...researchRoutes];
+function status(message,kind=''){
+  const el=document.querySelector('#official-view .data-status');
+  if(el){el.textContent=message;el.className=`data-status ${kind}`;}
 }
-function setTheme(){const root=document.documentElement,button=document.querySelector('.theme-toggle');let saved=null;try{saved=localStorage.getItem('jm-theme')}catch{}root.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const update=()=>{const dark=root.dataset.theme==='dark';button.setAttribute('aria-pressed',String(dark));button.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme')};update();button.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('jm-theme',root.dataset.theme)}catch{}update();showRoute()})}
+async function getJSON(name){
+  const response=await fetch(`./data/${name}.json`);
+  if(!response.ok)throw new Error(`${name} unavailable (HTTP ${response.status})`);
+  return response.json();
+}
+function showRoute(){
+  const requested=location.hash.slice(1).split('?')[0]||'overview';
+  const route=routes.includes(requested)?requested:'overview';
+  document.title=`Justice Metrics — ${route.replaceAll('-',' ')} — Official reports`;
+  document.querySelector('.coverage-short').textContent=dataset.official?.data_as_of||'Unavailable';
+  const root=document.getElementById('official-view');
+  document.body.classList.remove('crime-map-expanded');
+  document.getElementById('crime-map-dialog')?.close();
+  try{
+    if(!dataset.official?.available){
+      document.getElementById('mode-status').textContent='Official reports could not be loaded. No substitute dataset is shown.';
+      root.replaceChildren();
+      const heading=document.createElement('h1');heading.textContent='Official data unavailable';
+      const message=document.createElement('p');message.className='alert';message.textContent=dataset.officialError||'The verified source could not be loaded. No replacement figures are shown.';
+      root.append(heading,message);return;
+    }
+    updateOfficialModeStatus(dataset.official,dataset.refreshStatus,document.getElementById('mode-status'));
+    renderOfficialRoute(route,dataset.official,dataset.refreshStatus,status,{archive:dataset.archive,crime:dataset.crime,meta:dataset.meta,periodic:dataset.periodic});
+  }catch(error){
+    root.replaceChildren();const message=document.createElement('p');message.className='alert';message.setAttribute('role','alert');message.textContent=`Unable to display this view: ${error.message}`;root.append(message);
+  }finally{polishPresentation(route,'official');}
+}
+function setTheme(){
+  const root=document.documentElement,button=document.querySelector('.theme-toggle');let saved=null;
+  try{saved=localStorage.getItem('jm-theme');}catch{}
+  root.dataset.theme=['dark','light'].includes(saved)?saved:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  const update=()=>{const dark=root.dataset.theme==='dark';button.setAttribute('aria-pressed',String(dark));button.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');};
+  update();button.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('jm-theme',root.dataset.theme);}catch{}update();showRoute();});
+}
 async function start(){
-  setupPresentation();
-  setTheme();
-  const selector=document.getElementById('dataset-mode');selector.value='official';selector.addEventListener('change',showRoute);
-  window.addEventListener('hashchange',showRoute);
-  const [officialResult,refreshResult,archiveResult,crimeResult,periodicResult]=await Promise.allSettled([getJSON('official_snapshot'),getJSON('refresh_status'),getJSON('snapshot_archive'),getJSON('crime'),getJSON('periodic_reports')]);
-  if(periodicResult.status==='fulfilled')dataset.periodic=periodicResult.value;
-  if(archiveResult.status==='fulfilled')dataset.archive=archiveResult.value;
-  if(crimeResult.status==='fulfilled')dataset.crime=crimeResult.value;
-  if(officialResult.status==='fulfilled')dataset.official=officialResult.value;else dataset.officialError=`Official snapshot unavailable: ${officialResult.reason.message}`;
-  if(refreshResult.status==='fulfilled')dataset.refreshStatus=refreshResult.value;else dataset.refreshError=refreshResult.reason.message;
+  setupPresentation();setTheme();window.addEventListener('hashchange',showRoute);
+  const names=['official_snapshot','refresh_status','snapshot_archive','crime','periodic_reports','meta'];
+  const results=await Promise.allSettled(names.map(getJSON));
+  const keys=['official','refreshStatus','archive','crime','periodic','meta'];
+  results.forEach((r,i)=>{if(r.status==='fulfilled')dataset[keys[i]]=r.value;else if(i===0)dataset.officialError=r.reason.message;});
   showRoute();
-  const demoResults=await Promise.allSettled([getJSON('meta'),getJSON('summary'),getJSON('by_state'),getJSON('by_district')]);
-  if(demoResults.every(r=>r.status==='fulfilled')){
-    [dataset.meta,dataset.summary,dataset.by_state,dataset.by_district]=demoResults.map(r=>r.value);updateCoverage(dataset.meta);
-  }else dataset.demoError=demoResults.filter(r=>r.status==='rejected').map(r=>r.reason.message).join('; ');
-  if(mode==='demo'||researchRoutes.includes(active))showRoute();
 }
 start();

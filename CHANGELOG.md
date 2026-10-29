@@ -1,3 +1,10 @@
+## 0.6.0 - 2026-10-29
+
+- Replace the schematic crime tiles with a geographic India map covering all 36 State/UTs; preserve source attribution and boundary vintage.
+- Add clickable and shareable State/UT links, keyboard selection, zoom, pan, reset and an expanded modal view.
+- Remove the public synthetic selector, demo pages, requests and data series. Keep regression fixtures and outputs offline.
+- Publish six official data JSON contracts and add map geometry, permalink and colour-band checks.
+
 ## 0.5.0 — 2026-10-29
 
 - Redesign with navy/ivory themes, editorial typography, persistent grouped navigation, mobile drawer, clearer cards and tables.
@@ -32,4 +39,5 @@
 - Add verified monthly Kokrajhar district data and January–August 2025 Supreme Court Civil/Criminal/Total statistics from periodic court reports.
 - Add a publication catalogue, category/state filters, report CSV export and monthly stock chart; distinguish report dates and incomplete district coverage.
 - Validate periodic report identities, category/flow reconciliation and published controls; expand smoke contract to eleven JSON artifacts.
+
 

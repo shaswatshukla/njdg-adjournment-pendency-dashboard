@@ -1,5 +1,15 @@
 # Data sources and provenance
 
+## Geographic reference asset — added 29 October 2026
+
+The crime map uses **LGD States (2024)**, published for download by Bharatlas: https://bharatlas.com/api/dl/admin/states/LGD_States.geojson ; catalogue https://bharatlas.com/ ; primary organisation https://lgdirectory.gov.in/ . The publisher lists the administrative layer under `CC0-1.0 / CC-BY-4.0`; attribution to Local Government Directory via Bharatlas is retained, with a CC BY 4.0 link. This is a publisher licence statement, not a claim of government endorsement or data-wide commercial clearance.
+
+Access method: manual download of the published aggregate geographic file, no website scraping or undocumented API. The 36 polygon features were matched to the 36 State/UT crime rows by an explicit canonical-name mapping, retaining LGD codes. Only state identity and geometry are retained; all other source properties are excluded. The original download SHA-256, URL, publisher, date, licence and transformations are embedded in `site/assets/maps/india-states.json`.
+
+`pipeline/build_map.py` converts a manually supplied GeoJSON into equirectangular SVG paths and applies Ramer–Douglas–Peucker simplification at 0.45 display pixels. This asset is independent of the count-input registry: the normal report pipeline does not load or join the geographic download. No population, area or statistical rate is derived from it. The original large download is not bundled; the derived display asset is local and self-contained.
+
+Limitations: boundary vintage 2024 versus crime year 2023; reference geometry, not a survey record; small UT dots are enlarged interaction targets, not geographic areas. Refer to https://surveyofindia.gov.in/ for authoritative boundaries. Geographic attribution does not change the separate, unverified reuse status of NCRB/MHA count data.
+
 The repository contains separate synthetic demo inputs and verified manually transcribed official aggregate reports. Source-specific provenance and limitations are recorded below and in sources.csv. No website is scraped. Before adding a real file, manually download it, review its current terms, record its provenance in `pipeline/sources.csv`, and note its definitions and coverage. No values should be inferred from these pointers.
 
 ## 1. Official court data

@@ -299,6 +299,8 @@ def build() -> dict[str, Any]:
         raise BuildError(f"Build stopped: {len(rejects)} rejected data/provenance issue(s). See output/rejected_rows.csv")
     site_data = ROOT / "site" / "data"
     site_data.mkdir(parents=True, exist_ok=True)
+    fixture_data = PIPELINE / 'output' / 'synthetic_fixture_outputs'
+    fixture_data.mkdir(parents=True, exist_ok=True)
     if data.empty:
         raise BuildError("No aggregate rows loaded")
     views = build_views(data, context)
@@ -310,10 +312,10 @@ def build() -> dict[str, Any]:
         metrics = calculate_metrics(**{c: int(getattr(r, c)) for c in COUNT_COLUMNS})
         summary.append({"month":r.month, **{c:int(getattr(r,c)) for c in COUNT_COLUMNS},
                         "cases_pending_end":metrics["cases_pending_end"]["value"], "metrics":metrics})
-    for name, rows in views.items(): _dump(site_data / f"{name}.json", rows)
+    for name, rows in views.items(): _dump(fixture_data / f"{name}.json", rows)
     latest = summary[-1]
     coverage = {"start": str(data.month.min()), "end": str(data.month.max()), "months": int(data.month.nunique())}
-    _dump(site_data / "summary.json", {"coverage": coverage, "latest_month": latest["month"],
+    _dump(fixture_data / "summary.json", {"coverage": coverage, "latest_month": latest["month"],
                                       "latest_totals": latest, "time_series": summary})
     demo_sources = sources[~sources.file_name.str.startswith(("official/", "crime/", "periodic/"))]
     meta = {"generated_at_utc": datetime.now(timezone.utc).isoformat(), "schema_version":"1.0",
@@ -321,7 +323,17 @@ def build() -> dict[str, Any]:
             "sources":demo_sources.to_dict("records"), "coverage_start":str(data.month.min()),
             "coverage_end":str(data.month.max()), "synthetic_demo":True,
             "method_note":"Rolling rates use ratios of aggregate flows and opening/final stock. Missing calendar months make a rolling window unavailable."}
-    _dump(site_data / "meta.json", meta)
+    _dump(fixture_data / "meta.json", meta)
+    official_sources = sources[sources.file_name.str.startswith(('official/', 'crime/', 'periodic/'))]
+    _dump(site_data / 'meta.json', {'generated_at_utc': meta['generated_at_utc'], 'schema_version': '1.1',
+                                  'rejected_rows': 0, 'source_files': list(official_sources.file_name),
+                                  'sources': official_sources.to_dict('records'),
+                                  'records_by_dataset': {'national_snapshot': len(official_snapshot.get('records', [])),
+                                                         'crime': len(crime.get('records', [])),
+                                                         'periodic_reports': len(periodic.get('records', []))},
+                                  'method_note': 'Official aggregate reports only. Datasets retain separate reporting dates and scopes.'})
+    for obsolete in ('summary.json', 'by_state.json', 'by_district.json', 'by_court_type.json', 'by_category.json'):
+        (site_data / obsolete).unlink(missing_ok=True)
     _dump(site_data / "official_snapshot.json", official_snapshot)
     _dump(site_data / "refresh_status.json", refresh_status)
     try:
@@ -349,7 +361,7 @@ if __name__ == "__main__":
         official = json.loads((ROOT / "site" / "data" / "official_snapshot.json").read_text(encoding="utf-8"))
         official_label = (f"{len(official['records'])} official reporting units as of {official['data_as_of']}"
                           if official.get("available") else "no official snapshot available")
-        print(f"Build succeeded: {result['records_loaded']} synthetic demo rows ({result['coverage_start']}-{result['coverage_end']}); {official_label}")
+        print(f"Build succeeded: {result['records_loaded']} offline synthetic fixture rows ({result['coverage_start']}-{result['coverage_end']}); {official_label}")
     except BuildError as exc:
         print(str(exc))
         raise SystemExit(1)
