@@ -1,0 +1,282 @@
+{
+  "year": 2023,
+  "records": [
+    {
+      "state": "Andhra Pradesh",
+      "year": 2023,
+      "ipc": 153867,
+      "sll": 30426,
+      "total": 184293
+    },
+    {
+      "state": "Arunachal Pradesh",
+      "year": 2023,
+      "ipc": 2505,
+      "sll": 436,
+      "total": 2941
+    },
+    {
+      "state": "Assam",
+      "year": 2023,
+      "ipc": 49884,
+      "sll": 15075,
+      "total": 64959
+    },
+    {
+      "state": "Bihar",
+      "year": 2023,
+      "ipc": 231627,
+      "sll": 121875,
+      "total": 353502
+    },
+    {
+      "state": "Chhattisgarh",
+      "year": 2023,
+      "ipc": 67961,
+      "sll": 47532,
+      "total": 115493
+    },
+    {
+      "state": "Goa",
+      "year": 2023,
+      "ipc": 2094,
+      "sll": 988,
+      "total": 3082
+    },
+    {
+      "state": "Gujarat",
+      "year": 2023,
+      "ipc": 170657,
+      "sll": 408222,
+      "total": 578879
+    },
+    {
+      "state": "Haryana",
+      "year": 2023,
+      "ipc": 129294,
+      "sll": 94922,
+      "total": 224216
+    },
+    {
+      "state": "Himachal Pradesh",
+      "year": 2023,
+      "ipc": 13505,
+      "sll": 6482,
+      "total": 19987
+    },
+    {
+      "state": "Jharkhand",
+      "year": 2023,
+      "ipc": 50187,
+      "sll": 13651,
+      "total": 63838
+    },
+    {
+      "state": "Karnataka",
+      "year": 2023,
+      "ipc": 148648,
+      "sll": 65586,
+      "total": 214234
+    },
+    {
+      "state": "Kerala",
+      "year": 2023,
+      "ipc": 258538,
+      "sll": 325835,
+      "total": 584373
+    },
+    {
+      "state": "Madhya Pradesh",
+      "year": 2023,
+      "ipc": 297689,
+      "sll": 198019,
+      "total": 495708
+    },
+    {
+      "state": "Maharashtra",
+      "year": 2023,
+      "ipc": 385623,
+      "sll": 210480,
+      "total": 596103
+    },
+    {
+      "state": "Manipur",
+      "year": 2023,
+      "ipc": 19192,
+      "sll": 1091,
+      "total": 20283
+    },
+    {
+      "state": "Meghalaya",
+      "year": 2023,
+      "ipc": 2730,
+      "sll": 802,
+      "total": 3532
+    },
+    {
+      "state": "Mizoram",
+      "year": 2023,
+      "ipc": 3281,
+      "sll": 769,
+      "total": 4050
+    },
+    {
+      "state": "Nagaland",
+      "year": 2023,
+      "ipc": 1050,
+      "sll": 849,
+      "total": 1899
+    },
+    {
+      "state": "Odisha",
+      "year": 2023,
+      "ipc": 170022,
+      "sll": 29932,
+      "total": 199954
+    },
+    {
+      "state": "Punjab",
+      "year": 2023,
+      "ipc": 44872,
+      "sll": 25072,
+      "total": 69944
+    },
+    {
+      "state": "Rajasthan",
+      "year": 2023,
+      "ipc": 234985,
+      "sll": 82495,
+      "total": 317480
+    },
+    {
+      "state": "Sikkim",
+      "year": 2023,
+      "ipc": 511,
+      "sll": 207,
+      "total": 718
+    },
+    {
+      "state": "Tamil Nadu",
+      "year": 2023,
+      "ipc": 203804,
+      "sll": 335847,
+      "total": 539651
+    },
+    {
+      "state": "Telangana",
+      "year": 2023,
+      "ipc": 156737,
+      "sll": 26907,
+      "total": 183644
+    },
+    {
+      "state": "Tripura",
+      "year": 2023,
+      "ipc": 3814,
+      "sll": 1188,
+      "total": 5002
+    },
+    {
+      "state": "Uttar Pradesh",
+      "year": 2023,
+      "ipc": 428794,
+      "sll": 364226,
+      "total": 793020
+    },
+    {
+      "state": "Uttarakhand",
+      "year": 2023,
+      "ipc": 17094,
+      "sll": 16923,
+      "total": 34017
+    },
+    {
+      "state": "West Bengal",
+      "year": 2023,
+      "ipc": 156237,
+      "sll": 24035,
+      "total": 180272
+    },
+    {
+      "state": "Andaman and Nicobar Islands",
+      "year": 2023,
+      "ipc": 587,
+      "sll": 1286,
+      "total": 1873
+    },
+    {
+      "state": "Chandigarh",
+      "year": 2023,
+      "ipc": 3285,
+      "sll": 900,
+      "total": 4185
+    },
+    {
+      "state": "Dadra and Nagar Haveli and Daman and Diu",
+      "year": 2023,
+      "ipc": 761,
+      "sll": 104,
+      "total": 865
+    },
+    {
+      "state": "Delhi",
+      "year": 2023,
+      "ipc": 324257,
+      "sll": 20006,
+      "total": 344263
+    },
+    {
+      "state": "Jammu and Kashmir",
+      "year": 2023,
+      "ipc": 25127,
+      "sll": 4468,
+      "total": 29595
+    },
+    {
+      "state": "Ladakh",
+      "year": 2023,
+      "ipc": 459,
+      "sll": 63,
+      "total": 522
+    },
+    {
+      "state": "Lakshadweep",
+      "year": 2023,
+      "ipc": 76,
+      "sll": 51,
+      "total": 127
+    },
+    {
+      "state": "Puducherry",
+      "year": 2023,
+      "ipc": 3348,
+      "sll": 1717,
+      "total": 5065
+    }
+  ],
+  "totals": {
+    "ipc": 3763102,
+    "sll": 2478467,
+    "total": 6241569
+  },
+  "source": {
+    "file_name": "crime/registered_crime_2023.csv",
+    "source_name": "Ministry of Home Affairs Rajya Sabha Question 407 NCRB Crime in India",
+    "source_url": "https://sansad.in/getFile/annex/269/AU407_UbEvYl.pdf?source=pqars",
+    "download_date": "2026-10-29",
+    "licence": "Reuse terms unverified; no commercial clearance claimed",
+    "coverage_start": "2023-01",
+    "coverage_end": "2023-12",
+    "notes": "Manual transcription of Annexure I PDF page 3 answered 2025-12-03; 36 State/UT registered cognizable IPC and SLL counts; no personal data; not safety rankings."
+  },
+  "source_page": 3,
+  "table": "Annexure I",
+  "law_regime": "IPC (pre-BNS)",
+  "method": "Published registered cognizable cases; total = IPC + SLL. Counts, not population rates.",
+  "limitations": [
+    "Registered cases are not the true incidence of crime, convictions, or a safety score.",
+    "Reporting and policing practices differ across States/UTs.",
+    "Annual 2023 crime flows must not be compared as equivalent to 2026 pending court stocks.",
+    "Source commercial reuse terms are unverified."
+  ]
+}

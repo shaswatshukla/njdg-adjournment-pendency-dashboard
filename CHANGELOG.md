@@ -13,3 +13,17 @@
 - Added documented metric definitions, source provenance, privacy refusal, and rejection reporting.
 - Added hash-routed static dashboard, state and district exploration, CSV export, and theme toggle.
 - Added automated validation tests and GitHub Pages deployment workflow.
+## 0.3.0 — 2026-10-29
+
+- Add data health, preserved snapshot archive, State/UT comparison, inline citations and printable research briefs.
+- Add reporting-level and age-remainder breakdowns with explicit unavailable fields.
+- Add an accessible 36-State/UT schematic crime map using verified 2023 NCRB/MHA aggregate counts; IPC/BNS break documented, national controls tested.
+- Preserve the static free stack and independent crime/court reporting dates.
+
+## 0.4.0 — 2026-10-29
+
+- Expose dedicated High Court and Supreme Court aggregate views.
+- Add verified monthly Kokrajhar district data and January–August 2025 Supreme Court Civil/Criminal/Total statistics from periodic court reports.
+- Add a publication catalogue, category/state filters, report CSV export and monthly stock chart; distinguish report dates and incomplete district coverage.
+- Validate periodic report identities, category/flow reconciliation and published controls; expand smoke contract to eleven JSON artifacts.
+

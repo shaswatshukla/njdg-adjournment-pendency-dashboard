@@ -6,7 +6,8 @@ import sys
 from pathlib import Path
 
 EXPECTED = ("summary.json", "by_state.json", "by_district.json", "by_court_type.json",
-            "by_category.json", "meta.json", "official_snapshot.json", "refresh_status.json")
+            "by_category.json", "meta.json", "official_snapshot.json", "refresh_status.json",
+            "snapshot_archive.json", "crime.json", "periodic_reports.json")
 
 
 def check_json(data_dir: Path) -> None:

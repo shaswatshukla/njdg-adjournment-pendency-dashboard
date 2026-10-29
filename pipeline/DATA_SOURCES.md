@@ -1,6 +1,6 @@
 # Data sources and provenance
 
-The committed files are entirely synthetic. The links below are research starting points, not sources used to create the checked-in CSVs. No source has been scraped or downloaded by this project. Before adding a real file, manually download it, review its current terms, record its provenance in `pipeline/sources.csv`, and note its definitions and coverage. No values should be inferred from these pointers.
+The repository contains separate synthetic demo inputs and verified manually transcribed official aggregate reports. Source-specific provenance and limitations are recorded below and in sources.csv. No website is scraped. Before adding a real file, manually download it, review its current terms, record its provenance in `pipeline/sources.csv`, and note its definitions and coverage. No values should be inferred from these pointers.
 
 ## 1. Official court data
 
@@ -47,3 +47,16 @@ Optional context columns are `population`, `judge_strength`, and `budget`. They 
 ## Crime-series boundary
 
 This project includes no crime time series. India transitioned from the Indian Penal Code (IPC) to the Bharatiya Nyaya Sanhita (BNS) from July 2024. Any future crime comparison must document a defensible IPC-to-BNS category crosswalk and a break in comparability before inclusion. NCRB's [Sankalan portal](https://www.ncrb.mha.gov.in/uploads/SankalanPortal/Index.html) provides official correspondence material; this project does not apply it.
+## Added registered-crime aggregate source
+
+Government statistics: Ministry of Home Affairs, Rajya Sabha Unstarred Question 407, answered 3 December 2025, Annexure I, PDF page 3. URL: https://sansad.in/getFile/annex/269/AU407_UbEvYl.pdf?source=pqars
+
+Provides: State/UT registered cognizable IPC, SLL and combined counts for 2021–2023; this project manually transcribes 2023 only. Access method: manual download/inspection of the published report, no scraping. Source table visually checked; 36 row sums and three national published control totals reconcile. Reuse terms remain unverified. Limitations: police registrations reflect reporting and enforcement practices; no safety inference or comparison to court stocks; no matching population denominator; predates the July 2024 IPC/BNS transition. Dataset-specific schema and normalization notes are in `crime_schema.md`. The series-level transition mapping explicitly withholds direct IPC/BNS comparison.
+
+## Verified periodic court publications
+
+- Supreme Court: https://www.sci.gov.in/indian-judiciary-annual-report/ publishes annual volumes for the Supreme Court and High Courts. The ingested Volume I PDF is https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf ; PDF page 223 (printed 213) reports Civil/Criminal/Total monthly institutions, disposals and pending for January–August 2025. Access: manual published-report inspection. Opening, hearings and adjournments are not supplied in this table. The report reserves reproduction rights. No commercial clearance is claimed.
+- Kokrajhar District Judiciary: https://kokrajhar.dcourts.gov.in/document-category/statistical-reports/ publishes monthly pendency statements. The ingested September 2026 report, published 7 October 2026, is https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/10/2026100717.pdf ; PDF page 3 contains the district summary. Access: manual published-report inspection. One district only; no nationwide extrapolation. Reuse terms unverified. Only aggregate summary cells are transcribed, with no officer/case details.
+
+These reports' dates and scope remain separate from the March 2026 national snapshot. See `periodic_schema.md` for counts, validation and limitations.
+

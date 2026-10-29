@@ -13,9 +13,13 @@ import pandas as pd
 try:  # package import for tests; script import for `python pipeline/build.py`
     from .metrics import build_views, calculate_metrics
     from .snapshot import SnapshotError, validate_snapshot
+    from .research import CRIME_FILE, load_crime, archive_snapshot
+    from .periodic import load_periodic
 except ImportError:
     from metrics import build_views, calculate_metrics
     from snapshot import SnapshotError, validate_snapshot
+    from research import CRIME_FILE, load_crime, archive_snapshot
+    from periodic import load_periodic
 
 ROOT = Path(__file__).resolve().parents[1]
 PIPELINE = ROOT / "pipeline"
@@ -207,6 +211,10 @@ def build() -> dict[str, Any]:
             except Exception:
                 rejects.append({"source_file": filename, "row_number": "", "reason": "Unreadable context CSV"})
             continue
+        if filename == CRIME_FILE:
+            continue
+        if filename.startswith('periodic/'):
+            continue
         if "official" in Path(filename).parts:
             official_files.append(filename)
             continue
@@ -264,6 +272,28 @@ def build() -> dict[str, Any]:
         pass
     if refresh_status["data_as_of"] != official_controls.get("data_as_of"):
         rejects.append({"source_file": "pipeline/refresh_status.json", "row_number": "", "reason": "Refresh status data_as_of differs from controls manifest"})
+    crime = {"records": [], "note": "No verified crime source registered."}
+    if CRIME_FILE in source_map and (raw_root / CRIME_FILE).exists():
+        try:
+            crime = load_crime(raw_root / CRIME_FILE, source_map[CRIME_FILE]._asdict(),
+                               official_controls['expected_state_ut_aggregate_labels'])
+            crime_check = refresh_status.get('crime_check', {})
+            if crime_check.get('year') != crime['year'] or crime['source']['source_url'] not in crime_check.get('sources', []):
+                raise ValueError('Crime check metadata must identify the verified source and reporting year')
+            checked = datetime.fromisoformat(str(crime_check.get('last_checked_at_utc', '')).replace('Z', '+00:00'))
+            if checked.tzinfo is None or checked.utcoffset().total_seconds() != 0 or crime_check.get('status') not in REFRESH_STATUSES:
+                raise ValueError('Crime verification status or UTC check date invalid')
+        except (ValueError, KeyError) as exc:
+            rejects.append({"source_file": CRIME_FILE, "row_number": "", "reason": str(exc)})
+    periodic = {'records': [], 'reports': []}
+    try:
+        controls_path = PIPELINE / 'periodic_controls.json'
+        periodic_controls = json.loads(controls_path.read_text(encoding='utf-8')) if controls_path.exists() else {}
+        if set(periodic_controls) != {f for f in registered if f.startswith('periodic/')}:
+            raise ValueError('Registered periodic files must exactly match reviewed periodic controls')
+        periodic = load_periodic(raw_root, source_map, periodic_controls)
+    except (ValueError, KeyError) as exc:
+        rejects.append({'source_file': 'periodic', 'row_number': '', 'reason': str(exc)})
     _write_rejections(rejects)
     if rejects:
         raise BuildError(f"Build stopped: {len(rejects)} rejected data/provenance issue(s). See output/rejected_rows.csv")
@@ -285,7 +315,7 @@ def build() -> dict[str, Any]:
     coverage = {"start": str(data.month.min()), "end": str(data.month.max()), "months": int(data.month.nunique())}
     _dump(site_data / "summary.json", {"coverage": coverage, "latest_month": latest["month"],
                                       "latest_totals": latest, "time_series": summary})
-    demo_sources = sources[~sources.file_name.str.startswith("official/")]
+    demo_sources = sources[~sources.file_name.str.startswith(("official/", "crime/", "periodic/"))]
     meta = {"generated_at_utc": datetime.now(timezone.utc).isoformat(), "schema_version":"1.0",
             "records_loaded":int(len(data)), "rejected_rows":0, "source_files":list(demo_sources.file_name),
             "sources":demo_sources.to_dict("records"), "coverage_start":str(data.month.min()),
@@ -294,6 +324,13 @@ def build() -> dict[str, Any]:
     _dump(site_data / "meta.json", meta)
     _dump(site_data / "official_snapshot.json", official_snapshot)
     _dump(site_data / "refresh_status.json", refresh_status)
+    try:
+        archive = archive_snapshot(PIPELINE / 'archive', official_snapshot) if official_snapshot.get('available') else {'snapshots': []}
+    except ValueError as exc:
+        raise BuildError(str(exc)) from exc
+    _dump(site_data / 'snapshot_archive.json', archive)
+    _dump(site_data / 'crime.json', crime)
+    _dump(site_data / 'periodic_reports.json', periodic)
     # Require every expected artifact and parse it before declaring success.
     try:
         from .smoke import check_json

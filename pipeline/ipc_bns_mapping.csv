@@ -1,0 +1,4 @@
+series_id,ipc_label,bns_label,effective_from,comparability,note
+ipc_total,Total cognizable IPC crimes,Total cognizable BNS crimes,2024-07-01,not_directly_comparable,Scope and offence definitions changed; no post-transition series joined without reviewed offence-level crosswalk
+sll_total,Cognizable Special and Local Laws crimes,Cognizable Special and Local Laws crimes,2024-07-01,requires_review,Verify statutory scope and reporting definitions before linking years
+ipc_sll_total,Total cognizable IPC plus SLL crimes,Total cognizable BNS plus SLL crimes,2024-07-01,not_directly_comparable,2024 is a transition year; do not splice into this 2023 snapshot

@@ -3724,6 +3724,11 @@
     }
   ],
   "totals_by_level": {
+    "district_subordinate_aggregate": {
+      "reporting_units": 36,
+      "cases_pending": 49956834,
+      "cases_pending_over_5y": 14806291
+    },
     "supreme_court": {
       "reporting_units": 1,
       "cases_pending": 92621,
@@ -3733,11 +3738,6 @@
       "reporting_units": 25,
       "cases_pending": 6400890,
       "cases_pending_over_5y": 3022942
-    },
-    "district_subordinate_aggregate": {
-      "reporting_units": 36,
-      "cases_pending": 49956834,
-      "cases_pending_over_5y": 14806291
     }
   },
   "reported_categories_combined": {
@@ -3746,6 +3746,36 @@
     "cases_pending_over_5y": 17853678
   },
   "summary_metrics": {
+    "district_subordinate_aggregate": {
+      "cases_pending": {
+        "value": 49956834,
+        "method": "Sum of reported pending stocks for district subordinate aggregate; published reporting units only"
+      },
+      "cases_pending_over_5y": {
+        "value": 14806291,
+        "method": "Sum of reported over-five-year counts for district subordinate aggregate; published reporting units only"
+      },
+      "share_pending_over_5y": {
+        "value": 0.29638169224254685,
+        "method": "Sum of reported over-five-year counts ÷ sum of reported pending stocks for district subordinate aggregate; ratio of aggregate counts"
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Unavailable: opening stock and monthly case flows are not reported"
+      },
+      "clearance_rate": {
+        "value": null,
+        "method": "Unavailable: instituted and disposed counts are not reported"
+      },
+      "adjournment_rate": {
+        "value": null,
+        "method": "Unavailable: hearings listed and adjourned are not reported"
+      },
+      "share_pending_over_3y": {
+        "value": null,
+        "method": "Unavailable: over-three-year count is not reported"
+      }
+    },
     "supreme_court": {
       "cases_pending": {
         "value": 92621,
@@ -3788,36 +3818,6 @@
       "share_pending_over_5y": {
         "value": 0.47226901259043663,
         "method": "Sum of reported over-five-year counts ÷ sum of reported pending stocks for high court; ratio of aggregate counts"
-      },
-      "pendency_rate": {
-        "value": null,
-        "method": "Unavailable: opening stock and monthly case flows are not reported"
-      },
-      "clearance_rate": {
-        "value": null,
-        "method": "Unavailable: instituted and disposed counts are not reported"
-      },
-      "adjournment_rate": {
-        "value": null,
-        "method": "Unavailable: hearings listed and adjourned are not reported"
-      },
-      "share_pending_over_3y": {
-        "value": null,
-        "method": "Unavailable: over-three-year count is not reported"
-      }
-    },
-    "district_subordinate_aggregate": {
-      "cases_pending": {
-        "value": 49956834,
-        "method": "Sum of reported pending stocks for district subordinate aggregate; published reporting units only"
-      },
-      "cases_pending_over_5y": {
-        "value": 14806291,
-        "method": "Sum of reported over-five-year counts for district subordinate aggregate; published reporting units only"
-      },
-      "share_pending_over_5y": {
-        "value": 0.29638169224254685,
-        "method": "Sum of reported over-five-year counts ÷ sum of reported pending stocks for district subordinate aggregate; ratio of aggregate counts"
       },
       "pendency_rate": {
         "value": null,
@@ -3933,7 +3933,7 @@
     },
     "licence": "Reuse terms not verified; not represented as GODL",
     "notes": "Manual transcription of answer dated 2026-03-19; snapshot as of 2026-03-13. Annex I PDF page 53: Supreme Court and High Courts. Annex II PDF page 54: state/UT district and subordinate court aggregates. Jammu and Kashmir High Court label normalized to current shared-jurisdiction name. Source reuse/commercial terms not verified.",
-    "csv_sha256": "dde75d7acdd40318a5c57b81fe9cb1e3265ea43da17079216489fd8d0b48ffbc"
+    "csv_sha256": "2a0e2b0ed004bec2758bf70f4f74a2e152dc5d1803949d4f754cf190ec6de81b"
   },
   "limitations": [
     "District/subordinate figures are state/UT aggregates, not district-level or individual-court values.",

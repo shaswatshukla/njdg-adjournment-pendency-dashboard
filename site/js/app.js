@@ -1,4 +1,5 @@
-import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.2.2';
+import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.4.0';
+import { researchRoutes } from './research.js?v=0.4.0';
 const DATA='./data/';
 const number=n=>{if(n==null)return '-';const value=Number(n);if(Math.abs(value)>=10000000)return `${(value/10000000).toFixed(1)} Cr`;if(Math.abs(value)>=100000)return `${(value/100000).toFixed(1)} L`;return new Intl.NumberFormat('en-IN',{maximumFractionDigits:0}).format(value)};
 const percent=n=>n==null||!Number.isFinite(Number(n))?'—':`${(Number(n)*100).toFixed(1)}%`;
@@ -7,7 +8,7 @@ const charts=new Map();let dataset={};let active='overview';let mode='official';
 const cssColor=name=>getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 function status(message,kind=''){const target=mode==='official'?'#official-view .data-status':`#view-${active} .data-status`;document.querySelector(target)?.replaceChildren(document.createTextNode(message));const el=document.querySelector(target);if(el)el.className=`data-status ${kind}`}
-function updateCoverage(meta){const text=`${meta.coverage_start} – ${meta.coverage_end} · ${number(meta.records_loaded)} aggregate rows`;document.querySelectorAll('.coverage').forEach(e=>e.textContent=text);document.querySelectorAll('.coverage-short').forEach(e=>e.textContent=`${meta.coverage_start} – ${meta.coverage_end}`)}
+function updateCoverage(meta){const text=`${meta.coverage_start} – ${meta.coverage_end} · ${number(meta.records_loaded)} aggregate rows`;document.querySelectorAll('.coverage').forEach(e=>e.textContent=text);if(mode==='demo')document.querySelectorAll('.coverage-short').forEach(e=>e.textContent=`${meta.coverage_start} – ${meta.coverage_end}`)}
 async function getJSON(name){const response=await fetch(`${DATA}${name}.json`);if(!response.ok)throw new Error(`${name} data unavailable (HTTP ${response.status})`);return response.json()}
 function chart(id,labels,datasets,percentAxis=false,type='line'){const canvas=document.getElementById(id);if(!canvas)return;let empty=canvas.parentElement.querySelector('.chart-empty');if(!empty){empty=document.createElement('span');empty.className='chart-empty';canvas.parentElement.append(empty)}if(!window.Chart){empty.textContent='Chart library unavailable. Check the Chart.js CDN connection.';empty.hidden=false;return}charts.get(id)?.destroy();const text=cssColor('--chart-text'),grid=cssColor('--chart-grid');charts.set(id,new Chart(canvas,{type,data:{labels,datasets:datasets.map(d=>({label:d.label,data:d.data,borderColor:d.color,backgroundColor:d.color,pointRadius:2,pointHoverRadius:4,borderWidth:2,tension:.28,spanGaps:false,fill:false}))},options:{responsive:true,maintainAspectRatio:false,interaction:{intersect:false,mode:'index'},plugins:{legend:{display:datasets.length>1,position:'bottom',labels:{color:text,boxWidth:8,usePointStyle:true,font:{size:10}}},tooltip:{callbacks:percentAxis?{label:c=>`${c.dataset.label}: ${Number(c.raw).toFixed(1)}%`}:{label:c=>`${c.dataset.label}: ${number(c.raw)}`}}},scales:{x:{grid:{display:false},ticks:{color:text,font:{size:9},maxRotation:0}},y:{beginAtZero:true,grid:{color:grid},ticks:{color:text,font:{size:9},callback:v=>percentAxis?`${Number(v).toFixed(1)}%`:number(v)}}}}}));const available=labels.length>0&&datasets.some(d=>d.data.some(v=>v!==null&&v!==undefined));empty.textContent='No data available for this selection.';empty.hidden=available}
 function renderOverview(){const summary=dataset.summary,latest=summary?.latest_totals,series=summary?.time_series??[];if(!latest||!series.length){for(const id of ['kpi-pending','kpi-clearance','kpi-adjournment','kpi-long-pending'])document.getElementById(id).textContent='-';document.getElementById('kpi-month').textContent='No data';chart('pending-chart',[],[{label:'Pending at month end',data:[],color:cssColor('--chart-pending')}]);chart('state-comparison',[],[{label:'Pendency',data:[],color:cssColor('--chart-compare')}],true,'bar');return}document.getElementById('kpi-pending').textContent=number(latest.cases_pending_end);document.getElementById('kpi-pending').title=`${new Intl.NumberFormat('en-IN').format(latest.cases_pending_end)} cases`;document.getElementById('kpi-month').textContent=latest.month;document.getElementById('kpi-clearance').textContent=percent(metric(latest,'clearance_rate'));document.getElementById('kpi-adjournment').textContent=percent(metric(latest,'adjournment_rate'));document.getElementById('kpi-long-pending').textContent=percent(metric(latest,'share_pending_over_3y'));const labels=series.map(r=>r.month);chart('pending-chart',labels,[{label:'Pending at month end',data:series.map(r=>r.cases_pending_end),color:cssColor('--chart-pending')}]);const latestState=dataset.by_state.filter(r=>r.month===latest.month&&r.period==='monthly').sort((a,b)=>a.state.localeCompare(b.state));chart('state-comparison',latestState.map(r=>r.state),[{label:'Pendency',data:latestState.map(r=>metric(r,'pendency_rate')==null?null:metric(r,'pendency_rate')*100),color:cssColor('--chart-compare')}],true,'bar')}
@@ -18,7 +19,8 @@ function download(){const cols=['district','state','court_type','case_category',
 function renderSources(){const meta=dataset.meta,list=document.getElementById('source-list');list.innerHTML=(meta.sources??[]).filter(s=>!String(s.file_name).startsWith('official/')).map(s=>`<div class="source-item"><a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener">${escapeHtml(s.source_name)}</a><small>${escapeHtml(s.file_name)} · ${escapeHtml(s.coverage_start)} to ${escapeHtml(s.coverage_end)} · ${escapeHtml(s.licence)}</small><small>${escapeHtml(s.notes)}</small></div>`).join('')||'No sources registered.'}
 function showRoute(){
   let route=location.hash.slice(1)||'overview';
-  if(!['overview','state','district','methodology','about'].includes(route))route='overview';
+  if(!['overview','state','district','methodology','about',...researchRoutes].includes(route))route='overview';
+  if(researchRoutes.includes(route))document.getElementById('dataset-mode').value='official';
   active=route;mode=document.getElementById('dataset-mode')?.value||'official';
   document.querySelectorAll('.page-view').forEach(v=>{v.hidden=mode==='official'?v.id!=='official-view':!(v.dataset.mode==='demo'&&v.dataset.page===route)});
   const footerCoverage=document.querySelector('.coverage-short');
@@ -35,7 +37,7 @@ function showRoute(){
   try{
     if(mode==='official'){
       if(!dataset.official?.available){const e=document.getElementById('mode-status');e.textContent=`${dataset.officialError||'No verified official snapshot is available.'} The synthetic demo remains a separate option in the dataset selector.`;e.className='mode-status warning';document.getElementById('official-view').innerHTML='<section class="page-heading"><p class="eyebrow">OFFICIAL SNAPSHOT</p><h1>Official data unavailable</h1><p>The published official snapshot could not be loaded or verified. No synthetic values have been substituted.</p></section><div class="alert alert-strong" role="alert"><strong>Unavailable.</strong> Choose the synthetic demo dataset explicitly if you want to explore example values.</div>';return}
-      renderOfficialRoute(route,dataset.official,dataset.refreshStatus,status);
+      renderOfficialRoute(route,dataset.official,dataset.refreshStatus,status,{archive:dataset.archive,crime:dataset.crime,meta:dataset.meta,periodic:dataset.periodic});
     }else{
       status(`${number(dataset.meta.records_loaded)} synthetic demo rows loaded. This data is invented.`,'success');
       if(route==='overview')renderOverview();if(route==='state')renderState();if(route==='district')renderDistrict();if(route==='methodology')renderSources();
@@ -49,7 +51,10 @@ async function start(){
   setTheme();
   const selector=document.getElementById('dataset-mode');selector.value='official';selector.addEventListener('change',showRoute);
   window.addEventListener('hashchange',showRoute);
-  const [officialResult,refreshResult]=await Promise.allSettled([getJSON('official_snapshot'),getJSON('refresh_status')]);
+  const [officialResult,refreshResult,archiveResult,crimeResult,periodicResult]=await Promise.allSettled([getJSON('official_snapshot'),getJSON('refresh_status'),getJSON('snapshot_archive'),getJSON('crime'),getJSON('periodic_reports')]);
+  if(periodicResult.status==='fulfilled')dataset.periodic=periodicResult.value;
+  if(archiveResult.status==='fulfilled')dataset.archive=archiveResult.value;
+  if(crimeResult.status==='fulfilled')dataset.crime=crimeResult.value;
   if(officialResult.status==='fulfilled')dataset.official=officialResult.value;else dataset.officialError=`Official snapshot unavailable: ${officialResult.reason.message}`;
   if(refreshResult.status==='fulfilled')dataset.refreshStatus=refreshResult.value;else dataset.refreshError=refreshResult.reason.message;
   showRoute();
@@ -57,6 +62,6 @@ async function start(){
   if(demoResults.every(r=>r.status==='fulfilled')){
     [dataset.meta,dataset.summary,dataset.by_state,dataset.by_district]=demoResults.map(r=>r.value);updateCoverage(dataset.meta);
   }else dataset.demoError=demoResults.filter(r=>r.status==='rejected').map(r=>r.reason.message).join('; ');
-  if(mode==='demo')showRoute();
+  if(mode==='demo'||researchRoutes.includes(active))showRoute();
 }
 start();

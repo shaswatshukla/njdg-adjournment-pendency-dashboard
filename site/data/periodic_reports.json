@@ -1,0 +1,1032 @@
+{
+  "records": [
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-01",
+      "category": "Civil",
+      "opening": null,
+      "instituted": 3989,
+      "disposed": 4371,
+      "pending": 63816,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.0957633492103285,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-01",
+      "category": "Criminal",
+      "opening": null,
+      "instituted": 1858,
+      "disposed": 2443,
+      "pending": 17713,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.314854682454252,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-01",
+      "category": "Total",
+      "opening": null,
+      "instituted": 5847,
+      "disposed": 6814,
+      "pending": 81529,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.1653839575850864,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-02",
+      "category": "Civil",
+      "opening": null,
+      "instituted": 4355,
+      "disposed": 5050,
+      "pending": 63121,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.1595866819747416,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-02",
+      "category": "Criminal",
+      "opening": null,
+      "instituted": 1707,
+      "disposed": 1905,
+      "pending": 17515,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.115992970123023,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-02",
+      "category": "Total",
+      "opening": null,
+      "instituted": 6062,
+      "disposed": 6955,
+      "pending": 80636,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.1473111184427582,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-03",
+      "category": "Civil",
+      "opening": null,
+      "instituted": 3792,
+      "disposed": 3189,
+      "pending": 63724,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.8409810126582279,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-03",
+      "category": "Criminal",
+      "opening": null,
+      "instituted": 1829,
+      "disposed": 1848,
+      "pending": 17496,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.010388190267906,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-03",
+      "category": "Total",
+      "opening": null,
+      "instituted": 5621,
+      "disposed": 5037,
+      "pending": 81220,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.8961038961038961,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-04",
+      "category": "Civil",
+      "opening": null,
+      "instituted": 4511,
+      "disposed": 4667,
+      "pending": 63568,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.0345821325648414,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-04",
+      "category": "Criminal",
+      "opening": null,
+      "instituted": 1990,
+      "disposed": 2188,
+      "pending": 17298,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.099497487437186,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-04",
+      "category": "Total",
+      "opening": null,
+      "instituted": 6501,
+      "disposed": 6855,
+      "pending": 80866,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 1.054453161052146,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-05",
+      "category": "Civil",
+      "opening": null,
+      "instituted": 4967,
+      "disposed": 4188,
+      "pending": 64347,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.8431648882625327,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-05",
+      "category": "Criminal",
+      "opening": null,
+      "instituted": 2460,
+      "disposed": 2036,
+      "pending": 17722,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.8276422764227642,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-05",
+      "category": "Total",
+      "opening": null,
+      "instituted": 7427,
+      "disposed": 6224,
+      "pending": 82069,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.8380234280328531,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-06",
+      "category": "Civil",
+      "opening": null,
+      "instituted": 2608,
+      "disposed": 476,
+      "pending": 66479,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.18251533742331288,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-06",
+      "category": "Criminal",
+      "opening": null,
+      "instituted": 1244,
+      "disposed": 390,
+      "pending": 18576,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.3135048231511254,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-06",
+      "category": "Total",
+      "opening": null,
+      "instituted": 3852,
+      "disposed": 866,
+      "pending": 85055,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.22481827622014539,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-07",
+      "category": "Civil",
+      "opening": null,
+      "instituted": 5323,
+      "disposed": 3452,
+      "pending": 68350,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.6485064813075333,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-07",
+      "category": "Criminal",
+      "opening": null,
+      "instituted": 2454,
+      "disposed": 2235,
+      "pending": 18795,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.910757946210269,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-07",
+      "category": "Total",
+      "opening": null,
+      "instituted": 7777,
+      "disposed": 5687,
+      "pending": 87145,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.7312588401697313,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-08",
+      "category": "Civil",
+      "opening": null,
+      "instituted": 4397,
+      "disposed": 3479,
+      "pending": 69268,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.7912212872413009,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-08",
+      "category": "Criminal",
+      "opening": null,
+      "instituted": 2187,
+      "disposed": 2069,
+      "pending": 18913,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.9460448102423411,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "month": "2025-08",
+      "category": "Total",
+      "opening": null,
+      "instituted": 6584,
+      "disposed": 5548,
+      "pending": 88181,
+      "source_page": 223,
+      "source": {
+        "file_name": "periodic/supreme_court_2025.csv",
+        "source_name": "Supreme Court Indian Judiciary Annual Report 2024-25 Volume I",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Report reserves reproduction rights; no commercial clearance claimed",
+        "coverage_start": "2025-01",
+        "coverage_end": "2025-08",
+        "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
+      },
+      "clearance_rate": {
+        "value": 0.8426488456865128,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": null,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "district",
+      "state": "Assam",
+      "district": "Kokrajhar",
+      "court_label": "Kokrajhar district judiciary",
+      "month": "2026-09",
+      "category": "Civil",
+      "opening": 2504,
+      "instituted": 182,
+      "disposed": 135,
+      "pending": 2551,
+      "source_page": 3,
+      "source": {
+        "file_name": "periodic/kokrajhar_2026_09.csv",
+        "source_name": "Kokrajhar district judiciary monthly pendency statement September 2026",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/10/2026100717.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Reuse terms unverified; no commercial clearance claimed",
+        "coverage_start": "2026-09",
+        "coverage_end": "2026-09",
+        "notes": "Manual transcription of district summary Civil/Criminal/Total on PDF page 3; published 2026-10-07; one district only; no judge or case details collected."
+      },
+      "clearance_rate": {
+        "value": 0.7417582417582418,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": 1.0187699680511182,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "district",
+      "state": "Assam",
+      "district": "Kokrajhar",
+      "court_label": "Kokrajhar district judiciary",
+      "month": "2026-09",
+      "category": "Criminal",
+      "opening": 8572,
+      "instituted": 570,
+      "disposed": 416,
+      "pending": 8726,
+      "source_page": 3,
+      "source": {
+        "file_name": "periodic/kokrajhar_2026_09.csv",
+        "source_name": "Kokrajhar district judiciary monthly pendency statement September 2026",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/10/2026100717.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Reuse terms unverified; no commercial clearance claimed",
+        "coverage_start": "2026-09",
+        "coverage_end": "2026-09",
+        "notes": "Manual transcription of district summary Civil/Criminal/Total on PDF page 3; published 2026-10-07; one district only; no judge or case details collected."
+      },
+      "clearance_rate": {
+        "value": 0.7298245614035088,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": 1.0179654689687354,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    },
+    {
+      "court_level": "district",
+      "state": "Assam",
+      "district": "Kokrajhar",
+      "court_label": "Kokrajhar district judiciary",
+      "month": "2026-09",
+      "category": "Total",
+      "opening": 11076,
+      "instituted": 752,
+      "disposed": 551,
+      "pending": 11277,
+      "source_page": 3,
+      "source": {
+        "file_name": "periodic/kokrajhar_2026_09.csv",
+        "source_name": "Kokrajhar district judiciary monthly pendency statement September 2026",
+        "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/10/2026100717.pdf",
+        "download_date": "2026-10-29",
+        "licence": "Reuse terms unverified; no commercial clearance claimed",
+        "coverage_start": "2026-09",
+        "coverage_end": "2026-09",
+        "notes": "Manual transcription of district summary Civil/Criminal/Total on PDF page 3; published 2026-10-07; one district only; no judge or case details collected."
+      },
+      "clearance_rate": {
+        "value": 0.7327127659574468,
+        "method": "Reported monthly disposals divided by reported institutions; unavailable when institutions are zero."
+      },
+      "pendency_rate": {
+        "value": 1.0181473456121344,
+        "method": "Reported month-end pending divided by reported opening pending; no opening is back-calculated."
+      },
+      "pending_method": "Reported month-end stock; never summed across months or with Total plus category components.",
+      "adjournment_rate": {
+        "value": null,
+        "method": "Hearings listed and adjourned are not reported in these selected tables."
+      }
+    }
+  ],
+  "reports": [
+    {
+      "title": "Supreme Court Indian Judiciary Annual Report 2024–25, Volume I",
+      "court_level": "supreme_court",
+      "state": "",
+      "district": "",
+      "court_label": "Supreme Court of India",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf",
+      "publication_url": "https://www.sci.gov.in/indian-judiciary-annual-report/",
+      "frequency": "Annual publication containing monthly statistics",
+      "rows": 24,
+      "months": [
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08"
+      ],
+      "source_page": 223,
+      "control_totals": {
+        "instituted": 49671,
+        "disposed": 43986,
+        "last_pending": 88181
+      }
+    },
+    {
+      "title": "Kokrajhar monthly pendency statement, September 2026",
+      "court_level": "district",
+      "state": "Assam",
+      "district": "Kokrajhar",
+      "court_label": "Kokrajhar district judiciary",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/10/2026100717.pdf",
+      "publication_url": "https://kokrajhar.dcourts.gov.in/document-category/statistical-reports/",
+      "frequency": "Monthly",
+      "rows": 3,
+      "months": [
+        "2026-09"
+      ],
+      "source_page": 3,
+      "control_totals": {
+        "instituted": 752,
+        "disposed": 551,
+        "last_pending": 11277
+      }
+    }
+  ],
+  "coverage_note": "Partial district coverage: one district in Assam. Supreme Court monthly data Jan–Aug 2025. These reports are separate from the March 2026 national snapshot.",
+  "limitations": [
+    "Only the listed reports and periods have been verified; this is not nationwide district coverage.",
+    "Do not add Total rows to Civil/Criminal components or add stocks across months.",
+    "Hearings and adjournments are not supplied. No individual case records are collected.",
+    "Supreme Court annual report reserves reproduction rights; no commercial data clearance is claimed."
+  ]
+}

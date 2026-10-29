@@ -73,3 +73,23 @@ GitHub Actions runs pytest and rebuilds the JSON data before publishing the stat
 ## License
 
 MIT for the project code. The license does not grant rights to external source data. See [`LICENSE`](LICENSE).
+# Research tools (0.3.0)
+
+- **Data health:** reporting age, last recorded source attempt and result, last successful check when recorded, build timestamp, missing fields and coverage. A full check history is not yet recorded.
+- **Archive:** full verified snapshots in `pipeline/archive/`; the build generates `site/data/snapshot_archive.json`. It starts with one date. Future builds preserve prior dates. Same-date CSV revisions stop for explicit archive review. Cross-date changes are withheld when source or coverage identifiers differ; matching identifiers still require definition review.
+- **Comparison:** two State/UT district/subordinate aggregates at the same reporting date; exact counts and percentage-point age-share differences. No court-quality rankings.
+- **Sources:** links and computation notes beside cards and table values.
+- **Research brief:** print/save as PDF from any official view. The brief includes exact counts, source citations, reporting date, formulas and limitations; State/UT, court-level, comparison and archive selections are respected. Crime briefs include the selected measure and State/UT's counts and source. Browser print controls choose the destination; no paid PDF service is used.
+- **Breakdowns:** reporting levels plus reported over-five-year counts and the derived remainder. Civil/criminal, institutions/disposals and hearing splits remain unavailable until an appropriate source is verified.
+- **Crime map:** an accessible schematic tile map of all 36 State/UTs, based on NCRB's 2023 registrations in MHA parliamentary Question 407 (3 December 2025), Annexure I, page 3. IPC, SLL and total filters; exact-count accessible table. Positions are approximate, not boundaries or an official political map. This historical snapshot is not joined to court data, not a safety ranking and not population-adjusted. Reuse terms are unverified. See `pipeline/crime_schema.md` and `pipeline/ipc_bns_mapping.csv`.
+
+The pipeline emits ten JSON files and uses the same pandas-only runtime. No extra browser dependencies, accounts, backend or map-tile services were introduced. Daily verification reviews court and crime sources separately. Crime check status and reporting year are recorded independently; changed years or IPC/BNS definitions require review before ingestion.
+
+# Court reports (0.4.0)
+
+Dedicated links now expose all 25 High Courts and the Supreme Court's aggregate snapshot without requiring a State/UT filter. Shared High Courts are not assigned to a single state. These pages do not provide individual case lookup.
+
+The separate **District reports** page loads a real Kokrajhar district statement for September 2026, with Civil/Criminal/Total opening, institutions, disposals and pending. This is one district in Assam, **not nationwide district coverage**. Selecting another state displays an explicit missing-report message. The **Supreme Court** page also shows January–August 2025 monthly counts from its annual report, with category filters, chart, source pages and CSV export. These historical periods are never blended with the national snapshot dated March 2026.
+
+The **Periodic publications** page links the official publication archives. Input files, identity/period/control manifests and ingestion rules are documented in `pipeline/periodic_schema.md`. Eleven JSON files now form the smoke contract. Daily review is extended to these publication archives; new reports need primary-source checks before ingestion. The annual report reserves reproduction rights; no source commercial clearance is claimed.
+

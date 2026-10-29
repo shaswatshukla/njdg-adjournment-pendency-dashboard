@@ -5,5 +5,15 @@
   "sources": [
     "https://www.doj.gov.in/static/uploads/2026/04/b7b4da487543be9a9f1d1558d06d76d2.pdf"
   ],
-  "note": "Manual source check recorded on 2026-10-29; daily source verification is scheduled but has not yet run. No automatic public API is connected. This remains a historical snapshot until a newer official table is validated."
+  "note": "Manual source check recorded on 2026-10-29; daily source verification is scheduled but has not yet run. No automatic public API is connected. This remains a historical snapshot until a newer official table is validated.",
+  "last_successful_checked_at_utc": "2026-10-29T05:06:49Z",
+  "crime_check": {
+    "year": 2023,
+    "last_checked_at_utc": "2026-10-29T05:55:30.017221+00:00",
+    "status": "verified_snapshot",
+    "sources": [
+      "https://sansad.in/getFile/annex/269/AU407_UbEvYl.pdf?source=pqars"
+    ],
+    "note": "Manual verification of 36 State/UT rows and national controls against Annexure I PDF page 3. Historical 2023 data; newer releases require definition and IPC/BNS review."
+  }
 }

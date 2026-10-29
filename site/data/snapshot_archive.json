@@ -1,0 +1,3954 @@
+{
+  "snapshots": [
+    {
+      "schema_version": "1.0",
+      "data_as_of": "2026-03-13",
+      "records": [
+        {
+          "state": "",
+          "court_level": "supreme_court",
+          "court_id": "SC-IN",
+          "court_label": "Supreme Court of India",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 92621,
+          "cases_pending_over_5y": 24445,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 92621,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 24445,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.26392502780147054,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-ALLAHABAD-HIGH-COURT",
+          "court_label": "Allahabad High Court",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 1226147,
+          "cases_pending_over_5y": 733395,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 1226147,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 733395,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.5981297511636043,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-BOMBAY-HIGH-COURT",
+          "court_label": "Bombay High Court",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 665758,
+          "cases_pending_over_5y": 346741,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 665758,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 346741,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.5208213795403135,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-CALCUTTA-HIGH-COURT",
+          "court_label": "Calcutta High Court",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 204445,
+          "cases_pending_over_5y": 111239,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 204445,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 111239,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.5441023258088973,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-GAUHATI-HIGH-COURT",
+          "court_label": "Gauhati High Court",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 64502,
+          "cases_pending_over_5y": 24358,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 64502,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 24358,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.37763170134259405,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-FOR-THE-STATE-OF-TELANGANA",
+          "court_label": "High Court for the State of Telangana",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 236590,
+          "cases_pending_over_5y": 103050,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 236590,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 103050,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.4355636332896572,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-CHHATTISGARH",
+          "court_label": "High Court of Chhattisgarh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 75994,
+          "cases_pending_over_5y": 25151,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 75994,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 25151,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.3309603389741295,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-RAJASTHAN-HIGH-COURT",
+          "court_label": "Rajasthan High Court",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 673553,
+          "cases_pending_over_5y": 293502,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 673553,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 293502,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.43575190074129283,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-ANDHRA-PRADESH",
+          "court_label": "High Court of Andhra Pradesh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 248934,
+          "cases_pending_over_5y": 116331,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 248934,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 116331,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.4673166381450505,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-DELHI",
+          "court_label": "High Court of Delhi",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 126290,
+          "cases_pending_over_5y": 45592,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 126290,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 45592,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.3610103729511442,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-GUJARAT",
+          "court_label": "High Court of Gujarat",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 174091,
+          "cases_pending_over_5y": 71973,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 174091,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 71973,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.4134217162288688,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-HIMACHAL-PRADESH",
+          "court_label": "High Court of Himachal Pradesh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 104133,
+          "cases_pending_over_5y": 40527,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 104133,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 40527,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.3891849845870185,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-JAMMU-AND-KASHMIR-AND-LADAKH",
+          "court_label": "High Court of Jammu and Kashmir and Ladakh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 43314,
+          "cases_pending_over_5y": 13930,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 43314,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 13930,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.32160502377984024,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-JHARKHAND",
+          "court_label": "High Court of Jharkhand",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 72905,
+          "cases_pending_over_5y": 30458,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 72905,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 30458,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.4177765585350799,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-KARNATAKA",
+          "court_label": "High Court of Karnataka",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 331680,
+          "cases_pending_over_5y": 78843,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 331680,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 78843,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.23770803183791606,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-KERALA",
+          "court_label": "High Court of Kerala",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 247671,
+          "cases_pending_over_5y": 107493,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 247671,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 107493,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.4340152864081786,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-MADHYA-PRADESH",
+          "court_label": "High Court of Madhya Pradesh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 478434,
+          "cases_pending_over_5y": 255972,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 478434,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 255972,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.5350205043955906,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-MANIPUR",
+          "court_label": "High Court of Manipur",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 6042,
+          "cases_pending_over_5y": 1094,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 6042,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 1094,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.18106587222773915,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-MEGHALAYA",
+          "court_label": "High Court of Meghalaya",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 1785,
+          "cases_pending_over_5y": 100,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 1785,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 100,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.056022408963585436,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-PUNJAB-AND-HARYANA",
+          "court_label": "High Court of Punjab and Haryana",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 420452,
+          "cases_pending_over_5y": 234216,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 420452,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 234216,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.5570576427273506,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-SIKKIM",
+          "court_label": "High Court of Sikkim",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 297,
+          "cases_pending_over_5y": 16,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 297,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 16,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.05387205387205387,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-TRIPURA",
+          "court_label": "High Court of Tripura",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 1388,
+          "cases_pending_over_5y": 6,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 1388,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 6,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.004322766570605188,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-HIGH-COURT-OF-UTTARAKHAND",
+          "court_label": "High Court of Uttarakhand",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 60859,
+          "cases_pending_over_5y": 22891,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 60859,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 22891,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.376131714290409,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-MADRAS-HIGH-COURT",
+          "court_label": "Madras High Court",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 553854,
+          "cases_pending_over_5y": 205621,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 553854,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 205621,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.37125487944476343,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-ORISSA-HIGH-COURT",
+          "court_label": "Orissa High Court",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 163591,
+          "cases_pending_over_5y": 69359,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 163591,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 69359,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.4239780917043114,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "",
+          "court_level": "high_court",
+          "court_id": "HC-PATNA-HIGH-COURT",
+          "court_label": "Patna High Court",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 218181,
+          "cases_pending_over_5y": 91084,
+          "source_table": "Annex I",
+          "metrics": {
+            "cases_pending": {
+              "value": 218181,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 91084,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.417469898845454,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Andaman and Nicobar Islands",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-ANDAMAN-AND-NICOBAR-ISLANDS",
+          "court_label": "District and subordinate courts - Andaman and Nicobar Islands",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 8627,
+          "cases_pending_over_5y": 4254,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 8627,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 4254,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.4931030485684479,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Andhra Pradesh",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-ANDHRA-PRADESH",
+          "court_label": "District and subordinate courts - Andhra Pradesh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 976082,
+          "cases_pending_over_5y": 154956,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 976082,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 154956,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.15875305558344482,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Arunachal Pradesh",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-ARUNACHAL-PRADESH",
+          "court_label": "District and subordinate courts - Arunachal Pradesh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 15719,
+          "cases_pending_over_5y": 4327,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 15719,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 4327,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.2752719638653858,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Assam",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-ASSAM",
+          "court_label": "District and subordinate courts - Assam",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 578555,
+          "cases_pending_over_5y": 68130,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 578555,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 68130,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.11775889932677101,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Bihar",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-BIHAR",
+          "court_label": "District and subordinate courts - Bihar",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 3719519,
+          "cases_pending_over_5y": 2085650,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 3719519,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 2085650,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.5607311052853877,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Chandigarh",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-CHANDIGARH",
+          "court_label": "District and subordinate courts - Chandigarh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 101946,
+          "cases_pending_over_5y": 6478,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 101946,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 6478,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.06354344456869324,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Chhattisgarh",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-CHHATTISGARH",
+          "court_label": "District and subordinate courts - Chhattisgarh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 516848,
+          "cases_pending_over_5y": 43774,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 516848,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 43774,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.08469414605454602,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Delhi",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-DELHI",
+          "court_label": "District and subordinate courts - Delhi",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 1602441,
+          "cases_pending_over_5y": 279489,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 1602441,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 279489,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.17441453382683045,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Goa",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-GOA",
+          "court_label": "District and subordinate courts - Goa",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 62025,
+          "cases_pending_over_5y": 17109,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 62025,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 17109,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.2758403869407497,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Gujarat",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-GUJARAT",
+          "court_label": "District and subordinate courts - Gujarat",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 2069656,
+          "cases_pending_over_5y": 258773,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 2069656,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 258773,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.12503188935745843,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Haryana",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-HARYANA",
+          "court_label": "District and subordinate courts - Haryana",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 1546857,
+          "cases_pending_over_5y": 221443,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 1546857,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 221443,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.14315673653091399,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Himachal Pradesh",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-HIMACHAL-PRADESH",
+          "court_label": "District and subordinate courts - Himachal Pradesh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 623427,
+          "cases_pending_over_5y": 81154,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 623427,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 81154,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.13017402197851552,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Jammu and Kashmir",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-JAMMU-AND-KASHMIR",
+          "court_label": "District and subordinate courts - Jammu and Kashmir",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 352201,
+          "cases_pending_over_5y": 82675,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 352201,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 82675,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.23473811829040803,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Jharkhand",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-JHARKHAND",
+          "court_label": "District and subordinate courts - Jharkhand",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 573546,
+          "cases_pending_over_5y": 162249,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 573546,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 162249,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.28288751033047044,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Karnataka",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-KARNATAKA",
+          "court_label": "District and subordinate courts - Karnataka",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 2436610,
+          "cases_pending_over_5y": 428675,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 2436610,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 428675,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.17593090400187145,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Kerala",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-KERALA",
+          "court_label": "District and subordinate courts - Kerala",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 1800628,
+          "cases_pending_over_5y": 353933,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 1800628,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 353933,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.19656086654211752,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Ladakh",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-LADAKH",
+          "court_label": "District and subordinate courts - Ladakh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 1629,
+          "cases_pending_over_5y": 110,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 1629,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 110,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.06752608962553713,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Lakshadweep",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-LAKSHADWEEP",
+          "court_label": "District and subordinate courts - Lakshadweep",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 557,
+          "cases_pending_over_5y": 97,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 557,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 97,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.1741472172351885,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Madhya Pradesh",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-MADHYA-PRADESH",
+          "court_label": "District and subordinate courts - Madhya Pradesh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 2122639,
+          "cases_pending_over_5y": 392365,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 2122639,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 392365,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.18484772964220483,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Maharashtra",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-MAHARASHTRA",
+          "court_label": "District and subordinate courts - Maharashtra",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 6060201,
+          "cases_pending_over_5y": 1742851,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 6060201,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 1742851,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.2875896360533256,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Manipur",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-MANIPUR",
+          "court_label": "District and subordinate courts - Manipur",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 14139,
+          "cases_pending_over_5y": 3201,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 14139,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 3201,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.22639507744536388,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Meghalaya",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-MEGHALAYA",
+          "court_label": "District and subordinate courts - Meghalaya",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 16671,
+          "cases_pending_over_5y": 5810,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 16671,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 5810,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.3485093875592346,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Mizoram",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-MIZORAM",
+          "court_label": "District and subordinate courts - Mizoram",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 7343,
+          "cases_pending_over_5y": 545,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 7343,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 545,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.07422034590766717,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Nagaland",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-NAGALAND",
+          "court_label": "District and subordinate courts - Nagaland",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 3940,
+          "cases_pending_over_5y": 1129,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 3940,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 1129,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.2865482233502538,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Odisha",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-ODISHA",
+          "court_label": "District and subordinate courts - Odisha",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 1820475,
+          "cases_pending_over_5y": 746383,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 1820475,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 746383,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.40999354564056084,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Puducherry",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-PUDUCHERRY",
+          "court_label": "District and subordinate courts - Puducherry",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 36414,
+          "cases_pending_over_5y": 8499,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 36414,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 8499,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.2333992420497611,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Punjab",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-PUNJAB",
+          "court_label": "District and subordinate courts - Punjab",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 977912,
+          "cases_pending_over_5y": 65405,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 977912,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 65405,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.06688229615752747,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Rajasthan",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-RAJASTHAN",
+          "court_label": "District and subordinate courts - Rajasthan",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 2717617,
+          "cases_pending_over_5y": 700519,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 2717617,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 700519,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.25776958268954014,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Sikkim",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-SIKKIM",
+          "court_label": "District and subordinate courts - Sikkim",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 2284,
+          "cases_pending_over_5y": 40,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 2284,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 40,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.017513134851138354,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Tamil Nadu",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-TAMIL-NADU",
+          "court_label": "District and subordinate courts - Tamil Nadu",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 1763798,
+          "cases_pending_over_5y": 278994,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 1763798,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 278994,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.15817797729671992,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Telangana",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-TELANGANA",
+          "court_label": "District and subordinate courts - Telangana",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 991205,
+          "cases_pending_over_5y": 169772,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 991205,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 169772,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.1712783934705737,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Dadra and Nagar Haveli and Daman and Diu",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-DADRA-AND-NAGAR-HAVELI-AND-DAMAN-AND-DIU",
+          "court_label": "District and subordinate courts - Dadra and Nagar Haveli and Daman and Diu",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 8359,
+          "cases_pending_over_5y": 1770,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 8359,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 1770,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.21174781672448859,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Tripura",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-TRIPURA",
+          "court_label": "District and subordinate courts - Tripura",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 67190,
+          "cases_pending_over_5y": 4206,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 67190,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 4206,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.06259860098228903,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Uttar Pradesh",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-UTTAR-PRADESH",
+          "court_label": "District and subordinate courts - Uttar Pradesh",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 12137452,
+          "cases_pending_over_5y": 4866682,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 12137452,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 4866682,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.40096405736558216,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "Uttarakhand",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-UTTARAKHAND",
+          "court_label": "District and subordinate courts - Uttarakhand",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 313735,
+          "cases_pending_over_5y": 55687,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 313735,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 55687,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.17749693212424497,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        },
+        {
+          "state": "West Bengal",
+          "court_level": "district_subordinate_aggregate",
+          "court_id": "DIST-WEST-BENGAL",
+          "court_label": "District and subordinate courts - West Bengal",
+          "snapshot_date": "2026-03-13",
+          "cases_pending": 3908587,
+          "cases_pending_over_5y": 1509157,
+          "source_table": "Annex II",
+          "metrics": {
+            "cases_pending": {
+              "value": 3908587,
+              "method": "Reported stock in the source snapshot as of 2026-03-13"
+            },
+            "cases_pending_over_5y": {
+              "value": 1509157,
+              "method": "Reported nested age-band count in the source snapshot as of 2026-03-13"
+            },
+            "share_pending_over_5y": {
+              "value": 0.38611319128882127,
+              "method": "Reported pending over 5 years ÷ reported pending; derived from this snapshot"
+            },
+            "pendency_rate": {
+              "value": null,
+              "method": "Unavailable: opening stock and monthly case flows are not reported"
+            },
+            "clearance_rate": {
+              "value": null,
+              "method": "Unavailable: instituted and disposed counts are not reported"
+            },
+            "adjournment_rate": {
+              "value": null,
+              "method": "Unavailable: hearings listed and adjourned are not reported"
+            },
+            "share_pending_over_3y": {
+              "value": null,
+              "method": "Unavailable: over-three-year count is not reported"
+            },
+            "cases_instituted": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "cases_disposed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_listed": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "hearings_adjourned": {
+              "value": null,
+              "method": "Unavailable: not reported in this source"
+            },
+            "rolling_3m": {
+              "value": null,
+              "method": "Unavailable: a single dated snapshot is not a time series"
+            }
+          }
+        }
+      ],
+      "totals_by_level": {
+        "district_subordinate_aggregate": {
+          "reporting_units": 36,
+          "cases_pending": 49956834,
+          "cases_pending_over_5y": 14806291
+        },
+        "supreme_court": {
+          "reporting_units": 1,
+          "cases_pending": 92621,
+          "cases_pending_over_5y": 24445
+        },
+        "high_court": {
+          "reporting_units": 25,
+          "cases_pending": 6400890,
+          "cases_pending_over_5y": 3022942
+        }
+      },
+      "reported_categories_combined": {
+        "reporting_units": 62,
+        "cases_pending": 56450345,
+        "cases_pending_over_5y": 17853678
+      },
+      "summary_metrics": {
+        "district_subordinate_aggregate": {
+          "cases_pending": {
+            "value": 49956834,
+            "method": "Sum of reported pending stocks for district subordinate aggregate; published reporting units only"
+          },
+          "cases_pending_over_5y": {
+            "value": 14806291,
+            "method": "Sum of reported over-five-year counts for district subordinate aggregate; published reporting units only"
+          },
+          "share_pending_over_5y": {
+            "value": 0.29638169224254685,
+            "method": "Sum of reported over-five-year counts ÷ sum of reported pending stocks for district subordinate aggregate; ratio of aggregate counts"
+          },
+          "pendency_rate": {
+            "value": null,
+            "method": "Unavailable: opening stock and monthly case flows are not reported"
+          },
+          "clearance_rate": {
+            "value": null,
+            "method": "Unavailable: instituted and disposed counts are not reported"
+          },
+          "adjournment_rate": {
+            "value": null,
+            "method": "Unavailable: hearings listed and adjourned are not reported"
+          },
+          "share_pending_over_3y": {
+            "value": null,
+            "method": "Unavailable: over-three-year count is not reported"
+          }
+        },
+        "supreme_court": {
+          "cases_pending": {
+            "value": 92621,
+            "method": "Sum of reported pending stocks for supreme court; published reporting units only"
+          },
+          "cases_pending_over_5y": {
+            "value": 24445,
+            "method": "Sum of reported over-five-year counts for supreme court; published reporting units only"
+          },
+          "share_pending_over_5y": {
+            "value": 0.26392502780147054,
+            "method": "Sum of reported over-five-year counts ÷ sum of reported pending stocks for supreme court; ratio of aggregate counts"
+          },
+          "pendency_rate": {
+            "value": null,
+            "method": "Unavailable: opening stock and monthly case flows are not reported"
+          },
+          "clearance_rate": {
+            "value": null,
+            "method": "Unavailable: instituted and disposed counts are not reported"
+          },
+          "adjournment_rate": {
+            "value": null,
+            "method": "Unavailable: hearings listed and adjourned are not reported"
+          },
+          "share_pending_over_3y": {
+            "value": null,
+            "method": "Unavailable: over-three-year count is not reported"
+          }
+        },
+        "high_court": {
+          "cases_pending": {
+            "value": 6400890,
+            "method": "Sum of reported pending stocks for high court; published reporting units only"
+          },
+          "cases_pending_over_5y": {
+            "value": 3022942,
+            "method": "Sum of reported over-five-year counts for high court; published reporting units only"
+          },
+          "share_pending_over_5y": {
+            "value": 0.47226901259043663,
+            "method": "Sum of reported over-five-year counts ÷ sum of reported pending stocks for high court; ratio of aggregate counts"
+          },
+          "pendency_rate": {
+            "value": null,
+            "method": "Unavailable: opening stock and monthly case flows are not reported"
+          },
+          "clearance_rate": {
+            "value": null,
+            "method": "Unavailable: instituted and disposed counts are not reported"
+          },
+          "adjournment_rate": {
+            "value": null,
+            "method": "Unavailable: hearings listed and adjourned are not reported"
+          },
+          "share_pending_over_3y": {
+            "value": null,
+            "method": "Unavailable: over-three-year count is not reported"
+          }
+        },
+        "reported_categories_combined": {
+          "cases_pending": {
+            "value": 56450345,
+            "method": "Sum of reported pending stocks for the three reported categories combined; published reporting units only"
+          },
+          "cases_pending_over_5y": {
+            "value": 17853678,
+            "method": "Sum of reported over-five-year counts for the three reported categories combined; published reporting units only"
+          },
+          "share_pending_over_5y": {
+            "value": 0.3162722566177408,
+            "method": "Sum of reported over-five-year counts ÷ sum of reported pending stocks for the three reported categories combined; ratio of aggregate counts"
+          },
+          "pendency_rate": {
+            "value": null,
+            "method": "Unavailable: opening stock and monthly case flows are not reported"
+          },
+          "clearance_rate": {
+            "value": null,
+            "method": "Unavailable: instituted and disposed counts are not reported"
+          },
+          "adjournment_rate": {
+            "value": null,
+            "method": "Unavailable: hearings listed and adjourned are not reported"
+          },
+          "share_pending_over_3y": {
+            "value": null,
+            "method": "Unavailable: over-three-year count is not reported"
+          }
+        }
+      },
+      "coverage": {
+        "states_and_union_territories": [
+          "Andaman and Nicobar Islands",
+          "Andhra Pradesh",
+          "Arunachal Pradesh",
+          "Assam",
+          "Bihar",
+          "Chandigarh",
+          "Chhattisgarh",
+          "Dadra and Nagar Haveli and Daman and Diu",
+          "Delhi",
+          "Goa",
+          "Gujarat",
+          "Haryana",
+          "Himachal Pradesh",
+          "Jammu and Kashmir",
+          "Jharkhand",
+          "Karnataka",
+          "Kerala",
+          "Ladakh",
+          "Lakshadweep",
+          "Madhya Pradesh",
+          "Maharashtra",
+          "Manipur",
+          "Meghalaya",
+          "Mizoram",
+          "Nagaland",
+          "Odisha",
+          "Puducherry",
+          "Punjab",
+          "Rajasthan",
+          "Sikkim",
+          "Tamil Nadu",
+          "Telangana",
+          "Tripura",
+          "Uttar Pradesh",
+          "Uttarakhand",
+          "West Bengal"
+        ],
+        "state_ut_aggregate_count": 36,
+        "high_court_count": 25,
+        "supreme_court_count": 1,
+        "published_reporting_units": 62,
+        "district_level_detail": false,
+        "tribunal_coverage": "Not stated in source"
+      },
+      "source": {
+        "source_name": "Department of Justice Rajya Sabha Unstarred Question 3113",
+        "source_url": "https://www.doj.gov.in/static/uploads/2026/04/b7b4da487543be9a9f1d1558d06d76d2.pdf",
+        "title": "Department of Justice reply to Rajya Sabha Unstarred Question 3113",
+        "answer_date": "2026-03-19",
+        "source_tables": [
+          "Annex I",
+          "Annex II"
+        ],
+        "source_table_by_level": {
+          "supreme_court": "Annex I",
+          "high_court": "Annex I",
+          "district_subordinate_aggregate": "Annex II"
+        },
+        "source_pages": {
+          "Annex I": 53,
+          "Annex II": 54
+        },
+        "licence": "Reuse terms not verified; not represented as GODL",
+        "notes": "Manual transcription of answer dated 2026-03-19; snapshot as of 2026-03-13. Annex I PDF page 53: Supreme Court and High Courts. Annex II PDF page 54: state/UT district and subordinate court aggregates. Jammu and Kashmir High Court label normalized to current shared-jurisdiction name. Source reuse/commercial terms not verified.",
+        "csv_sha256": "2a0e2b0ed004bec2758bf70f4f74a2e152dc5d1803949d4f754cf190ec6de81b"
+      },
+      "limitations": [
+        "District/subordinate figures are state/UT aggregates, not district-level or individual-court values.",
+        "Tribunal coverage is not stated in this source.",
+        "Institution, disposal, hearings, adjournments, over-three-year counts, and monthly series are not reported in these tables.",
+        "The combined total sums the three reported categories and is not evidence of coverage of all judicial bodies.",
+        "The source is a historical snapshot as of 2026-03-13, not a current/live data feed."
+      ],
+      "label_aliases": {
+        "High Court of Jammu and Kashmir": "High Court of Jammu and Kashmir and Ladakh"
+      },
+      "available": true
+    }
+  ],
+  "note": "Only verified reporting dates are archived; no interpolated monthly observations."
+}
