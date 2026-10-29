@@ -1,4 +1,4 @@
-import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.2.1';
+import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.2.2';
 const DATA='./data/';
 const number=n=>{if(n==null)return '-';const value=Number(n);if(Math.abs(value)>=10000000)return `${(value/10000000).toFixed(1)} Cr`;if(Math.abs(value)>=100000)return `${(value/100000).toFixed(1)} L`;return new Intl.NumberFormat('en-IN',{maximumFractionDigits:0}).format(value)};
 const percent=n=>n==null||!Number.isFinite(Number(n))?'—':`${(Number(n)*100).toFixed(1)}%`;
