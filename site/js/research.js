@@ -1,5 +1,5 @@
 // Research tools share the verified snapshot; crime remains an independent series.
-import { reportRoutes, renderCourtReports } from './court-reports.js?v=0.4.0';
+import { reportRoutes, renderCourtReports } from './court-reports.js?v=0.5.0';
 const e = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num = v => v == null ? 'Unavailable' : new Intl.NumberFormat('en-IN').format(v);
 const share = r => r.cases_pending ? r.cases_pending_over_5y / r.cases_pending : null;

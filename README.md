@@ -1,3 +1,7 @@
+## Interface
+
+The grouped sidebar links all court and research views; use the menu button on mobile. Escape closes the mobile drawer. The header theme button switches light/dark mode and retains the choice locally. The overview chart starts with the ten largest State/UT aggregates; choose All 36 to show every published aggregate. Dates and coverage limitations remain visible. The interface uses system fonts with no new external services or tracking.
+
 # NJDG Adjournment & Pendency Dashboard
 
 **Live dashboard:** [shaswatshukla.github.io/njdg-adjournment-pendency-dashboard](https://shaswatshukla.github.io/njdg-adjournment-pendency-dashboard/)  

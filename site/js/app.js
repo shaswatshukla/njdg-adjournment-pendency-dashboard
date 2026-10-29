@@ -1,5 +1,6 @@
-import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.4.0';
-import { researchRoutes } from './research.js?v=0.4.0';
+import { setupPresentation, polishPresentation } from './presentation.js?v=0.5.0';
+import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.5.0';
+import { researchRoutes } from './research.js?v=0.5.0';
 const DATA='./data/';
 const number=n=>{if(n==null)return '-';const value=Number(n);if(Math.abs(value)>=10000000)return `${(value/10000000).toFixed(1)} Cr`;if(Math.abs(value)>=100000)return `${(value/100000).toFixed(1)} L`;return new Intl.NumberFormat('en-IN',{maximumFractionDigits:0}).format(value)};
 const percent=n=>n==null||!Number.isFinite(Number(n))?'—':`${(Number(n)*100).toFixed(1)}%`;
@@ -26,7 +27,7 @@ function showRoute(){
   const footerCoverage=document.querySelector('.coverage-short');
   if(footerCoverage)footerCoverage.textContent=mode==='official'?(dataset.official?(dataset.official.data_as_of||'Unavailable'):'Loading'):(dataset.meta?`${dataset.meta.coverage_start} to ${dataset.meta.coverage_end}`:'Loading');
   document.querySelectorAll('[data-route]').forEach(a=>{if(a.dataset.route===route)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-  const districtLink=document.querySelector('[data-route="district"]');if(districtLink)districtLink.textContent=mode==='official'?'Court coverage':'District explorer';
+  const districtLink=document.querySelector('[data-route="district"]');if(districtLink)districtLink.querySelector('.nav-label').textContent=mode==='official'?'Court coverage':'District explorer';
   document.title=`NJDG Adjournment & Pendency Dashboard - ${mode==='official'?'Official snapshot':'Synthetic demo'} - ${route[0].toUpperCase()+route.slice(1)}`;
   if(mode==='official'&&dataset.official)updateOfficialModeStatus(dataset.official,dataset.refreshStatus,document.getElementById('mode-status'));
   else if(mode==='official'&&!dataset.officialError){const e=document.getElementById('mode-status');e.textContent='Loading official snapshot and source-check status...';e.className='mode-status'}
@@ -44,10 +45,11 @@ function showRoute(){
       const empty=route==='overview'?!(dataset.summary?.latest_totals&&dataset.summary?.time_series?.length):route==='state'?dataset.by_state.length===0:route==='district'?dataset.by_district.slices.length===0:route==='methodology'?dataset.meta.sources.length===0:false;
       if(empty)status('No data is available for this view.','');
     }
-  }catch(err){status(`Unable to display this view: ${err.message}`,'error')}
+  }catch(err){status(`Unable to display this view: ${err.message}`,'error')}finally{polishPresentation(route,mode)}
 }
 function setTheme(){const root=document.documentElement,button=document.querySelector('.theme-toggle');let saved=null;try{saved=localStorage.getItem('jm-theme')}catch{}root.dataset.theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const update=()=>{const dark=root.dataset.theme==='dark';button.setAttribute('aria-pressed',String(dark));button.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme')};update();button.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('jm-theme',root.dataset.theme)}catch{}update();showRoute()})}
 async function start(){
+  setupPresentation();
   setTheme();
   const selector=document.getElementById('dataset-mode');selector.value='official';selector.addEventListener('change',showRoute);
   window.addEventListener('hashchange',showRoute);

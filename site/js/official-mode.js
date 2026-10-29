@@ -1,5 +1,5 @@
-import { researchRoutes, renderResearch, addResearchActions } from './research.js?v=0.4.0';
-import { reportRoutes, courtLinks } from './court-reports.js?v=0.4.0';
+import { researchRoutes, renderResearch, addResearchActions } from './research.js?v=0.5.0';
+import { reportRoutes, courtLinks } from './court-reports.js?v=0.5.0';
 const n = value => {
   if (value == null) return '-';
   const v = Number(value);
@@ -10,6 +10,7 @@ const n = value => {
 const pct = value => value == null ? '-' : `${(Number(value) * 100).toFixed(1)}%`;
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[ch]);
 const charts = new Map();
+let officialRange = '10';
 const levelNames = { supreme_court:'Supreme Court', high_court:'High Courts', district_subordinate_aggregate:'State/UT district/subordinate aggregates' };
 
 function dateLabel(value) {
@@ -58,9 +59,9 @@ function markup(route, snapshot, refresh) {
 function drawOfficialBars(rows) {
   const canvas=document.getElementById('official-state-bars');if(!canvas)return;
   if(!window.Chart){canvas.insertAdjacentHTML('afterend','<p class="chart-method">Chart library unavailable.</p>');return;}
-  charts.get('official-state-bars')?.destroy();const wrap=canvas.closest('.chart-wrap');if(wrap)wrap.style.height=`${Math.max(500,rows.length*22)}px`;
+  charts.get('official-state-bars')?.destroy();const wrap=canvas.closest('.chart-wrap');if(wrap)wrap.style.height=`${Math.max(320,rows.length*30)}px`;
   const css=getComputedStyle(document.documentElement),pending=css.getPropertyValue('--chart-pending').trim(),text=css.getPropertyValue('--chart-text').trim(),grid=css.getPropertyValue('--chart-grid').trim();
-  charts.set('official-state-bars',new Chart(canvas,{type:'bar',data:{labels:rows.map(r=>r.state),datasets:[{label:'Reported pending cases',data:rows.map(r=>r.cases_pending),backgroundColor:pending,borderColor:pending}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`${n(c.raw)} pending cases`}}},scales:{x:{beginAtZero:true,grid:{color:grid},ticks:{color:text,callback:n}},y:{grid:{display:false},ticks:{color:text,font:{size:10}}}}}}));
+  charts.set('official-state-bars',new Chart(canvas,{type:'bar',data:{labels:rows.map(r=>r.state),datasets:[{label:'Reported pending cases',data:rows.map(r=>r.cases_pending),backgroundColor:pending,borderColor:pending,borderRadius:3,maxBarThickness:14}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`${n(c.raw)} pending cases`}}},scales:{x:{beginAtZero:true,grid:{color:grid},ticks:{color:text,callback:n,maxTicksLimit:5,font:{size:9}},border:{display:false}},y:{grid:{display:false},ticks:{color:text,font:{size:10}},border:{display:false}}}}}));
 }
 
 function renderOfficialOverview(snapshot) {
@@ -68,7 +69,19 @@ function renderOfficialOverview(snapshot) {
   document.getElementById('official-pending').textContent=n(combined.cases_pending);document.getElementById('official-pending').title=new Intl.NumberFormat('en-IN').format(combined.cases_pending);
   document.getElementById('official-share').textContent=pct(metrics.share_pending_over_5y.value);
   document.getElementById('official-level-totals').innerHTML=Object.entries(snapshot.totals_by_level).map(([key,v])=>`<tr><td>${levelNames[key]}</td><td class="numeric">${n(v.reporting_units)}</td><td class="numeric">${n(v.cases_pending)}</td><td class="numeric">${n(v.cases_pending_over_5y)}</td></tr>`).join('');
-  drawOfficialBars(snapshot.records.filter(r=>r.court_level==='district_subordinate_aggregate').sort((a,b)=>b.cases_pending-a.cases_pending));
+  const rows=snapshot.records.filter(r=>r.court_level==='district_subordinate_aggregate').sort((a,b)=>b.cases_pending-a.cases_pending);
+  const chartPanel=document.getElementById('official-state-bars').closest('.panel');
+  const controls=document.createElement('div');controls.className='chart-range';controls.setAttribute('role','group');controls.setAttribute('aria-label','State comparison coverage');
+  controls.innerHTML='<button type="button" data-range="10">Top 10</button><button type="button" data-range="all">All 36</button>';
+  chartPanel.querySelector('.panel-heading .unit').replaceWith(controls);
+  const count=document.createElement('span');count.className='chart-coverage';chartPanel.querySelector('.chart-method').prepend(count);
+  const draw=()=>{controls.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.range===officialRange)));const view=officialRange==='all'?rows:rows.slice(0,10);count.textContent=`${view.length} of ${rows.length} State/UT aggregates shown. `;drawOfficialBars(view);};
+  controls.addEventListener('click',event=>{const button=event.target.closest('button');if(button){officialRange=button.dataset.range;draw();}});draw();
+  const categoryTable=document.getElementById('official-level-totals').closest('.table-scroll');
+  const levelLinks={supreme_court:'supreme-court',high_court:'high-courts',district_subordinate_aggregate:'state'};
+  categoryTable.closest('.panel').classList.add('level-panel');
+  categoryTable.outerHTML='<div class="level-cards">'+['supreme_court','high_court','district_subordinate_aggregate'].map((key,i)=>{const v=snapshot.totals_by_level[key];return [key,v];}).map(([key,v],i)=>{const table=snapshot.source.source_table_by_level[key];const page=snapshot.source.source_pages[table];return `<article class="level-card"><div class="level-card-top"><span class="level-index">0${i+1}</span><a href="#${levelLinks[key]}">${levelNames[key]} <span aria-hidden="true">↗</span></a></div><div class="level-card-value"><strong title="${new Intl.NumberFormat('en-IN').format(v.cases_pending)}">${n(v.cases_pending)}</strong><span>reported pending</span></div><p>${n(v.reporting_units)} reporting unit${v.reporting_units===1?'':'s'} · ${n(v.cases_pending_over_5y)} over 5 years</p><a class="source-inline" href="${esc(snapshot.source.source_url)}#page=${page}" target="_blank" rel="noopener">Source: ${esc(table)} · PDF page ${page}</a></article>`;}).join('')+'</div>';
+
 }
 
 function renderOfficialState(snapshot, previousState) {

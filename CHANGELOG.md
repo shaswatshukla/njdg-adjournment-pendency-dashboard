@@ -1,3 +1,9 @@
+## 0.5.0 — 2026-10-29
+
+- Redesign with navy/ivory themes, editorial typography, persistent grouped navigation, mobile drawer, clearer cards and tables.
+- Remove repeated route navigation; add a Top 10 / All 36 state-chart display control with explicit coverage.
+- Preserve datasets, sources, exports and metric definitions; no new dependencies or external assets.
+
 # Changelog
 
 ## 0.2.0 - 2026-10-29
