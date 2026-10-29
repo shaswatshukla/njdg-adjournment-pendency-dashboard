@@ -1,0 +1,1 @@
+setTimeout(()=>{if(document.documentElement.dataset.interactive!=='ready'){const status=document.getElementById('mode-status');if(status)status.textContent='Interactive data is unavailable or still loading. Dated figures and evidence pages remain available below.';}},13000);

@@ -54,6 +54,7 @@ def validate_periodic(path, provenance, control):
         for key in ['opening','instituted','disposed','pending','source_page']:
             row[key]=int(row[key]) if row[key] != '' else None
         row['source']=provenance
+        row['scope_note']=control.get('scope_note','Scope stated by the cited report')
         row['clearance_rate']={'value':row['disposed']/row['instituted'] if row['instituted'] else None,
                                'method':'Reported monthly disposals divided by reported institutions; unavailable when institutions are zero.'}
         row['pendency_rate']={'value':row['pending']/row['opening'] if row['opening'] else None,
@@ -71,6 +72,7 @@ def load_periodic(raw_root, source_map, controls):
         if filename not in source_map or not (Path(raw_root)/filename).is_file():
             raise ValueError('Periodic report missing its raw file or sources.csv entry: '+filename)
         records.extend(validate_periodic(Path(raw_root)/filename,source_map[filename]._asdict(),control))
+    districts=sorted({(r['state'],r['district']) for r in records if r['court_level']=='district'})
     return {'records':records,'reports':list(controls.values()),
             'coverage_note':'Partial district coverage: one district in Assam. Supreme Court monthly data Jan–Aug 2025. These reports are separate from the March 2026 national snapshot.',
             'limitations':['Only the listed reports and periods have been verified; this is not nationwide district coverage.',

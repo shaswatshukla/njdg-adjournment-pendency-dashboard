@@ -29,7 +29,7 @@ jobs:
       - run: python -m pytest pipeline/tests -q
       - run: node pipeline/tests/map_logic.mjs
       - run: node pipeline/tests/evidence_logic.mjs
-      - run: node --check site/js/app.js && node --check site/js/crime-map.js
+      - run: for file in site/js/*.js; do node --check "$file"; done
       - run: python pipeline/build.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,37 @@
+{
+  "control": {
+    "title": "Kokrajhar monthly pendency statement, September 2026",
+    "court_level": "district",
+    "state": "Assam",
+    "district": "Kokrajhar",
+    "court_label": "Kokrajhar district judiciary",
+    "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/10/2026100717.pdf",
+    "publication_url": "https://kokrajhar.dcourts.gov.in/document-category/statistical-reports/",
+    "frequency": "Monthly",
+    "rows": 3,
+    "months": [
+      "2026-09"
+    ],
+    "source_page": 3,
+    "control_totals": {
+      "instituted": 752,
+      "disposed": 551,
+      "last_pending": 11277
+    }
+  },
+  "source": {
+    "file_name": "periodic/kokrajhar_2026_09.csv",
+    "source_name": "Kokrajhar district judiciary monthly pendency statement September 2026",
+    "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/10/2026100717.pdf",
+    "download_date": "2026-10-29",
+    "licence": "Reuse terms unverified; no commercial clearance claimed",
+    "coverage_start": "2026-09",
+    "coverage_end": "2026-09",
+    "notes": "Manual transcription of district summary Civil/Criminal/Total on PDF page 3; published 2026-10-07; one district only; no judge or case details collected."
+  },
+  "review": {
+    "date": "2026-10-30",
+    "source_pdf_sha256": "cc3c0a0f03b0a2f988857f9204cbd0f703b067b5990e805166f70a6878a4c89e",
+    "finding": "Prior transcription does not match cited page 3; printed table also has inconsistent category/flow totals. Withdrawn, not corrected by inference."
+  }
+}

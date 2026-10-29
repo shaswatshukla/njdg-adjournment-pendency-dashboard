@@ -38,9 +38,14 @@ export function polishPresentation(route, mode) {
     if(reportButton){const tools=document.createElement('div');tools.className='research-actions';tools.append(reportButton);header.append(tools);}
   }
   root.querySelectorAll('.kpi strong').forEach(x=>{x.classList.toggle('metric-unavailable',x.textContent==='Unavailable');});
+  root.querySelectorAll('table').forEach(table=>{
+    if(!table.caption){const caption=table.createCaption();caption.textContent=table.closest('section,article')?.querySelector('h2')?.textContent||'Reported aggregate figures';}
+    table.querySelectorAll('thead th').forEach(th=>th.scope='col');
+    const scroll=table.closest('.table-scroll');if(scroll){scroll.tabIndex=0;scroll.setAttribute('role','region');scroll.setAttribute('aria-label',table.caption.textContent);}
+  });
   root.querySelectorAll('table').forEach(table=>{table.querySelectorAll('td').forEach(cell=>{if(/^[-+]?\d[\d,.\s]*(?:%| Cr| L)?$/.test(cell.childNodes[0]?.textContent?.trim()||''))cell.classList.add('numeric');});});
   if(mode==='official'&&route==='overview'){
-    const heading=root.querySelector('h1');if(heading)heading.textContent='Where the backlog stands.';
+    const heading=root.querySelector('h1');if(heading)heading.textContent='Court pendency in India';
     const eyebrow=root.querySelector('.page-heading .eyebrow');if(eyebrow)eyebrow.textContent='INDIA / VERIFIED AGGREGATE REPORTS';
     const chartGrid=root.querySelector('.chart-grid');if(chartGrid)chartGrid.classList.add('overview-grid');
     const table=root.querySelector('#official-level-totals')?.closest('.panel');if(table)table.classList.add('level-panel');

@@ -70,3 +70,11 @@ Provides: State/UT registered cognizable IPC, SLL and combined counts for 2021â€
 
 These reports' dates and scope remain separate from the March 2026 national snapshot. See `periodic_schema.md` for counts, validation and limitations.
 
+
+## Correction and verified district history â€” 30 October 2026
+
+The previous September 2026 Kokrajhar CSV is withdrawn. Its figures do not match its cited PDF page; that September summary also contains inconsistent category/flow totals. It is preserved only under `pipeline/quarantine/`, not as active or published data. The October 29 source review was incomplete and must not be treated as a fresh full PDF verification.
+
+- Official Kokrajhar district reports, July 2026: https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/08/2026082761.pdf . Manual published-report download; visually checked PDF page 2, three Civil/Criminal/Total aggregate rows. Explicitly excludes JJB. Pending total 5,138; source-specific reuse terms unverified.
+- Official Kokrajhar district reports, August 2026: https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/09/2026090880.pdf . Same access method and page-2 scope. Pending total 5,252. Category totals and opening + instituted - disposed reconcile; July closing equals August opening. Source checksums are in periodic_controls.json.
+- Publication archive: https://kokrajhar.dcourts.gov.in/document-category/statistical-reports/ . Archive availability is not proof that an individual PDF or its arithmetic is correct. Only these reviewed periods are loaded; this remains one district, not comprehensive national coverage. No personal/case-level data or website table scraping.

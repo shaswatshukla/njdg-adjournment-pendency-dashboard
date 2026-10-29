@@ -1,12 +1,13 @@
 {
-  "generated_at_utc": "2026-10-29T08:13:31.123848+00:00",
+  "generated_at_utc": "2026-10-29T19:17:19.640660+00:00",
   "schema_version": "1.1",
   "rejected_rows": 0,
   "source_files": [
     "periodic/supreme_court_2025.csv",
-    "periodic/kokrajhar_2026_09.csv",
     "crime/registered_crime_2023.csv",
-    "official/pendency_2026-03-13.csv"
+    "official/pendency_2026-03-13.csv",
+    "periodic/kokrajhar_2026_07.csv",
+    "periodic/kokrajhar_2026_08.csv"
   ],
   "sources": [
     {
@@ -18,16 +19,6 @@
       "coverage_start": "2025-01",
       "coverage_end": "2025-08",
       "notes": "Manual transcription of monthly Civil/Criminal/Total institutions disposals and pending on PDF page 223 printed page 213; no opening inferred; aggregate facts only."
-    },
-    {
-      "file_name": "periodic/kokrajhar_2026_09.csv",
-      "source_name": "Kokrajhar district judiciary monthly pendency statement September 2026",
-      "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/10/2026100717.pdf",
-      "download_date": "2026-10-29",
-      "licence": "Reuse terms unverified; no commercial clearance claimed",
-      "coverage_start": "2026-09",
-      "coverage_end": "2026-09",
-      "notes": "Manual transcription of district summary Civil/Criminal/Total on PDF page 3; published 2026-10-07; one district only; no judge or case details collected."
     },
     {
       "file_name": "crime/registered_crime_2023.csv",
@@ -48,12 +39,32 @@
       "coverage_start": "2026-03",
       "coverage_end": "2026-03",
       "notes": "Manual transcription of answer dated 2026-03-19; snapshot as of 2026-03-13. Annex I PDF page 53: Supreme Court and High Courts. Annex II PDF page 54: state/UT district and subordinate court aggregates. Jammu and Kashmir High Court label normalized to current shared-jurisdiction name. Source reuse/commercial terms not verified."
+    },
+    {
+      "file_name": "periodic/kokrajhar_2026_07.csv",
+      "source_name": "Kokrajhar district monthly aggregate July 2026; excludes JJB",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/08/2026082761.pdf",
+      "download_date": "2026-10-30",
+      "licence": "Reuse terms unverified; no commercial clearance claimed",
+      "coverage_start": "2026-07",
+      "coverage_end": "2026-07",
+      "notes": "Manual visual transcription of published Civil/Criminal/Total summary on PDF page 2. Explicitly excludes JJB. Row identities, category totals and flow reconciliation reviewed; source PDF SHA256 8ebe497a3071e438aa30918b4f3a9dfe1af8674a34d6868f7e92ccc9544814bd."
+    },
+    {
+      "file_name": "periodic/kokrajhar_2026_08.csv",
+      "source_name": "Kokrajhar district monthly aggregate August 2026; excludes JJB",
+      "source_url": "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/09/2026090880.pdf",
+      "download_date": "2026-10-30",
+      "licence": "Reuse terms unverified; no commercial clearance claimed",
+      "coverage_start": "2026-08",
+      "coverage_end": "2026-08",
+      "notes": "Manual visual transcription of published Civil/Criminal/Total summary on PDF page 2. Explicitly excludes JJB. Row identities, category totals and flow reconciliation reviewed; source PDF SHA256 a533f2d157595d91e267a2100ac4102d7cb23ab6f009e33d8ab7dd9a8ef189bb."
     }
   ],
   "records_by_dataset": {
     "national_snapshot": 62,
     "crime": 36,
-    "periodic_reports": 27
+    "periodic_reports": 30
   },
   "method_note": "Official aggregate reports only. Datasets retain separate reporting dates and scopes."
 }

@@ -49,7 +49,9 @@ def archive_snapshot(directory, snapshot):
         previous = json.loads(path.read_text(encoding='utf-8'))
         if previous['source']['csv_sha256'] != snapshot['source']['csv_sha256']:
             raise ValueError('Same-date source revision: review and update the archived snapshot explicitly')
-    path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    else:
+        # Preserve the original reporting-date artifact, including its byte representation.
+        path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
     snapshots = [json.loads(p.read_text(encoding='utf-8')) for p in sorted(directory.glob('????-??-??.json'))]
     for item in snapshots:
         if len(item['records']) != item['coverage']['published_reporting_units']:

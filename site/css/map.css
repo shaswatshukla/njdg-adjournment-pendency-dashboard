@@ -1,4 +1,4 @@
-:root{--map-water:#edf2f3;--map-border:#fff;--map-selection:#a87929;--map-backdrop:rgba(10,28,40,.76)}
+:root{--map-water:#edf2f3;--map-border:#33454d;--map-selection:#a87929;--map-backdrop:rgba(10,28,40,.76)}
 .geo-map-stage.map-unavailable{height:auto!important;min-height:160px;aspect-ratio:auto}
 html[data-theme=dark]{--map-water:#132633;--map-border:#263e4c;--map-selection:#e1c17f;--map-backdrop:rgba(3,12,18,.87)}
 .official-dataset{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10px;white-space:nowrap}.official-dataset .status-dot{width:5px;height:5px;background:var(--teal);border-radius:50%;display:inline-block}
@@ -7,3 +7,12 @@ html[data-theme=dark]{--map-water:#132633;--map-border:#263e4c;--map-selection:#
 @media(max-width:1190px){.geo-layout{grid-template-columns:minmax(0,1fr) 210px}.crime-selection{padding:16px}.geo-map-stage{height:590px}}
 @media(max-width:720px){.official-dataset{font-size:8px;max-width:115px;white-space:normal;line-height:1.4}.geographic-panel{padding:17px}.geo-layout,.crime-map-dialog .geo-layout{grid-template-columns:minmax(0,1fr)}.geo-map-stage{height:auto;aspect-ratio:800/880;min-height:340px}.crime-selection{padding:18px}.crime-selection h3{font-size:24px}.crime-selection dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.crime-selection dl>div{display:block}.crime-selection dd{font-size:16px}.crime-selection .method-note{margin-top:16px}.map-toolbar{align-items:center;gap:8px}.map-toolbar>.button-secondary{font-size:9px;padding:8px}.zoom-controls{gap:3px}.zoom-controls #map-reset{font-size:9px;padding:0 7px}.zoom-controls button{min-width:30px;min-height:34px}.zoom-controls .unit{font-size:8px}.crime-map-dialog{width:calc(100vw - 12px);height:calc(100dvh - 12px);padding:15px;border-radius:9px}.expanded-map-header{gap:10px}.expanded-map-header h2{font-size:18px}.expanded-map-header button{font-size:9px;white-space:normal;padding:8px;line-height:1.4}.crime-map-dialog .geo-map-stage{height:auto;min-height:360px;aspect-ratio:800/880}.geo-legend i{width:27px}.geo-legend>span{font-size:8px;margin:0 5px}}
 @media(max-width:390px){.official-dataset{max-width:97px;font-size:8px}.geo-map-stage{min-height:300px}.geo-label{font-size:16px}.zoom-controls #map-zoom-level{display:none}.map-toolbar{gap:4px}.crime-selection dl{gap:6px}.crime-selection dd{font-size:15px}}
+
+/* Pale regions use dark boundaries; dark regions use a pale boundary. */
+.geo-state.band-3 path,.geo-state.band-4 path,.geo-state.band-3 .ut-marker,.geo-state.band-4 .ut-marker{stroke:#e5f4f1}
+.geo-state:focus-visible path,.geo-state:focus-visible circle{stroke:var(--map-selection);stroke-width:3;filter:drop-shadow(0 0 1px var(--ink))}
+.zoom-controls button,.map-toolbar>button{min-width:44px;min-height:44px;font-size:14px}.crime-table-disclosure summary{min-height:44px;padding:12px 0}.crime-selection .method-note,.map-attribution,.map-legend{font-size:12px!important}.geo-label{font-size:12px}
+
+.geo-state.selected path,.geo-state.selected .ut-marker,.geo-state:hover path,.geo-state:hover .ut-marker{stroke:var(--map-selection);stroke-width:2;filter:drop-shadow(0 0 1px var(--ink))}
+
+.geo-state:focus-visible path,.geo-state:focus-visible .ut-marker{stroke:var(--map-selection);stroke-width:3;filter:drop-shadow(0 0 1px var(--ink))}

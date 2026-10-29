@@ -15,5 +15,18 @@
       "https://sansad.in/getFile/annex/269/AU407_UbEvYl.pdf?source=pqars"
     ],
     "note": "Manual verification of 36 State/UT rows and national controls against Annexure I PDF page 3. Historical 2023 data; newer releases require definition and IPC/BNS review."
+  },
+  "periodic_check": {
+    "status": "needs_review",
+    "review_date": "2026-10-30",
+    "loaded_district_months": [
+      "2026-07",
+      "2026-08"
+    ],
+    "note": "Correction: prior Kokrajhar September 2026 values withdrawn because they do not match the cited PDF page. Published September summary also has inconsistent category/flow totals; no September counts are published. July and August PDF p2 were visually verified and reconcile; scope excludes JJB. National snapshot and crime reporting dates are unchanged.",
+    "sources": [
+      "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/08/2026082761.pdf",
+      "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/09/2026090880.pdf"
+    ]
   }
 }

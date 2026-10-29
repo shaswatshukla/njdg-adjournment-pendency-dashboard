@@ -1,3 +1,5 @@
+> Superseded in part by the 30 October 2026 PDF review: prior September Kokrajhar values were incorrect and withdrawn. The source has arithmetic inconsistencies. Only reconciled July/August (excluding JJB) are now published. See quarantine/README.md and the 0.8.0 changelog. Earlier availability checks below were not complete numeric verification.
+
 # Source and coverage review — 29 October 2026
 
 This is a source/implementation review, not a complete functional, security or commercial-rights audit. No reporting date or count was advanced by this review.

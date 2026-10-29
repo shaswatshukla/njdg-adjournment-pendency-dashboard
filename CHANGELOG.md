@@ -1,3 +1,11 @@
+# 0.8.0 — 2026-10-30
+
+- Withdraw incorrect Kokrajhar September figures; quarantine original input and provenance. Load visually verified July/August totals, excluding JJB, with source checksums and reconciliation controls.
+- Generate crawlable evidence pages, canonical/source metadata, sitemap and social previews from validated aggregates.
+- Load data per view, isolate crime and periodic failures, preserve focus and selections, and bound geographic requests.
+- Self-host pinned Chart.js, add Vercel security/cache headers, improve text/table/map accessibility and retain exact chart values.
+- Browser/device, screen-reader, Core Web Vitals and penetration verification remain outstanding; no commercial data clearance claimed.
+
 ## 0.6.0 - 2026-10-29
 
 - Replace the schematic crime tiles with a geographic India map covering all 36 State/UTs; preserve source attribution and boundary vintage.

@@ -1,9 +1,10 @@
+import { loadJSON } from './data-client.js?v=0.8.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=v=>v==null?'Unavailable':new Intl.NumberFormat('en-IN').format(v);
 const measures={total:'IPC + SLL registered cases',ipc:'IPC registered cases',sll:'SLL registered cases'};
 let boundaryRequest;
 function loadBoundaries(){
-  if(!boundaryRequest)boundaryRequest=fetch('./assets/maps/india-states.json').then(r=>{if(!r.ok)throw new Error('Boundary file could not be loaded');return r.json();}).catch(error=>{boundaryRequest=null;throw error;});
+  if(!boundaryRequest)boundaryRequest=loadJSON('geographic boundaries',{url:'./assets/maps/india-states.json'}).catch(error=>{boundaryRequest=null;throw error;});
   return boundaryRequest;
 }
 export function stateLink(state,measure){return '#crime?'+new URLSearchParams({state,measure}).toString();}

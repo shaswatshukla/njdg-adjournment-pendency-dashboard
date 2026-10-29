@@ -348,6 +348,14 @@ def build() -> dict[str, Any]:
     except ImportError:
         from landing import write_landing
     write_landing(site_data.parent / 'index.html', official_snapshot, periodic)
+    # Evidence pages are emitted only for the actual hosted tree, not temporary fixture builds.
+    if (site_data.parent / 'index.html').exists():
+        try:
+            from .pages import write_evidence
+        except ImportError:
+            from pages import write_evidence
+        write_evidence(site_data.parent, official_snapshot, periodic, crime,
+                       json.loads((site_data / 'meta.json').read_text(encoding='utf-8')), refresh_status)
     # Require every expected artifact and parse it before declaring success.
     try:
         from .smoke import check_json

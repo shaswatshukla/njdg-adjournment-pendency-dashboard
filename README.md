@@ -1,11 +1,11 @@
 # Justice Metrics — NJDG Pendency Dashboard
 
-A free, static research website for verified aggregate court reports and registered-crime statistics in India. Plain HTML, CSS and JavaScript modules; pinned Chart.js 4.4.8. Python 3.11+ and pandas validate manually downloaded aggregate inputs. No backend, paid API, analytics or cookies.
+A free, static research website for verified aggregate court reports and registered-crime statistics in India. Plain HTML, CSS and JavaScript modules; locally hosted, pinned Chart.js 4.4.8. Python 3.11+ and pandas validate manually downloaded aggregate inputs. No backend, paid API, analytics or cookies.
 
 ## Current coverage and limits
 
 - National court snapshot: 13 March 2026; Supreme Court, 25 High Courts and 36 State/UT district/subordinate aggregates. These are not individual district observations.
-- Periodic reports: Supreme Court monthly Civil/Criminal/Total statistics for January–August 2025, and Kokrajhar district for September 2026. Nationwide district coverage remains incomplete.
+- Periodic reports: Supreme Court monthly Civil/Criminal/Total statistics for January–August 2025, and Kokrajhar district for July-August 2026 (excluding JJB). Nationwide district coverage remains incomplete.
 - Crime map: 2023 NCRB/MHA registered cognizable IPC/SLL counts for all 36 States/UTs. Crime registrations are not convictions, true incidence, population-adjusted rates or safety scores. They are never combined with pending court stocks.
 - Geographic boundaries: 2024 LGD state/UT polygons, distributed by Bharatlas and simplified for display. Source, licence statement, transformations and download checksum are bundled with the geometry. Small UT dots are enlarged click targets, not areas. Refer to Survey of India for authoritative boundaries.
 
@@ -18,6 +18,8 @@ The homepage answers pending volume, backlog concentration and whether a nationa
 Four primary destinations cover the overview, State/UT totals, partial district detail and sources/status. Court reports and further analysis sit in expandable groups. Registered crime is a separate context dataset, never a court-pendency measure. State views link to the loaded district reports; a missing district report means missing coverage, not zero cases. See [source audit](pipeline/SOURCE_AUDIT.md) for evidence and verification limits.
 
 The grouped sidebar opens all court and research views. On mobile use the menu button; Escape closes the drawer. The header theme toggle defaults to the system preference and saves a light/dark choice in localStorage. Charts re-theme with the page.
+
+Static evidence pages at `/states/`, `/sources/`, `/methodology/`, `/high-courts/`, `/supreme-court/`, `/district-reports/` and `/crime/` expose dated tables without JavaScript. The interactive app keeps hash routing for filters. Canonicals, sitemap, provenance JSON-LD, social preview and source corrections are generated from validated data, with no backend or frontend framework.
 
 The crime map supports clickable, keyboard-focusable State/UT regions, exact figures, shareable State/UT links, zoom buttons, drag-to-pan when zoomed, reset, and an expanded modal view. Escape or Close returns to the normal view. The dropdown and exact-count table provide alternatives for small regions and map-loading failures. Expanding works without a browser full-screen permission. All geometry is served locally: no map tile service or external API is called by the map.
 
@@ -35,7 +37,9 @@ python pipeline/smoke.py
 python -m http.server 8000 --directory site
 ```
 
-Open http://localhost:8000 . There is no frontend build step. Six JSON contracts in `site/data/` contain official reports and build metadata; a separate geographic asset lives in `site/assets/maps/india-states.json`. Smoke checks reject any of the former public synthetic summary/series files. Fixture JSON is generated only under `pipeline/output/synthetic_fixture_outputs/`, outside the hosted directory.
+Open http://localhost:8000 . There is no frontend build step. The homepage loads national data and the small refresh record; other datasets load only when opened. Theme changes re-theme charts without replacing the view.
+
+Six JSON contracts in `site/data/` contain official reports and build metadata; a separate geographic asset lives in `site/assets/maps/india-states.json`. Smoke checks reject any of the former public synthetic summary/series files. Fixture JSON is generated only under `pipeline/output/synthetic_fixture_outputs/`, outside the hosted directory.
 
 ## Add or update a report
 
@@ -81,3 +85,15 @@ The MIT licence covers project code, not third-party data. Government report com
 - Establish dependable permitted data access and source-specific commercial reuse terms.
 - Review an offence-level IPC/BNS crosswalk before adding a post-transition crime year.
 - Verify newly published boundary revisions against authoritative sources before replacing the fixed map asset.
+
+## Correction published 30 October 2026
+
+The former September Kokrajhar figures did not match the cited PDF page and have been withdrawn. The source table also has inconsistent category/flow totals. The original CSV/provenance remain under `pipeline/quarantine/` for audit history, outside all published datasets and raw inputs. No September value is inferred. July and August PDF page-2 summaries were visually verified, reconcile, and explicitly exclude Juvenile Justice Board data. National and crime reporting dates are unchanged. See `pipeline/quarantine/README.md` and `pipeline/refresh_status.json` periodic_check.
+
+## Security, accessibility and publication
+
+Chart.js is served from `/site/vendor/`; its MIT licence is retained. The Vercel project uses `/site/vercel.json`: scripts and fetches stay on the same origin, object embedding is blocked, framing is denied, MIME sniffing is disabled and a referrer/permissions policy is set. Inline styles remain permitted for dynamic chart sizing. Version-named vendor assets are cached immutably; JSON revalidates. GitHub Pages cannot apply Vercel response-header rules; its static content remains an alternate host.
+
+The pipeline regenerates the homepage, 36 State/UT evidence pages and supporting source/report pages, `robots.txt` and `sitemap.xml`. Commit generated HTML as well as JSON on verified data updates. JSON-LD deliberately omits source licences that have not been verified. Review field/date changes; do not claim commercial clearance.
+
+Text sizes, table regions/captions, chart-value alternatives, focus handling, control targets and map boundaries have been improved. Browser automation was unavailable during this release. Static/contrast checks and CI are not a WCAG certificate, a real-device layout test, a screen-reader walkthrough, Core Web Vitals measurement or penetration test.

@@ -1,7 +1,7 @@
-import { renderCrimeMap } from './crime-map.js?v=0.7.0';
-import { districtCoverage } from './evidence.js?v=0.7.0';
+import { renderCrimeMap } from './crime-map.js?v=0.8.0';
+import { districtCoverage } from './evidence.js?v=0.8.0';
 // Research tools share the verified snapshot; crime remains an independent series.
-import { reportRoutes, renderCourtReports } from './court-reports.js?v=0.7.0';
+import { reportRoutes, renderCourtReports } from './court-reports.js?v=0.8.0';
 const e = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num = v => v == null ? 'Unavailable' : new Intl.NumberFormat('en-IN').format(v);
 const share = r => r.cases_pending ? r.cases_pending_over_5y / r.cases_pending : null;
@@ -16,7 +16,7 @@ function table(rows, s) {
   return `<div class="table-scroll"><table><thead><tr><th>Reporting unit</th><th>Pending</th><th>Over 5 years</th><th>Share over 5 years</th><th>Source</th></tr></thead><tbody>${rows.length ? rows.map(r => `<tr><td>${e(r.court_label)}</td><td>${num(r.cases_pending)}</td><td>${num(r.cases_pending_over_5y)}</td><td>${pct(share(r))}</td><td>${source(s, r.source_table)}</td></tr>`).join('') : '<tr><td colspan="5">No data for this selection.</td></tr>'}</tbody></table></div>`;
 }
 function chrome(route, s) {
-  return `<p class="breadcrumb"><a href="#overview">Overview</a> / Research tools / ${labels[researchRoutes.indexOf(route)]}</p><section class="page-heading"><p class="eyebrow">RESEARCH TOOLS</p><h1>${labels[researchRoutes.indexOf(route)]}</h1><p>${route==='crime'?'Separate annual crime dataset; not a court backlog measure. Court reference date:':'National court reference date:'} ${e(s.data_as_of)} · ${s.records.length} published reporting units. Crime data has its own reporting year.</p></section><nav class="research-nav" aria-label="Research tools">${researchRoutes.map((r, i) => `<a href="#${r}" ${r === route ? 'aria-current="page"' : ''}>${labels[i]}</a>`).join('')}</nav><div id="research-content"></div>`;
+  return `<p class="breadcrumb"><a href="#overview">Overview</a> / Research tools / ${labels[researchRoutes.indexOf(route)]}</p><section class="page-heading"><p class="eyebrow">RESEARCH TOOLS</p><h1>${labels[researchRoutes.indexOf(route)]}</h1><p>${route==='crime'?'Separate annual crime dataset; not a court backlog measure. Court reference date:':'National court reference date:'} ${e(s.data_as_of)} · ${s.coverage?.published_reporting_units||s.records?.length||'Unknown'} published reporting units. Crime data has its own reporting year.</p></section><nav class="research-nav" aria-label="Research tools">${researchRoutes.map((r, i) => `<a href="#${r}" ${r === route ? 'aria-current="page"' : ''}>${labels[i]}</a>`).join('')}</nav><div id="research-content"></div>`;
 }
 function health(s, refresh, root, meta) {
   const missing = ['Institutions', 'Disposals', 'Hearings', 'Adjournments', 'Over-three-year counts', 'District rows', 'Civil/criminal split'];
@@ -60,13 +60,14 @@ function breakdowns(s, root) {
 }
 function crime(data, root, check) { void renderCrimeMap(data,root,check); }
 export function renderResearch(route,s,refresh,extras,root) {
-  root.innerHTML=chrome(route,s);const content=root.querySelector('#research-content');
+  root.innerHTML=route==='crime'?'<p class="breadcrumb"><a href="#overview">Overview</a> / Separate crime context</p><section class="page-heading"><h1>Registered crime map</h1><p>Annual registered cases; not court backlog, convictions or personal safety. <a href="crime/">Read exact counts and primary sources without the map</a>.</p></section><div id="research-content"></div>':chrome(route,s);const content=root.querySelector('#research-content');
   if(reportRoutes.includes(route)){renderCourtReports(route,s,extras.periodic,content,refresh);return;}
   if(route==='health'){
     health(s,refresh,content,extras.meta);
+    if(refresh?.periodic_check?.note){const notice=document.createElement('p');notice.className='alert';notice.textContent=refresh.periodic_check.note;content.prepend(notice);}
     const loadedDistricts=districtCoverage(extras.periodic?.records);
     const sourceRows=(extras.meta?.sources||[]).map(r=>`<tr><td>${e(r.source_name)}</td><td>${e(r.coverage_start)} – ${e(r.coverage_end)}</td><td>${e(r.download_date)} (download, not refresh)</td><td><a href="${e(r.source_url)}" target="_blank" rel="noopener">Official source</a><br>${e(r.notes)}</td></tr>`).join('');
-    content.insertAdjacentHTML('beforeend',`<section class="panel"><h2>Dataset loading status</h2><p>National snapshot: loaded (${s.records.length} rows). Secondary request failures: ${Object.entries(extras.loadErrors||{}).map(([k,v])=>`${e(k)}: ${e(v)}`).join('; ')||(extras.secondaryReady?'None. All secondary requests completed.':'None recorded yet; requests are still in progress.')}</p><h2>Loaded source register</h2><div class="table-scroll"><table><thead><tr><th>Source</th><th>Reporting coverage</th><th>Recorded download</th><th>Link and table notes</th></tr></thead><tbody>${sourceRows||'<tr><td colspan="4">Source registry unavailable or still loading.</td></tr>'}</tbody></table></div><p>High Court stock and Supreme Court stock: national reply, Annex I, PDF p. 53. Supreme Court monthly series: annual report, PDF p. 223. Loaded district detail: ${e(loadedDistricts.districts.join('; ')||'Unavailable')}; periods ${e(loadedDistricts.months.join(', ')||'Unavailable')}. Consult each registered report for its PDF page. Periodic source download dates are not proof of a successful subsequent refresh.</p><p><a href="#district-reports">Check district coverage</a> · <a href="#supreme-court">Review the historical Supreme Court series</a></p></section>`);
+    content.insertAdjacentHTML('beforeend',`<section class="panel"><h2>Dataset loading status</h2><p>National snapshot: loaded (${s.records.length} rows). Secondary request failures: ${Object.entries(extras.loadErrors||{}).map(([k,v])=>`${e(k)}: ${e(v)}`).join('; ')||(extras.secondaryReady?'No failure among requested datasets. Other datasets load only when opened.':'None recorded yet; requests are still in progress.')}</p><h2>Loaded source register</h2><div class="table-scroll"><table><thead><tr><th>Source</th><th>Reporting coverage</th><th>Recorded download</th><th>Link and table notes</th></tr></thead><tbody>${sourceRows||'<tr><td colspan="4">Source registry unavailable or still loading.</td></tr>'}</tbody></table></div><p>High Court stock and Supreme Court stock: national reply, Annex I, PDF p. 53. Supreme Court monthly series: annual report, PDF p. 223. Loaded district detail: ${e(loadedDistricts.districts.join('; ')||'Unavailable')}; periods ${e(loadedDistricts.months.join(', ')||'Unavailable')}. Consult each registered report for its PDF page. Periodic source download dates are not proof of a successful subsequent refresh.</p><p><a href="#district-reports">Check district coverage</a> · <a href="#supreme-court">Review the historical Supreme Court series</a></p></section>`);
   }
   if(route==='archive')archive(s,extras.archive,content);
   if(route==='compare')compare(s,content);

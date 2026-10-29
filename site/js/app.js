@@ -1,53 +1,55 @@
-import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.7.0';
-import { researchRoutes } from './research.js?v=0.7.0';
-import { setupPresentation, polishPresentation } from './presentation.js?v=0.7.0';
-import { loadJSON } from './data-client.js?v=0.7.0';
-
-const dataset={};
+import {renderOfficialRoute,updateOfficialModeStatus} from './official-mode.js?v=0.8.0';
+import {researchRoutes,renderResearch} from './research.js?v=0.8.0';
+import {setupPresentation,polishPresentation} from './presentation.js?v=0.8.0';
+import {loadJSON,createDataStore,requirementsFor} from './data-client.js?v=0.8.0';
+const data=createDataStore(loadJSON);
+const bootstrap=JSON.parse(document.getElementById('data-bootstrap')?.textContent||'{}');
 const routes=['overview','state','district','methodology','about',...researchRoutes];
-function status(message,kind=''){
-  const el=document.querySelector('#official-view .data-status');
-  if(el){el.textContent=message;el.className=`data-status ${kind}`;}
+const keys={official_snapshot:'official',refresh_status:'refreshStatus',snapshot_archive:'archive',crime:'crime',periodic_reports:'periodic',meta:'meta'};
+let navigation=0;
+function currentRoute(){const name=location.hash.slice(1).split('?')[0]||'overview';return routes.includes(name)?name:'overview';}
+function status(message,kind=''){const el=document.querySelector('#official-view .data-status');if(el){el.textContent=message;el.className=`data-status ${kind}`;}}
+function updateBanner(){const snapshot=data.peek('official_snapshot')||bootstrap.reference;if(snapshot)updateOfficialModeStatus(snapshot,data.peek('refresh_status'),document.getElementById('mode-status'));}
+function errorNotice(root,route,errors){
+  root.querySelector('.load-error')?.remove();const box=document.createElement('section');box.className='panel load-error';box.setAttribute('role','alert');
+  const heading=document.createElement('h1');heading.textContent='Interactive data unavailable';
+  const p=document.createElement('p');p.textContent=errors.join(' ')+' Dated evidence pages remain available.';
+  const retry=document.createElement('button');retry.className='button-secondary';retry.type='button';retry.textContent='Retry this view';retry.addEventListener('click',()=>showRoute({force:true}));
+  const link=document.createElement('a');link.href='sources/';link.textContent='Read sources and reporting dates';box.append(heading,p,retry,document.createTextNode(' '),link);
+  if(route==='overview'){heading.remove();root.prepend(box);}else root.replaceChildren(box);
 }
-function showRoute(){
-  const requested=location.hash.slice(1).split('?')[0]||'overview';
-  const route=routes.includes(requested)?requested:'overview';
-  document.title=`Justice Metrics — ${route.replaceAll('-',' ')} — Official reports`;
-  document.querySelector('.coverage-short').textContent=dataset.official?.data_as_of||'Unavailable';
-  const root=document.getElementById('official-view');
-  document.body.classList.remove('crime-map-expanded');
-  document.getElementById('crime-map-dialog')?.close();
+async function showRoute({force=false,focus=false}={}){
+  const run=++navigation,route=currentRoute(),root=document.getElementById('official-view');
+  document.title=`${({overview:'Court pendency in India',state:'State and UT court pendency',crime:'Registered crime in India — separate context',health:'Sources and data status'})[route]||route.replaceAll('-',' ')} | Justice Metrics`;
+  root.setAttribute('aria-busy','true');document.getElementById('navigation-status').textContent='Loading '+route.replaceAll('-',' ')+'.';
+  const needed=requirementsFor(route);if(force)needed.forEach(name=>data.invalidate(name));
+  const results=await Promise.allSettled(needed.map(name=>data.get(name)));if(run!==navigation)return;
+  document.getElementById('crime-map-dialog')?.close();document.body.classList.remove('crime-map-expanded');Object.values(window.Chart?.instances||{}).forEach(chart=>chart.destroy());
+  const errors=results.flatMap((r,i)=>r.status==='rejected'?[`${needed[i]}: ${r.reason.message}`]:[]),snapshot=data.peek('official_snapshot');
+  const fatal=route==='crime'?!data.peek('crime'):['district-reports','reports'].includes(route)?!data.peek('periodic_reports'):!snapshot?.available;
   try{
-    if(!dataset.official?.available){
-      if(!dataset.officialError)return;
-      document.getElementById('mode-status').textContent='Official reports could not be loaded. No substitute dataset is shown.';
-      root.querySelector('.load-error')?.remove();
-      const message=document.createElement('div');message.className='alert load-error';message.setAttribute('role','alert');
-      const note=document.createElement('p');note.textContent=`Interactive data unavailable: ${dataset.officialError} The dated published summary remains below.`;
-      const retry=document.createElement('button');retry.type='button';retry.className='button-secondary';retry.textContent='Retry data loading';retry.addEventListener('click',loadData);
-      message.append(note,retry);root.prepend(message);return;
-    }
-    updateOfficialModeStatus(dataset.official,dataset.refreshStatus,document.getElementById('mode-status'));
-    document.documentElement.dataset.interactive='ready';
-    renderOfficialRoute(route,dataset.official,dataset.refreshStatus,status,{archive:dataset.archive,crime:dataset.crime,meta:dataset.meta,periodic:dataset.periodic,loadErrors:dataset.loadErrors,secondaryReady:dataset.secondaryReady});
-  }catch(error){
-    root.replaceChildren();const message=document.createElement('p');message.className='alert';message.setAttribute('role','alert');message.textContent=`Unable to display this view: ${error.message}`;root.append(message);
-  }finally{polishPresentation(route,'official');}
+    if(fatal){errorNotice(root,route,errors);return;}
+    const extras={loadErrors:data.errors(),secondaryReady:true,districtCoverageRows:bootstrap.districtCoverageRows||[]};for(const [name,key] of Object.entries(keys))extras[key]=data.peek(name);
+    if(['crime','district-reports','reports'].includes(route))renderResearch(route,snapshot||bootstrap.reference,data.peek('refresh_status'),extras,root);
+    else renderOfficialRoute(route,snapshot,data.peek('refresh_status'),status,extras);
+    if(errors.length){const p=document.createElement('p');p.className='alert';p.textContent='Supporting data unavailable: '+errors.join(' ');root.prepend(p);}
+    document.documentElement.dataset.interactive='ready';document.querySelector('.coverage-short').textContent=(snapshot||bootstrap.reference)?.data_as_of||'See reporting dates';updateBanner();
+  }catch(error){errorNotice(root,route,[error.message]);}
+  finally{root.setAttribute('aria-busy','false');polishPresentation(route,'official');document.getElementById('navigation-status').textContent=route.replaceAll('-',' ')+' view ready.';if(focus){const h=root.querySelector('h1');if(h){h.tabIndex=-1;h.focus();}}}
 }
-function setTheme(){
-  const root=document.documentElement,button=document.querySelector('.theme-toggle');let saved=null;
-  try{saved=localStorage.getItem('jm-theme');}catch{}
-  root.dataset.theme=['dark','light'].includes(saved)?saved:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
-  const update=()=>{const dark=root.dataset.theme==='dark';button.setAttribute('aria-pressed',String(dark));button.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');};
-  update();button.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('jm-theme',root.dataset.theme);}catch{}update();showRoute();});
+function setupTheme(){
+  const button=document.querySelector('.theme-toggle');const update=()=>{const dark=document.documentElement.dataset.theme==='dark';button.setAttribute('aria-pressed',String(dark));button.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');};update();
+  button.addEventListener('click',()=>{
+    const tokens=['--chart-pending','--chart-clearance','--chart-adjournment','--chart-compare','--chart-flow','--chart-grid','--chart-text','--gold'];const before=getComputedStyle(document.documentElement),old=tokens.map(t=>before.getPropertyValue(t).trim());
+    document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('jm-theme',document.documentElement.dataset.theme);}catch{}
+    const after=getComputedStyle(document.documentElement),colours=new Map(tokens.map((t,i)=>[old[i],after.getPropertyValue(t).trim()]));const colour=v=>Array.isArray(v)?v.map(colour):colours.get(v)||v;
+    for(const chart of Object.values(window.Chart?.instances||{})){
+      for(const set of chart.data.datasets)for(const key of ['borderColor','backgroundColor','pointBackgroundColor'])if(set[key])set[key]=colour(set[key]);
+      for(const scale of Object.values(chart.options.scales||{})){if(scale.ticks)scale.ticks.color=after.getPropertyValue('--chart-text').trim();if(scale.grid)scale.grid.color=after.getPropertyValue('--chart-grid').trim();}
+      if(chart.options.plugins?.legend?.labels)chart.options.plugins.legend.labels.color=after.getPropertyValue('--chart-text').trim();chart.update('none');
+    }update();
+  });
 }
-async function loadData(){
-  dataset.officialError=null;dataset.loadErrors={};dataset.secondaryReady=false;
-  const primary=loadJSON('official_snapshot').then(value=>{if(!value.available||!Array.isArray(value.records))throw Error('Official snapshot has no validated records.');dataset.official=value;showRoute();}).catch(error=>{dataset.officialError=error.message;showRoute();});
-  const names=['refresh_status','snapshot_archive','crime','periodic_reports','meta'];
-  const keys=['refreshStatus','archive','crime','periodic','meta'];
-  await Promise.allSettled(names.map(async(name,i)=>{try{dataset[keys[i]]=await loadJSON(name);}catch(error){dataset.loadErrors[name]=error.message;}}));
-  dataset.secondaryReady=true;await primary;showRoute();
-}
-setupPresentation();setTheme();window.addEventListener('hashchange',showRoute);loadData();
-document.getElementById('chart-library')?.addEventListener('load',()=>{if(dataset.official)showRoute();});
+setupPresentation();setupTheme();window.addEventListener('hashchange',()=>showRoute({focus:true}));showRoute();
+// This small freshness request updates only the banner, never rebuilds a view.
+data.get('refresh_status').then(updateBanner).catch(()=>{});
