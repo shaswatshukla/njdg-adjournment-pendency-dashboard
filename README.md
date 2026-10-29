@@ -61,6 +61,8 @@ Daily source review is scheduled separately from website hosting. It looks for n
 
 For GitHub Pages, enable GitHub Actions under repository Settings → Pages. The included workflow validates reports and tests before uploading only `/site`. Commit source changes and generated official JSON to `main`. Pipeline fixtures and private fixture outputs stay outside the uploaded directory. Other static hosts can serve `/site` directly for free.
 
+Vercel production: https://njdg-dashboard.vercel.app . The `njdg-dashboard` project is linked to this repository's `main` branch, with Root Directory `site`, Framework `Other`, empty Install/Build commands and Output Directory `.`. Git pushes automatically create deployments; no backend, Vercel Cron, runtime secret or paid API is needed. The existing daily source-review task runs at 8:00 AM Asia/Kolkata, validates changes before publishing and checks the production deployment, public JSON and map asset afterward. It retains verified data if a source is unavailable and flags failures for review. Hosting automation does not guarantee source availability, instant updates or unattended recovery from every upstream change. GitHub Pages remains available as an alternate host.
+
 ## Disclaimer and data rights
 
 Independent analysis and information only. Not legal advice. Does not predict verdicts, recommend bail, judge cases or provide case-level lookup. Figures may differ from current [official NJDG](https://njdg.ecourts.gov.in/) numbers because reporting dates, scopes and definitions differ.
