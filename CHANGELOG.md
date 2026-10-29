@@ -41,3 +41,10 @@
 - Validate periodic report identities, category/flow reconciliation and published controls; expand smoke contract to eleven JSON artifacts.
 
 
+# 0.7.0 — 2026-10-29
+
+- Focus the homepage on pending volume, concentration and the limits on national trends.
+- Publish a dated HTML fallback; bound JSON requests and load the national snapshot independently.
+- Simplify navigation, separate crime context, expose partial district drilldowns and source status.
+- Record source-audit limits; add concentration, coverage, request-failure and landing checks.
+

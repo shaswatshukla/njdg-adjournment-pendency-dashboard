@@ -13,6 +13,10 @@ The website publishes official report data only. The synthetic selector, demo vi
 
 ## Use the website
 
+The homepage answers pending volume, backlog concentration and whether a national direction can be established. It explicitly leaves the national trend unavailable: a single national reporting date is not a time series. A dated summary is generated into HTML by the pipeline, so headline facts and source downloads remain available without JavaScript or when JSON requests fail. Requests time out after 12 seconds; secondary data cannot hold back the national figures.
+
+Four primary destinations cover the overview, State/UT totals, partial district detail and sources/status. Court reports and further analysis sit in expandable groups. Registered crime is a separate context dataset, never a court-pendency measure. State views link to the loaded district reports; a missing district report means missing coverage, not zero cases. See [source audit](pipeline/SOURCE_AUDIT.md) for evidence and verification limits.
+
 The grouped sidebar opens all court and research views. On mobile use the menu button; Escape closes the drawer. The header theme toggle defaults to the system preference and saves a light/dark choice in localStorage. Charts re-theme with the page.
 
 The crime map supports clickable, keyboard-focusable State/UT regions, exact figures, shareable State/UT links, zoom buttons, drag-to-pan when zoomed, reset, and an expanded modal view. Escape or Close returns to the normal view. The dropdown and exact-count table provide alternatives for small regions and map-loading failures. Expanding works without a browser full-screen permission. All geometry is served locally: no map tile service or external API is called by the map.
@@ -26,6 +30,7 @@ python -m pip install -r requirements-dev.txt
 python pipeline/build.py
 python -m pytest pipeline/tests -q
 node pipeline/tests/map_logic.mjs
+node pipeline/tests/evidence_logic.mjs
 python pipeline/smoke.py
 python -m http.server 8000 --directory site
 ```

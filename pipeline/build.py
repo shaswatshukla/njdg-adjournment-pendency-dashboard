@@ -343,6 +343,11 @@ def build() -> dict[str, Any]:
     _dump(site_data / 'snapshot_archive.json', archive)
     _dump(site_data / 'crime.json', crime)
     _dump(site_data / 'periodic_reports.json', periodic)
+    try:
+        from .landing import write_landing
+    except ImportError:
+        from landing import write_landing
+    write_landing(site_data.parent / 'index.html', official_snapshot, periodic)
     # Require every expected artifact and parse it before declaring success.
     try:
         from .smoke import check_json

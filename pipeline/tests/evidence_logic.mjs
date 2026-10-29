@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {concentration,districtCoverage} from '../../site/js/evidence.js';
+import {loadJSON} from '../../site/js/data-client.js';
+const row=(state,n,level='district_subordinate_aggregate')=>({state,cases_pending:n,court_level:level});
+const rows=[row('A',40),row('B',30),row('C',20),row('D',10),row('Higher court',999,'high_court')];
+assert.equal(concentration(rows).share,.9);assert.equal(concentration(rows).total,100);
+assert.equal(concentration([row('A',0)]),null);assert.equal(concentration([row('A',-1)]),null);
+assert.equal(concentration([row('A',null)]),null);assert.equal(concentration([]),null);
+assert.equal(rows[0].state,'A');
+assert.deepEqual(districtCoverage([{court_level:'district',district:'K',state:'Assam',month:'2026-09'},{court_level:'district',district:'K',state:'Assam',month:'2026-09'}]),{districts:['K, Assam'],months:['2026-09']});
+assert.deepEqual(districtCoverage(),{districts:[],months:[]});
+assert.deepEqual(await loadJSON('ok',{fetcher:async()=>({ok:true,json:async()=>({loaded:true})})}),{loaded:true});
+await assert.rejects(loadJSON('missing',{fetcher:async()=>({ok:false,status:404})}),/HTTP 404/);
+await assert.rejects(loadJSON('slow',{fetcher:()=>new Promise(()=>{}),timeoutMs:10}),/timed out/);
+await assert.rejects(loadJSON('bad',{fetcher:async()=>({ok:true,json:async()=>{throw Error('Malformed JSON');}})}),/Malformed/);
+console.log('Concentration, coverage and bounded JSON failure checks passed.');

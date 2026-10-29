@@ -14,7 +14,7 @@ export function setupPresentation() {
   document.addEventListener('keydown',event=>{
     if(!document.body.classList.contains('nav-open'))return;
     if(event.key==='Escape'){close();button.focus();}
-    if(event.key==='Tab'&&media.matches){const items=[...sidebar.querySelectorAll('a,button')].filter(x=>!x.hidden);const first=items[0],last=items.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
+    if(event.key==='Tab'&&media.matches){const items=[...sidebar.querySelectorAll('a,button,summary')].filter(x=>x.getClientRects().length);const first=items[0],last=items.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}
   });
   document.querySelector('.skip-link').addEventListener('click',event=>{event.preventDefault();close();document.getElementById('main').focus();});
 }
@@ -22,6 +22,7 @@ export function setupPresentation() {
 export function polishPresentation(route, mode) {
   document.getElementById('workspace-title').textContent=titles[route]||'Overview';
   document.querySelectorAll('[data-route]').forEach(a=>{if(a.dataset.route===route)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+  document.querySelectorAll('nav details').forEach(group=>{if(group.querySelector('[aria-current="page"]'))group.open=true;});
   document.documentElement.dataset.view=route;
   const root=mode==='official'?document.getElementById('official-view'):document.getElementById('view-'+route);
   if(!root)return;
@@ -39,9 +40,10 @@ export function polishPresentation(route, mode) {
   root.querySelectorAll('.kpi strong').forEach(x=>{x.classList.toggle('metric-unavailable',x.textContent==='Unavailable');});
   root.querySelectorAll('table').forEach(table=>{table.querySelectorAll('td').forEach(cell=>{if(/^[-+]?\d[\d,.\s]*(?:%| Cr| L)?$/.test(cell.childNodes[0]?.textContent?.trim()||''))cell.classList.add('numeric');});});
   if(mode==='official'&&route==='overview'){
-    const heading=root.querySelector('h1');if(heading)heading.innerHTML='Judicial pendency,<br><em>in perspective.</em>';
+    const heading=root.querySelector('h1');if(heading)heading.textContent='Where the backlog stands.';
     const eyebrow=root.querySelector('.page-heading .eyebrow');if(eyebrow)eyebrow.textContent='INDIA / VERIFIED AGGREGATE REPORTS';
     const chartGrid=root.querySelector('.chart-grid');if(chartGrid)chartGrid.classList.add('overview-grid');
     const table=root.querySelector('#official-level-totals')?.closest('.panel');if(table)table.classList.add('level-panel');
   }
 }
+
