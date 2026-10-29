@@ -1,4 +1,4 @@
-import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.2.0';
+import { renderOfficialRoute, updateOfficialModeStatus } from './official-mode.js?v=0.2.1';
 const DATA='./data/';
 const number=n=>{if(n==null)return '-';const value=Number(n);if(Math.abs(value)>=10000000)return `${(value/10000000).toFixed(1)} Cr`;if(Math.abs(value)>=100000)return `${(value/100000).toFixed(1)} L`;return new Intl.NumberFormat('en-IN',{maximumFractionDigits:0}).format(value)};
 const percent=n=>n==null||!Number.isFinite(Number(n))?'—':`${(Number(n)*100).toFixed(1)}%`;
@@ -21,11 +21,15 @@ function showRoute(){
   if(!['overview','state','district','methodology','about'].includes(route))route='overview';
   active=route;mode=document.getElementById('dataset-mode')?.value||'official';
   document.querySelectorAll('.page-view').forEach(v=>{v.hidden=mode==='official'?v.id!=='official-view':!(v.dataset.mode==='demo'&&v.dataset.page===route)});
+  const footerCoverage=document.querySelector('.coverage-short');
+  if(footerCoverage)footerCoverage.textContent=mode==='official'?(dataset.official?(dataset.official.data_as_of||'Unavailable'):'Loading'):(dataset.meta?`${dataset.meta.coverage_start} to ${dataset.meta.coverage_end}`:'Loading');
   document.querySelectorAll('[data-route]').forEach(a=>{if(a.dataset.route===route)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
   const districtLink=document.querySelector('[data-route="district"]');if(districtLink)districtLink.textContent=mode==='official'?'Court coverage':'District explorer';
   document.title=`NJDG Adjournment & Pendency Dashboard - ${mode==='official'?'Official snapshot':'Synthetic demo'} - ${route[0].toUpperCase()+route.slice(1)}`;
   if(mode==='official'&&dataset.official)updateOfficialModeStatus(dataset.official,dataset.refreshStatus,document.getElementById('mode-status'));
+  else if(mode==='official'&&!dataset.officialError){const e=document.getElementById('mode-status');e.textContent='Loading official snapshot and source-check status...';e.className='mode-status'}
   else if(mode==='demo'&&dataset.meta){const e=document.getElementById('mode-status');e.textContent=`SYNTHETIC - FOR DEMO. Demo coverage ${dataset.meta.coverage_start} to ${dataset.meta.coverage_end}; not official data.`;e.className='mode-status'}
+  else if(mode==='demo'&&!dataset.demoError){const e=document.getElementById('mode-status');e.textContent='Loading synthetic demo data...';e.className='mode-status'}
   if(mode==='demo'&&dataset.demoError){status(`Synthetic demo data unavailable: ${dataset.demoError}`,'error');return}
   if(mode==='demo'&&!dataset.meta)return;
   try{
