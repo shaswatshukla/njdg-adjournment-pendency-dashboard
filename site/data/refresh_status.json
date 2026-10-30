@@ -1,20 +1,24 @@
 {
-  "last_checked_at_utc": "2026-10-29T05:06:49Z",
-  "status": "verified_snapshot",
+  "last_checked_at_utc": "2026-10-30T02:32:40Z",
+  "status": "needs_review",
   "data_as_of": "2026-03-13",
   "sources": [
-    "https://www.doj.gov.in/static/uploads/2026/04/b7b4da487543be9a9f1d1558d06d76d2.pdf"
+    "https://www.doj.gov.in/static/uploads/2026/04/b7b4da487543be9a9f1d1558d06d76d2.pdf",
+    "https://www.doj.gov.in/parliament-questions",
+    "https://ecommitteesci.gov.in/service/national-judicial-data-grid/",
+    "https://data.gov.in/"
   ],
-  "note": "Manual source check recorded on 2026-10-29; daily source verification is scheduled but has not yet run. No automatic public API is connected. This remains a historical snapshot until a newer official table is validated.",
+  "note": "Checked 30 October 2026 (Asia/Kolkata). Active DoJ Q3113 PDF downloaded successfully; all 62 aggregate identities/count pairs and national controls match Annex I/II, PDF pages 53–54. No replacement imported. A newer July 2026 snapshot is suggested by a secondary index, but its primary parliamentary report and age-band definitions could not be established. The DoJ parliamentary catalogue rendered no usable listing in this check. Official NJDG/eCommittee and data.gov.in searches did not establish a compatible documented public authorized feed. Freshness review remains unresolved; 13 March 2026 is the reporting date, not a live count. Reuse terms remain unverified.",
   "last_successful_checked_at_utc": "2026-10-29T05:06:49Z",
   "crime_check": {
     "year": 2023,
-    "last_checked_at_utc": "2026-10-29T05:55:30.017221+00:00",
-    "status": "verified_snapshot",
+    "last_checked_at_utc": "2026-10-30T02:32:40Z",
+    "status": "needs_review",
     "sources": [
-      "https://sansad.in/getFile/annex/269/AU407_UbEvYl.pdf?source=pqars"
+      "https://sansad.in/getFile/annex/269/AU407_UbEvYl.pdf?source=pqars",
+      "https://www.mha.gov.in/sites/default/files/2026-04/MonthlyMajormarch_20042026.pdf"
     ],
-    "note": "Manual verification of 36 State/UT rows and national controls against Annexure I PDF page 3. Historical 2023 data; newer releases require definition and IPC/BNS review."
+    "note": "Active 2023 primary parliamentary PDF downloaded; all 36 State/UT IPC/SLL/total rows match Annexure I PDF page 3 and national controls (IPC 3,763,102; SLL 2,478,467; total 6,241,569). Search indexing suggested MHA March 2026 achievements discussed Crime in India 2024, but the indexed primary PDF returned HTTP 404 during manual download; neither publication nor compatible new-year tables were verified. Loaded year remains 2023. Any newer year requires scope and IPC/BNS transition review; reuse terms unverified."
   },
   "periodic_check": {
     "status": "needs_review",
@@ -23,10 +27,14 @@
       "2026-07",
       "2026-08"
     ],
-    "note": "Correction: prior Kokrajhar September 2026 values withdrawn because they do not match the cited PDF page. Published September summary also has inconsistent category/flow totals; no September counts are published. July and August PDF p2 were visually verified and reconcile; scope excludes JJB. National snapshot and crime reporting dates are unchanged.",
+    "note": "Correction: prior Kokrajhar September 2026 values withdrawn because they do not match the cited PDF page. Published September summary also has inconsistent category/flow totals; no September counts are published. July and August PDF p2 were visually verified and reconcile; scope excludes JJB. National snapshot and crime reporting dates are unchanged. Archive review on 30 October 2026 found no later Supreme Court annual-report volume or later/corrected Kokrajhar monthly statement than the withdrawn September report. All 24 loaded Supreme Court monthly rows match PDF page 223; July/August district PDF SHA-256 checksums match controls. The unresolved September source inconsistency remains; no reporting dates or counts changed.",
     "sources": [
       "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/08/2026082761.pdf",
-      "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/09/2026090880.pdf"
-    ]
+      "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/09/2026090880.pdf",
+      "https://www.sci.gov.in/indian-judiciary-annual-report/",
+      "https://kokrajhar.dcourts.gov.in/document-category/statistical-reports/",
+      "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf"
+    ],
+    "last_checked_at_utc": "2026-10-30T02:32:40Z"
   }
 }
