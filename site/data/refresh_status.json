@@ -1,36 +1,34 @@
 {
-  "last_checked_at_utc": "2026-11-03T02:14:10Z",
+  "last_checked_at_utc": "2026-11-04T02:07:37Z",
   "status": "needs_review",
   "data_as_of": "2026-03-13",
   "sources": [
     "https://www.doj.gov.in/static/uploads/2026/04/b7b4da487543be9a9f1d1558d06d76d2.pdf",
     "https://www.doj.gov.in/parliament-questions",
-    "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2323573&lang=1&reg=3",
+    "https://www.doj.gov.in/whats-new",
     "https://ecommitteesci.gov.in/service/national-judicial-data-grid/",
     "https://www.data.gov.in/resource/court-wise-number-pending-cases-across-country-national-judicial-data-grid-njdg-portal-06"
   ],
-  "note": "Checked 3 November 2026 (Asia/Kolkata). Active DoJ Q3113 PDF downloaded successfully (SHA-256 86c2ee4193b87a28c9bba96c93f59dd5b95c9c6bde50c318726ab9c4fcd098b0). Retained the verified 13 March 2026 snapshot and all source counts. DoJ/Parliament searches did not establish the primary newer July table; its age-band definitions remain unresolved. The DoJ catalogue returned no readable listing. The 14 October DoJ/PIB release gives a rounded national figure without the complete comparable controls/rows required here. NJDG/eCommittee documentation and data.gov.in review established no compatible authorized live feed; the reviewed OGD resource rendered a sandbox/no-records notice. Freshness remains unresolved; download/check/build dates do not change the reporting date. Reuse terms remain unverified.",
+  "note": "Checked 4 November 2026 (Asia/Kolkata). Active DoJ Q3113 PDF downloaded successfully; SHA-256 86c2ee4193b87a28c9bba96c93f59dd5b95c9c6bde50c318726ab9c4fcd098b0. No verified like-for-like newer or corrected national release was established by DoJ/Parliament searches. The unresolved newer July primary-table/age-band review remains open. DoJ publication pages returned no readable listing; the reviewed OGD resource returned no records and a sandbox notice. NJDG/eCommittee documentation did not establish a compatible authorized structured feed. Retained the 13 March 2026 reporting date and previous successful-check timestamp. Download, check and build dates do not make historical counts current; source reuse terms remain unverified.",
   "last_successful_checked_at_utc": "2026-10-29T05:06:49Z",
   "crime_check": {
     "year": 2023,
-    "last_checked_at_utc": "2026-11-03T02:14:10Z",
+    "last_checked_at_utc": "2026-11-04T02:07:37Z",
     "status": "needs_review",
     "sources": [
       "https://sansad.in/getFile/annex/269/AU407_UbEvYl.pdf?source=pqars",
-      "https://www.ncrb.mha.gov.in/crime-in-india.html",
-      "https://www.ncrb.gov.in/crime-in-india-year-wise.html?keyword=&year=2024",
-      "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287039&lang=2&reg=48"
+      "https://www.ncrb.mha.gov.in/uploads/files/9ACII2024Snapshots-StateandUTs.pdf"
     ],
-    "note": "Active 2023 parliamentary PDF downloaded successfully (SHA-256 b71decd21916e54c8295a30df16742d737659f7607295f97c17d98f551e2f3a9); loaded year and IPC/SLL national controls remain unchanged. NCRB publication overview and MHA/PIB release dated 21 July 2026 explicitly identify Crime in India 2024 as published. The NCRB linked 2024 download catalogue could not be fetched in this check (502); no new rows were imported. A 2024 transition-year release is outside the intentionally 2023 pre-BNS schema and requires reviewed scope, IPC/BNS treatment, primary table/page citations and new published controls. No offence equivalence or commercial clearance is claimed."
+    "note": "Active 2023 parliamentary PDF downloaded successfully; SHA-256 b71decd21916e54c8295a30df16742d737659f7607295f97c17d98f551e2f3a9. Official NCRB Crime in India 2024 State/UT snapshot PDF also downloaded successfully (SHA-256 207d0209b447104d88f4ef5f239d470857b81d4a21dfd3aaf6fb82683d0b2060); PDF page 1 explicitly combines IPC and BNS registrations. This transition-year scope remains outside the intentionally 2023 pre-BNS schema. No 2024 rows imported or offence equivalence inferred; primary full State/UT tables, definitions and new controls require review. Loaded reporting year remains 2023, independent of court reporting dates; reuse terms unverified."
   },
   "periodic_check": {
     "status": "needs_review",
-    "review_date": "2026-11-03",
+    "review_date": "2026-11-04",
     "loaded_district_months": [
       "2026-07",
       "2026-08"
     ],
-    "note": "Correction: prior Kokrajhar September 2026 values withdrawn because they do not match the cited PDF page. Published September summary also has inconsistent category/flow totals; no September counts are published. July and August PDF p2 were visually verified and reconcile; scope excludes JJB. National snapshot and crime reporting dates are unchanged. Review on 3 November 2026: the Supreme Court archive still lists 2024–25 as its latest annual volume; the Kokrajhar archive still lists the withdrawn September statement with no later/corrected report observed. All three active periodic PDFs downloaded successfully; July/August SHA-256 checksums match controls. No new rows or periods imported; the September inconsistency remains unresolved.",
+    "note": "Correction: prior Kokrajhar September 2026 values withdrawn because they do not match the cited PDF page. Published September summary also has inconsistent category/flow totals; no September counts are published. July and August PDF p2 were visually verified and reconcile; scope excludes JJB. National snapshot and crime reporting dates are unchanged. Review on 4 November 2026: the Supreme Court annual-report archive still lists 2024–25; the Kokrajhar archive still lists the withdrawn September statement, with no later/corrected report observed. All three active periodic PDFs downloaded successfully. July/August SHA-256 checksums match controls; no new periods or counts imported. The September source inconsistency remains unresolved.",
     "sources": [
       "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/08/2026082761.pdf",
       "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/09/2026090880.pdf",
@@ -38,6 +36,6 @@
       "https://kokrajhar.dcourts.gov.in/document-category/statistical-reports/",
       "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf"
     ],
-    "last_checked_at_utc": "2026-11-03T02:14:10Z"
+    "last_checked_at_utc": "2026-11-04T02:07:37Z"
   }
 }
