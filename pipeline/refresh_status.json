@@ -1,5 +1,5 @@
 {
-  "last_checked_at_utc": "2026-11-04T02:07:37Z",
+  "last_checked_at_utc": "2026-11-05T02:19:11Z",
   "status": "needs_review",
   "data_as_of": "2026-03-13",
   "sources": [
@@ -7,13 +7,14 @@
     "https://www.doj.gov.in/parliament-questions",
     "https://www.doj.gov.in/whats-new",
     "https://ecommitteesci.gov.in/service/national-judicial-data-grid/",
-    "https://www.data.gov.in/resource/court-wise-number-pending-cases-across-country-national-judicial-data-grid-njdg-portal-06"
+    "https://www.data.gov.in/resource/court-wise-number-pending-cases-across-country-national-judicial-data-grid-njdg-portal-06",
+    "https://www.data.gov.in/"
   ],
-  "note": "Checked 4 November 2026 (Asia/Kolkata). Active DoJ Q3113 PDF downloaded successfully; SHA-256 86c2ee4193b87a28c9bba96c93f59dd5b95c9c6bde50c318726ab9c4fcd098b0. No verified like-for-like newer or corrected national release was established by DoJ/Parliament searches. The unresolved newer July primary-table/age-band review remains open. DoJ publication pages returned no readable listing; the reviewed OGD resource returned no records and a sandbox notice. NJDG/eCommittee documentation did not establish a compatible authorized structured feed. Retained the 13 March 2026 reporting date and previous successful-check timestamp. Download, check and build dates do not make historical counts current; source reuse terms remain unverified.",
+  "note": "Checked 5 November 2026 (Asia/Kolkata). Active DoJ Q3113 PDF downloaded successfully; SHA-256 86c2ee4193b87a28c9bba96c93f59dd5b95c9c6bde50c318726ab9c4fcd098b0. No verified like-for-like newer or corrected national release was established by DoJ/Parliament searches. The unresolved newer July primary-table/age-band review remains open. DoJ publication pages returned no readable listing; the reviewed OGD resource timed out and its homepage displayed maintenance and sandbox notices. NJDG/eCommittee documentation did not establish a compatible authorized structured feed. Retained the 13 March 2026 reporting date and previous successful-check timestamp. Download, check and build dates do not make historical counts current; source reuse terms remain unverified.",
   "last_successful_checked_at_utc": "2026-10-29T05:06:49Z",
   "crime_check": {
     "year": 2023,
-    "last_checked_at_utc": "2026-11-04T02:07:37Z",
+    "last_checked_at_utc": "2026-11-05T02:19:11Z",
     "status": "needs_review",
     "sources": [
       "https://sansad.in/getFile/annex/269/AU407_UbEvYl.pdf?source=pqars",
@@ -23,12 +24,12 @@
   },
   "periodic_check": {
     "status": "needs_review",
-    "review_date": "2026-11-04",
+    "review_date": "2026-11-05",
     "loaded_district_months": [
       "2026-07",
       "2026-08"
     ],
-    "note": "Correction: prior Kokrajhar September 2026 values withdrawn because they do not match the cited PDF page. Published September summary also has inconsistent category/flow totals; no September counts are published. July and August PDF p2 were visually verified and reconcile; scope excludes JJB. National snapshot and crime reporting dates are unchanged. Review on 4 November 2026: the Supreme Court annual-report archive still lists 2024–25; the Kokrajhar archive still lists the withdrawn September statement, with no later/corrected report observed. All three active periodic PDFs downloaded successfully. July/August SHA-256 checksums match controls; no new periods or counts imported. The September source inconsistency remains unresolved.",
+    "note": "Correction: prior Kokrajhar September 2026 values withdrawn because they do not match the cited PDF page. Published September summary also has inconsistent category/flow totals; no September counts are published. July and August PDF p2 were visually verified and reconcile; scope excludes JJB. National snapshot and crime reporting dates are unchanged. Review on 5 November 2026: the Supreme Court annual-report archive still lists 2024–25; the Kokrajhar archive still lists the withdrawn September statement, with no later/corrected report observed. All three active periodic PDFs downloaded successfully. July/August SHA-256 checksums match controls; no new periods or counts imported. The September source inconsistency remains unresolved.",
     "sources": [
       "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/08/2026082761.pdf",
       "https://cdnbbsr.s3waas.gov.in/s3ec05cdd0500dc0ef6682fa6ec6d2e6b5/uploads/2026/09/2026090880.pdf",
@@ -36,6 +37,6 @@
       "https://kokrajhar.dcourts.gov.in/document-category/statistical-reports/",
       "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/01/2026011698.pdf"
     ],
-    "last_checked_at_utc": "2026-11-04T02:07:37Z"
+    "last_checked_at_utc": "2026-11-05T02:19:11Z"
   }
 }
